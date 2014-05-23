@@ -92,30 +92,38 @@ $(document).ready(function () {
       transition: 'all 0.3s',
       opacity: 0.7
     });
+    $('#contact-success-modal').popup({
+      transition: 'all 0.3s',
+      opacity: 0.7
+    });
 
 });
 
 /* Show contact modal */
 $(document).ready(function() {
-
   $("#contact-launch").on("click", function() {
     $('#fade').popup('show');
   });
-
 });
 
 // set up contact modals when page loads
 $( document ).ready(function() {
   $('#contact-form').submit(function(form) {
   $.ajax({
-        dataType: 'jsonp',
-        url: "http://getsimpleform.com/messages/ajax?form_api_token=eca2adb05b1ade6f67db49e9bdab0822",
-        data: $('#contact-form').serialize() 
-        }).done(function() {
-      $('#contact-modal').trigger('closeModal');
-      $('#contact-success-modal').trigger('openModal');
-        });
-        return false; //to stop the form from submitting
+    dataType: 'jsonp',
+    url: "http://getsimpleform.com/messages/ajax?form_api_token=eca2adb05b1ade6f67db49e9bdab0822",
+    data: $('#contact-form').serialize() 
+    }).done(function() {
+      $('#fade').popup('hide');
+      $('#contact-success-modal').popup('show');
+    });
+    return false; //to stop the form from submitting
+  });
+});
 
+/* Show contact modal */
+$(document).ready(function() {
+  $("#contact-success-modal .fade_close, #contact-success-modal_background, #contact-success-modal_wrapper").on("click", function() {
+    $('#contact-success-modal').popup('hide');
   });
 });

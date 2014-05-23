@@ -510,7 +510,6 @@ footer h3 {
 	background: rgba(255, 255, 255, 1);
   border-bottom: 9px solid #e74c3c;
 	border-radius: 4px;
-
 }
 #fade input, #fade textarea {
   outline: none;
@@ -546,13 +545,13 @@ footer h3 {
   border: none;
 }
 
-#fade .fade_close {
+#fade .fade_close, #contact-success-modal .fade_close {
   position: absolute;
   top: 0;
   right: -60px;
   opacity: 0.8;
 }
-#fade .fade_close:hover {
+.fade_close:hover {
   opacity: 1;
   cursor: pointer;
 }
@@ -595,4 +594,24 @@ footer h3 {
 .nav>li>a:hover, .nav>li>a:focus {
   background-color: transparent;
   color: #ffd737;
+}
+
+#contact-success-modal {
+  color: #000;
+  padding: 24px 18px;
+  width: 45%;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 4px;
+
+}
+
+#contact-success-modal img {
+  display: block;
+  margin: 0 auto 18px auto;
+
+}
+
+#contact-success-modal p {
+  text-align: center;
+  margin-bottom: 12px;
 }
