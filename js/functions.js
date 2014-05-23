@@ -104,3 +104,18 @@ $(document).ready(function() {
 
 });
 
+// set up contact modals when page loads
+$( document ).ready(function() {
+  $('#contact-form').submit(function(form) {
+  $.ajax({
+        dataType: 'jsonp',
+        url: "http://getsimpleform.com/messages/ajax?form_api_token=eca2adb05b1ade6f67db49e9bdab0822",
+        data: $('#contact-form').serialize() 
+        }).done(function() {
+      $('#contact-modal').trigger('closeModal');
+      $('#contact-success-modal').trigger('openModal');
+        });
+        return false; //to stop the form from submitting
+
+  });
+});
