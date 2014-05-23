@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+{% include header.html %}
+
+  <!-- Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
+{{ content }}
+      </div>
+    </div>
+  </div>
+
+{% include footer.html %}
+
+{% include sitejs.html %}
+
+<script>
+$(document).ready(function () {
+
+    $('#fade').popup({
+      transition: 'all 0.3s'
+    });
+
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+# Site settings
+title: Gian Johansen | Development Portfolio
+email: gian.johansen@gmail.com
+description: "Web developer Gian Johansen's portfolio."
+baseurl: ""
+url: "http://gianjohansen.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
