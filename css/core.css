@@ -55,11 +55,11 @@ a {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
-  transition: background 0.1s ease-in-out;
-  -webkit-transition: background 0.1s ease-in-out;
-  -moz-transition: background 0.1s ease-in-out;
-  -ms-transition: background 0.1s ease-in-out;
-  -o-transition: background 0.1s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   color: #000;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -633,7 +633,7 @@ footer h3 {
 }
 .nav>li>a:hover, .nav>li>a:focus {
   background-color: transparent;
-  color: #ffd737;
+  color: #eee;
 }
 
 #contact-success-modal {
