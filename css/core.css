@@ -224,7 +224,7 @@ a {
   -ms-transition: opacity .25s ease-in-out;
   -o-transition: opacity .25s ease-in-out;
   transition: opacity .25s ease-in-out;
-  cursor: default;
+  cursor: pointer;
 }
 
 .box .project-details .project-icon {

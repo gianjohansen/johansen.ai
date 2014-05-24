@@ -130,3 +130,31 @@ $(document).ready(function() {
     $('#contact-success-modal').popup('hide');
   });
 });
+
+$("#portfolio-cp").on("click", function(e) {
+  $.colorbox({title:'Camperdown Program Online', href:'../img/screenshot-cp-2.png', scalePhotos:'true', height:"90%", maxHeight:"760px"});
+});
+$("#portfolio-cp a").on("click", function(e) {
+    e.stopPropagation();
+});
+
+$("#portfolio-sd").on("click", function(e) {
+  $.colorbox({title:'Usyd Note Sharing', href:'../img/screenshot-sd-1.png', scalePhotos:'true', height:"90%", maxHeight:"760px"});
+});
+$("#portfolio-sd a").on("click", function(e) {
+    e.stopPropagation();
+});
+
+$("#portfolio-kc").on("click", function(e) {
+  $.colorbox({title:'KnowledgeCareer', href:'../img/screenshot-kc-1.png', scalePhotos:'true', height:"90%", maxHeight:"760px"});
+});
+$("#portfolio-kc a").on("click", function(e) {
+    e.stopPropagation();
+});
+
+$("#portfolio-se").on("click", function(e) {
+  $.colorbox({title:'Sydney Emeralds Synchronised Swimming', href:'../img/screenshot-se-1.png', scalePhotos:'true', height:"90%", maxHeight:"760px"});
+});
+$("#portfolio-se a").on("click", function(e) {
+    e.stopPropagation();
+});
