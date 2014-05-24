@@ -488,19 +488,44 @@ footer h3 {
 }
 
 .blink {
-  -webkit-animation: blink 1.2s steps(5, start) infinite;
-}
+  -webkit-animation-name: blink; 
+  -webkit-animation-iteration-count: infinite; 
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 1.2s;
 
-@keyframes blink {
-  to {
-    visibility: hidden;
-  }
+    animation-duration: 1.2s;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
 }
-
 @-webkit-keyframes blink {
-  to {
-    visibility: hidden;
-  }
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    81% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    81% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 #fade {
