@@ -6,7 +6,7 @@ roles[0] = "";
 roles[1] = "Web Developer";
 roles[2] = "Tinkerer";
 roles[3] = "Software Engineer";
-roles[4] = "Scholar";
+roles[4] = "University Student";
 roles[5] = "Python Enthusiast";
 
 var currentRole = 0;
@@ -29,7 +29,10 @@ function changeRole() {
   // get role string
   var str = roles[currentRole];
   str = str.split("");
-  if (currentRole != 0) str.push(".");
+  if (currentRole != 0) {
+    str.push(".");
+    str.push(" ");
+  }
   str.push("_");
 
   // add a span for each letter
