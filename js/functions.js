@@ -7,7 +7,7 @@ roles[1] = "Web Developer";
 roles[2] = "Tinkerer";
 roles[3] = "Software Engineer";
 roles[4] = "Scholar";
-roles[5] = "Node Enthusiast";
+roles[5] = "Python Enthusiast";
 
 var currentRole = 0;
 
