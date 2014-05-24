@@ -4,10 +4,10 @@
 var roles = new Array();
 roles[0] = "";
 roles[1] = "Web Developer";
-roles[2] = "Computer Scientist";
-roles[3] = "Mobile Developer";
-roles[4] = "League of Legends Player";
-roles[5] = "Frozen Coke Enthusiast";
+roles[5] = "Tinkerer";
+roles[2] = "Software Engineer";
+roles[3] = "Student";
+roles[4] = "Node.js Enthusiast";
 
 var currentRole = 0;
 
