@@ -1,8 +1,8 @@
-/* Rotating Dialog */
+/* Rotate between roles in the navbar */
 
-// create roles that will be cycled through
+// dictionary of roles that will be cycled through
 var roles = new Array();
-roles[0] = "";
+roles[0] = ""; // blank role if string needs to be cleared
 roles[1] = "Web Developer";
 roles[2] = "Tinkerer";
 roles[3] = "Software Engineer";
@@ -11,9 +11,10 @@ roles[5] = "Python Enthusiast";
 
 var currentRole = 0;
 
+// delay between "keystrokes"
 var delay = 50;
 
-// function for delay between strng changes
+// allow sleeping between role changes
 function sleep(millis, callback) {
     setTimeout(function()
             { callback(); }
@@ -46,18 +47,21 @@ function changeRole() {
       }
   });
 
+  // make the underscore character blink
   $("#who-am-i").children("span:last").addClass("blink");
   
-  // cycle through the roles every 3 seconds
+  // cycle through the roles every 4 seconds
   var sleepTime = 2000;
   if (currentRole != 0)
     sleepTime = 4000;
 
   currentRole++;
 
-  if (currentRole == 6)
+  // reset if we've reached our last role
+  if (currentRole == roles.length)
     currentRole = 1;
-  
+
+  // loop over roles dictionary
   if (currentRole == 0) {
     sleep(sleepTime, changeRole);
   }
@@ -66,13 +70,12 @@ function changeRole() {
   }
 }
 
+// begin changing roles
 changeRole();
 
-
-
-/* Change navbar opacity */
+/* Change navbar opacity on scroll */
 $(window).on('scroll',function(){
-  // we round here to reduce a little workload
+  // rounding here to reduce a little workload
   stop = Math.round($(window).scrollTop());
   if (stop > 0) {
       $('.navbar').addClass('past-main');
@@ -81,7 +84,7 @@ $(window).on('scroll',function(){
   }
 });
 
-/* Scroll to top of page */
+/* Scroll to top of page on navbar click */
 $('#who-am-i').click(function () {
   $('body,html').animate({
     scrollTop: 0
@@ -89,8 +92,8 @@ $('#who-am-i').click(function () {
   return false;
 });
 
+/* Initialize contact modals */
 $(document).ready(function () {
-
     $('#fade').popup({
       transition: 'all 0.3s',
       opacity: 0.7
@@ -99,17 +102,16 @@ $(document).ready(function () {
       transition: 'all 0.3s',
       opacity: 0.7
     });
-
 });
 
-/* Show contact modal */
+/* Show contact modal on click*/
 $(document).ready(function() {
   $("#contact-launch").on("click", function() {
     $('#fade').popup('show');
   });
 });
 
-// contact form submission
+/* Contact form submission */
 $( document ).ready(function() {
   $('#contact-form').submit(function(form) {
     // validate form
@@ -133,6 +135,8 @@ $(document).ready(function() {
     $('#contact-success-modal').popup('hide');
   });
 });
+
+/* Show lightbox when a project is clicked */
 
 $("#portfolio-cp").on("click", function(e) {
   $.colorbox({title:'Camperdown Program Online', href:'../img/screenshot-cp-2.png', scalePhotos:'true', height:"90%", maxHeight:"760px"});
