@@ -147,8 +147,16 @@ a:hover {
 
 #skills {
 	padding-top: 72px;
-	padding-bottom: 180px;
+	padding-bottom: 96px;
 	position: relative;
+}
+
+#skills .content {  
+	margin-bottom: 48px; 
+}
+
+#skills .img-wrapper {
+	height: 220px;
 }
 
 #skills img {
