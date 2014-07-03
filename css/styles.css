@@ -364,16 +364,11 @@ footer p {
 	transition: transform 0.4s;
 }
 	
-@media screen and (min-width: 0px) and (max-width: 1019px) {
+@media screen and (min-width: 0px) and (max-width: 960px) {
 	.grid li {
 		width: 100%;
 	}
-	.cs-style-5 figcaption {
-		display: none;
-	}
 }
-	
-@media screen and (min-width: 1020px) { 
 
 	.no-touch .cs-style-5 figure:hover .screen-wrapper,
 	.cs-style-5 figure.cs-hover img {
@@ -406,6 +401,24 @@ footer p {
 		-ms-transform: scale(1);
 		transform: scale(1);
 		opacity: 1;
+	}
+	
+@media screen and (min-width: 481px) and (max-width: 720px) {
+	.no-touch .cs-style-5 figure:hover .screen-wrapper,
+	.cs-style-5 figure.cs-hover img {
+		-webkit-transform: scale(0.4);
+		-moz-transform: scale(0.4);
+		-ms-transform: scale(0.4);
+		transform: scale(0.4);
+	}
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+	.no-touch .cs-style-5 figure:hover .screen-wrapper,
+	.cs-style-5 figure.cs-hover img {
+		-webkit-transform: scale(0);
+		-moz-transform: scale(0);
+		-ms-transform: scale(0);
+		transform: scale(0);
 	}
 }
 
@@ -577,7 +590,6 @@ footer p {
 		display: none;
 	}
 }
-
 @media screen and (max-width: 1000px) { 
 	.navbar {
 		display: none;

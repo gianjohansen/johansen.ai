@@ -1,4 +1,8 @@
 $(document).ready(function() {
+
+// only show these if the user's screen is tall enough
+if($(window).height() > 400) {
+
 /**
  * modalEffects.js v1.0.0
  * http://www.codrops.com
@@ -56,4 +60,6 @@ var ModalEffects = (function() {
 	init();
 
 })();
+
+}
 });
