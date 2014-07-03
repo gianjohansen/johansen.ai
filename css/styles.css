@@ -232,7 +232,7 @@ a:hover {
 	padding-top: 10px;
 }
 
-#contact .contact-form {
+#contact .contact-form-wrapper {
 	background: #333e44;
 	width: 100%;
 	border-bottom-left-radius: 5px;
@@ -272,7 +272,7 @@ a:hover {
 	width: 100%;
 	color: #fff;
 	border: none;
-	background: #27ae60;
+	background: #2980b9;
 	font-size: 28px;
 }
 
