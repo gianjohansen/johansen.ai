@@ -177,6 +177,7 @@ a:hover {
 	padding-top: 48px;
 	padding-bottom: 120px;
 	position: relative;
+	overflow-x: hidden;
 }
 
 #portfolio .screen {
