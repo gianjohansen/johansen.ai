@@ -310,12 +310,12 @@ footer p {
 }
 
 .grid li {
-	display: inline-block;
-	margin: 0;
+	display: block;
+	margin: 0 auto;
 	padding: 20px;
 	text-align: left;
 	position: relative;
-	width: 50%;
+	width: 80%;
 	margin-bottom: 24px;
 }
 
@@ -377,10 +377,10 @@ footer p {
 
 	.no-touch .cs-style-5 figure:hover .screen-wrapper,
 	.cs-style-5 figure.cs-hover img {
-		-webkit-transform: scale(0.45);
-		-moz-transform: scale(0.45);
-		-ms-transform: scale(0.45);
-		transform: scale(0.45);
+		-webkit-transform: scale(0.6);
+		-moz-transform: scale(0.6);
+		-ms-transform: scale(0.6);
+		transform: scale(0.6);
 	}
 	
 	.cs-style-5 figcaption {
