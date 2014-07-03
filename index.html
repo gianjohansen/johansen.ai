@@ -1,196 +1,306 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<title>Portfolio</title>
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css" />
+	
+	<!-- Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300,100' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	
+	<!-- JavaScript -->
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+	<!-- Navbar -->
+	<nav class="navbar navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<!-- Logo -->
+					<div id="navbar-brand-wrapper" class="navbar-header">
+						<a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+					</div>
+					<!-- Contact link -->
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+						<a id="navbar-contact" class="nav-button" href="#">CONTACT ME</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
 
-        <div class="about-text">
-          <h2>CREATING ENGAGING EXPERIENCES<br>FOR <span class="primary">WEB AND MOBILE</span></h2>
-          <!--<div class="underline"></div> -->
-          <p>
-            I'm Gian Johansen, a web developer and designer with a passion for delivering beautiful and responsive websites that solve real problems. This page serves as a portfolio for some recent projects in which I did just&nbsp;that.<br>
-          </p>
-        </div>
-        <div class="box current-box">
-          <div class="project">
-            <img src="img/port-box-cp.jpg">
-            <div id="portfolio-cp" class="project-details">
-              <div class="row-fluid">
-                <div class="col-xs-6">
-                  <span class="project-type">WEB APPLICATION</span>
-                  <div class="project-title">Camperdown Program Online</div>
-                  <div class="project-description">An online component for the speech therapy program from the Australian Stuttering Research Centre. Designed to supplement the in-person clinic sessions that their patients attend.<br><br>Our client for this project was the <a target="_blank" href="http://sydney.edu.au/health-sciences/asrc/">ASRC</a>.<br><br>Web Development, Web Design, UI/UX Design, HTML5, CSS3, Javascript, jQuery, Python, Django, Bootstrap, Git, UML.</div>
-                </div>
-                <div class="col-xs-6">
-                  <div class="project-title">My Contributions</div>
-                  <div class="project-description">
-                    <ul>
-                      <li>I was part of the frontend team during the development and release of the service.</li>
-                      <li>I prototyped the UX design and aesthetic, first by hand, then in Photoshop and <a target="_blank" href="http://balsamiq.com/">Balsamiq</a>.</li>
-                      <li>I created UML diagrams during the design stage and worked from them during implementation.</li>
-                      <li>I did interface implementation work in Django using Python and HTML/CSS/jQuery.</li>
-                      <li>I used the web frameworks <a target="_blank" href="http://getbootstrap.com">Bootstrap</a> and <a target="_blank" href="http://www.getskeleton.com/">Skeleton</a> to scaffold and code the site.</li>
-                      <li>I worked as part of a team using <a target="_blank" href="http://git-scm.com/">Git</a> for source control and <a target="_blank" href="http://www.redmine.org/">Redmine</a> for project management.</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="project">
-            <img src="img/port-box-sd.jpg">
-            <div id="portfolio-sd" class="project-details">
-              <div class="row-fluid">
-                <div class="col-xs-6">
-                  <span class="project-type">WEB APPLICATION</span>
-                  <div class="project-title">StudyDrone.com</div>
-                  <div class="project-description">An online note-sharing and collaboration tool for the University of Sydney's IT faculty. Allows students to upload and share notes, and then rate and download contributions from other students.<br><br>Our client for this project was the <a target="_blank" href="http://www.it.usyd.edu.au">University of Sydney</a>.<br><br>Web Development, Web Design, UI/UX Design, HTML5, CSS3, Javascript, jQuery, Python, Django, Bootstrap, Git, UML.</div>
-                </div>
-                <div class="col-xs-6">
-                  <div class="project-title">My Contributions</div>
-                  <div class="project-description">
-                    <ul>
-                      <li>I was in charge of the frontend development team throughout the project.</li>
-                      <li>I created the frontend-related sections of the <a target="_blank" href="http://dx.doi.org/10.1109%2FIEEESTD.1984.119205">Software Requirements Specification</a> and UML work.</li>
-                      <li>I prototyped the UX design and aesthetic, first by hand, then in Photoshop.</li>
-                      <li>I did interface implementation work in Django using Python and HTML/CSS/jQuery.</li>
-                      <li>I coded the frontend using the web framework <a target="_blank" href="http://getbootstrap.com">Bootstrap</a>.</li>
-                      <li>I worked as part of a team using <a target="_blank" href="https://bitbucket.org/">BitBucket</a> for source control.</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="project">
-            <img src="img/port-box-se.jpg">
-            <div id="portfolio-se" class="project-details">
-              <div class="row-fluid">
-                <div class="col-xs-6">
-                  <span class="project-type">WEBSITE</span>
-                  <div class="project-title">Sydney Emeralds Synchro Club</div>
-                  <div class="project-description">A complete overhaul of the club's existing website. The site was to act as a showcase for club-related news, events, information and media and needed to be easy to edit and update by the club.<br><br>My client for this project was <a target="_blank" href="http://www.sydneysynchroclub.com/">Sydney Emeralds Synchro</a>.<br><br>Web Development, Web Design, UI/UX Design, Wordpress, HTML5, CSS3, Javascript, jQuery, PHP, MySQL, Business Analysis.</div>
-                </div>
-                <div class="col-xs-6">
-                  <div class="project-title">My Contributions</div>
-                  <div class="project-description">
-                    <ul>
-                      <li>This was a solo freelance project.</li>
-                      <li>I prototyped the UX design and aesthetic, first by hand, then in Photoshop and <a href="http://getbootstrap.com">Bootstrap</a>.</li>
-                      <li>I created mockups and a quote for the club.</li>
-                      <li>I did interface implementation work in <a target="_blank" href="http://wordpress.com/">Wordpress</a> using PHP and HTML/CSS/jQuery. I created a custom Wordpress theme with the new design.</li>
-                      <li>I designed a potential new logo for the club using <a target="_blank" href="http://www.adobe.com/products/illustrator.html">Illustrator</a> and Photoshop.</li>
-                      <li>I used <a target="_blank" href="http://git-scm.com/">Git</a> for source control and <a target="_blank" href="https://trello.com/">Trello</a> for project management and collaboration.</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="project">
-            <img src="img/port-box-kc.jpg">
-            <div id="portfolio-kc" class="project-details">
-              <div class="row-fluid">
-                <div class="col-xs-6">
-                  <span class="project-type">WEB APPLICATION</span>
-                  <div class="project-title">KnowledgeCareer.com</div>
-                  <div class="project-description">Assists individuals with their continuing professional development by taking their skills, experience and goals and then generating a personalized learning path for them.<br><br>Our client for this project was <a target="_blank" href="http://www.simplogy.com/">Simplogy Pty Ltd</a>.<br><br>Web Development, Web Design, UI/UX Design, HTML5, CSS3, Javascript, jQuery, PHP, MySQL, Bootstrap, Business Analysis, Project Management, Agile Development, Extreme Programming.</div>
-                </div>
-                <div class="col-xs-6">
-                  <div class="project-title">My Contributions</div>
-                  <div class="project-description">
-                    <ul>
+
+	<!-- Content -->
+	<div class="container">
+
+		<!-- Section: Introduction -->
+		<div class="row" id="intro">
+			<div class="col-xs-12 content">
+					<!-- Hero image and text -->
+					<div id="description">
+						<img id="hero" src="img/dev-illustration.png">
+						<h2>CREATING ENGAGING EXPERIENCES FOR <span class="primary">WEB AND MOBILE</span></h2>
+						<p>
+						I'm Gian Johansen, a web developer and designer with a passion for delivering clean, beautiful code that solves real problems. I spend my time crafting simple, usable interactions that keep users coming back.<br>
+						</p>
+					</div>
+					
+					<!-- "Scroll to" link -->
+					<div id="nav-arrow-skills" class="nav-arrow text-center"><p class="floating">SKILLS</p> <img class="floating" src="img/nav-arrow.png"></div>
+			</div>
+		</div>
+			
+		<!-- Section: Skills -->
+		<div class="row" id="skills">
+			<!-- Left and right skills -->
+			<div class="col-xs-5 col-xs-offset-1 text-center content">
+				<img src="img/skills.left@2x.png">
+				<h2 class="primary">DEVELOPMENT</h2>
+				<p>I develop using languages relevant to today's web, like HTML5 and jQuery, to produce high quality solutions within modern technologies like Django and Wordpress. My code brings your designs to life.</p>
+			</div>
+			<div class="col-xs-5 text-center content">
+				<img src="img/skills.right@2x.png">
+				<h2 class="primary">UI/UX DESIGN</h2>
+				<p>I design, build and test user experiences that solve complex problems in the simplest manner possible. I enjoy finding ways to make my user's lives easier, and I believe solid design is a vital first step for that.</p>
+			</div>
+			
+			<!-- "Scroll to" link -->
+			<div id="nav-arrow-portfolio" class="nav-arrow text-center"><p class="floating">PORTFOLIO</p> <img class="floating" src="img/nav-arrow.png"></div>
+		</div>
+		
+		<!-- Section: Portfolio -->
+		<div class="row" id="portfolio">
+			<div class="col-xs-12 content">
+				<!-- Grid of portfolio pieces -->
+				<!-- Overlay effect used: http://tympanus.net/codrops/2013/06/18/caption-hover-effects/ -->
+				<ul class="grid cs-style-5">
+					
+					<!-- Camperdown Program Online -->
+					<li id="screen-cp" class="md-trigger" data-modal="modal-cp">
+						<figure>
+							<div class="screen-wrapper">
+								<div class="screen-header">
+									<div class="screen-buttons-wrapper">
+										<img class="screen-buttons" src="img/screen-buttons.png">
+									</div>
+								</div>
+								<img class="screen-img" src="img/screen-cp.png">
+							</div>
+							<figcaption>
+								<h3>CAMPERDOWN PROGRAM ONLINE</h3>
+								<span>Australian Stuttering Research Center</span>
+								<span class="description">An online component for the speech therapy program from the Australian Stuttering Research Centre. Built using <span class="primary">Django</span> with <span class="primary">Bootstrap</span>.</span>
+							</figcaption>
+						</figure>
+						
+					<!-- Study Drones -->
+					</li><li id="screen-sd" class="md-trigger" data-modal="modal-sd">
+						<figure>
+							<div class="screen-wrapper">
+								<div class="screen-header">
+									<div class="screen-buttons-wrapper">
+										<img class="screen-buttons" src="img/screen-buttons.png">
+									</div>
+								</div>
+								<img class="screen-img" src="img/screen-sd.png">
+							</div>
+							<figcaption>
+								<h3>STUDY DRONES</h3>
+								<span>University of Sydney</span>
+								<span class="description">A note-sharing tool that allows Usyd students to share files and collaborate with one another. Built using <span class="primary">Django</span> with <span class="primary">Bootstrap</span>.</span>
+							</figcaption>
+						</figure>
+						
+					<!-- KnowledgeCareer -->
+					</li><li id="screen-sd" class="md-trigger" data-modal="modal-kc">
+						<figure>
+							<div class="screen-wrapper">
+								<div class="screen-header">
+									<div class="screen-buttons-wrapper">
+										<img class="screen-buttons" src="img/screen-buttons.png">
+									</div>
+								</div>
+								<img class="screen-img" src="img/screen-kc.png">
+							</div>
+							<figcaption>
+								<h3>KNOWLEDGE CAREER</h3>
+								<span>Simplogy Pty Ltd</span>
+								<span class="description">Assists individuals with their continuing professional development through personalized learning paths. Built using <span class="primary">Drupal</span>.</span>
+							</figcaption>
+						</figure>
+						
+					<!-- Touchstone -->
+					</li><li id="screen-sd" class="md-trigger" data-modal="modal-ts">
+						<figure>
+							<div class="screen-wrapper">
+								<div class="screen-header">
+									<div class="screen-buttons-wrapper">
+										<img class="screen-buttons" src="img/screen-buttons.png">
+									</div>
+								</div>
+								<img class="screen-img" src="img/screen-ts.png">
+							</div>
+							<figcaption>
+								<h3>TOUCHSTONE</h3>
+								<span>CSIRO</span>
+								<span class="description">A web-based implementation for the database benchmarking standard TPC-C. Built under CSIRO supervision using <span class="primary">J2EE</span> and the <span class="primary">Play Framework</span>.</span>
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- "Scroll to" link -->
+			<div id="nav-arrow-contact" class="nav-arrow text-center"><p class="floating">CONTACT</p> <img class="floating" src="img/nav-arrow.png"></div>
+		</div>
+		
+		<!-- Section: Contact -->
+		<div class="row" id="contact">
+			
+			<div class="col-xs-6 col-xs-offset-3 text-center">
+			
+				<div class="contact-icon-wrapper">
+					<div class="row-fluid">
+					
+						<!-- Heading icon -->
+						<div class="col-xs-12 text-center heading-icon">
+							<div class="contact-icon">
+								<img src="img/contact-icon.png">
+							</div>
+						</div>
+					
+						<div class="clearfix"></div>
+					</div>
+					
+				</div>
+			
+				<!-- Message form (works via ajax in functions.js) -->
+				<div class="contact-form">
+					<form role="form">
+						<div class="left-inner-addon ">
+							<i class="fa fa-user"></i>
+							<input type="text" class="form-control" id="input-name" placeholder="Name">
+						</div>
+						
+						<div class="left-inner-addon ">
+							<i class="fa fa-envelope"></i>
+							<input type="email" class="form-control" id="input-email" placeholder="Email">
+						</div>
+						
+						<div class="left-inner-addon ">
+							<i class="fa fa-pencil"></i>
+							<textarea rows="4" class="form-control" id="input-message" placeholder="Message"></textarea>
+						</div>
+							
+						<button type="submit" class="btn btn-default"><i class="fa fa-check"></i></button>
+					</form>
+				</div>
+			
+			</div>
+			
+		</div>
+		
+		<!-- Signing off -->
+		<footer>
+			<p class="text-center">Designed with <i class="fa fa-heart primary"></i> by Gian Johansen</p>
+		</footer>
+
+	</div><!-- /container -->
+
+	<!-- Modal overlay element -->
+	<div class="md-overlay"></div>
+	
+	<!-- Portfolio piece modals -->
+	<div class="md-modal md-effect-1" id="modal-cp">
+		<div class="md-content">
+			<h3>Camperdown Program Online</h3>
+			<div>
+				<p><strong>Early-Mid 2014</strong></p>
+				<!-- Contribution listing -->
+				<ul>
+					<li>I was part of the frontend team during the development and release of the service.</li>
+					<li>I prototyped the UX design and aesthetic, first by hand, then in Photoshop and <a target="_blank" href="http://balsamiq.com/">Balsamiq</a>.</li>
+					<li>I created UML diagrams during the design stage and worked from them during implementation.</li>
+					<li>I did interface implementation work in Django using Python and HTML/CSS/jQuery.</li>
+					<li>I used the web frameworks <a target="_blank" href="http://getbootstrap.com">Bootstrap</a> and <a target="_blank" href="http://www.getskeleton.com/">Skeleton</a> to scaffold and code the site.</li>
+					<li>I worked as part of a team using <a target="_blank" href="http://git-scm.com/">Git</a> for source control and <a target="_blank" href="http://www.redmine.org/">Redmine</a> for project management.</li>
+				</ul>
+				<button class="md-close">Go back</button>
+			</div>
+		</div>
+	</div>
+	<div class="md-modal md-effect-1" id="modal-sd">
+		<div class="md-content">
+			<h3>Camperdown Program Online</h3>
+			<div>
+				<p><strong>Late 2013</strong></p>
+				<!-- Contribution listing -->
+				<ul>
+					<li>I was in charge of the frontend development team throughout the project.</li>
+					<li>I did the frontend-related sections of our UML work.</li>
+					<li>I prototyped the UX design and aesthetic, first by hand, then in Photoshop.</li>
+					<li>I did interface implementation work in Django using Python and HTML/CSS/jQuery.</li>
+					<li>I coded the frontend using the web framework <a target="_blank" href="http://getbootstrap.com">Bootstrap</a>.</li>
+					<li>I worked as part of a team using <a target="_blank" href="https://bitbucket.org/">BitBucket</a> for source control.</li>
+				</ul>
+				<button class="md-close">Go back</button>
+			</div>
+		</div>
+	</div>
+	<div class="md-modal md-effect-1" id="modal-kc">
+		<div class="md-content">
+			<h3>Knowledge Career</h3>
+			<div>
+				<p><strong>Late 2013</strong></p>
+				<!-- Contribution listing -->
+				<ul>
                       <li>I was part of the frontend team during the websites pre-release phase.</li>
                       <li>I prototyped the UX design and aesthetic, first by hand, then in Photoshop.</li>
                       <li>I did interface implementation work in <a target="_blank" href="https://drupal.org/">Drupal</a> using PHP and HTML/CSS/jQuery.</li>
                       <li>I evaluated and modified the UX using live-user testing and A/B testing. This included regular meetings with the client to demonstrate designs and incorporate feedback.</li>
-                      <li>I worked as part of a team using <a target="_blank" href="http://git-scm.com/">Git</a> for source control and <a target="_blank" href="http://trac.edgewall.org/">Trac</a> for project management. Our team used Extreme Programming methodology.</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!--
-        <div class="box">
-          <div class="project">
-            <img src="img/port-box-kc.jpg">
-            <div id="portfolio-tc" class="project-details">
-              <div class="row-fluid">
-                <div class="col-xs-6">
-                  <span class="project-type">WEB APPLICATION</span>
-                  <div class="project-title">Touchstone</div>
-                  <div class="project-description">A web application implementation of the database benchmarking specification <a target="_blank" href="http://www.tpc.org/tpcc/">TPC-C</a>. It allows users to test simulated transactions against a relational database to evaluate its performance.<br><br>This was a 12-month project done with the <a target="_blank" href="http://www.csiro.au/ICT">CSIRO</a> under senior researcher <a target="_blank" href="http://www.ict.csiro.au/staff/shiping.chen/">Dr Shiping Chen</a>.<br><br>Web Development, Web Design, UI/UX Design, HTML5, CSS3, Javascript, jQuery, PHP, MySQL, Bootstrap, Business Analysis, Project Management, Agile Development, Extreme Programming.</div>
-                </div>
-                <div class="col-xs-6">
-                  <div class="project-title">My Contributions</div>
-                  <div class="project-description">
-                    <ul>
-                      <li>I completed both the frontend and backend development under the supervision of the CSIRO.</li>
-                      <li>I did interface implementation work with HTML/CSS/JQuery and Bootstrap.</li>
-                      <li>I prototyped the website design, first on paper and then in Photoshop.</li>
-                      <li>I prototyped the UX design using Balsamiq.</li>
-                      <li>I evaluated and modified the UX using live-user testing and A/B testing.</li>
-                      <li>I created UML diagrams during the design stage.</li>
-                      <li>I attended client consultations to assist in our business analysis work.</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        -->
-
-        <!-- Contact modal -->
-        <div id="fade">
-          <form id="contact-form" method="post" action="http://getsimpleform.com/messages?form_api_token=eca2adb05b1ade6f67db49e9bdab0822">
-            <div class="row-fluid">
-              <div class="col-xs-12">
-                <p class="lead"><i class="fa fa-envelope"></i> Message Details</p>
-              </div>
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="row-fluid fade-inputs">
-              <div class="col-xs-6">
-                <input id="contact-name" type="text" class="text" name="name" placeholder="Name" required/>
-              </div>
-              <div class="col-xs-6">
-                <input id="contact-email" type="text" class="text" name="email" placeholder="Email" required/>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-
-            <div class="row-fluid fade-inputs">
-              <div class="col-xs-12">
-                <textarea rows="8" id="contact-message" name="message" placeholder="Message" required></textarea>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-
-            <div class="row-fluid">
-              <div class="col-xs-6 col-xs-offset-6">
-                <button type="submit" class="fade_send btn btn-default pull-right">Send Message</button>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-          </form>
-          <img src="img/contact-close.png" class="fade_close">
-        </div>
-        <div id="contact-success-modal" class="text-center">
-          <img src="img/mail-sent.png">
-          <p>Thanks! If you left a contact email then I'll be in touch soon.</p>
-          <img src="img/contact-close.png" class="fade_close">
-        </div>
+                      <li>I worked as part of a team using <a target="_blank" href="http://git-scm.com/">Git</a> for source control and <a target="_blank" href="http://trac.edgewall.org/">Trac</a> for project management. Our team used the Extreme Programming methodology.</li>
+				</ul>
+				<button class="md-close">Go back</button>
+			</div>
+		</div>
+	</div>
+	<div class="md-modal md-effect-1" id="modal-ts">
+		<div class="md-content">
+			<h3>Touchstone</h3>
+			<div>
+				<p><strong>Mid-Late 2014</strong></p>
+				<!-- Contribution listing -->
+				<ul>
+                      <li>I am working under the supervision of CSIRO senior researcher <a href="#">Dr Shiping Chen</a>. There is a thesis component in addition to the development work.</li>
+                      <li>I determined project requirements through extensive consultation with Dr Chen, then expressed those using UML and an SRS.</li>
+                      <li>I did interface implementation work in <a target="_blank" href="https://drupal.org/">JEE</a> and <a href="#">Play</a> using Java and HTML/CSS/jQuery.</li>
+					  <li>I coded the frontend using the web framework <a target="_blank" href="http://getbootstrap.com">Bootstrap</a>.</li>
+                      <li>I collaborated with my supervisors using <a target="_blank" href="http://git-scm.com/">Git</a> for source control and <a target="_blank" href="http://trac.edgewall.org/">Jekyll</a> for tracking my progress.</li>
+				</ul>
+				<button class="md-close">Go back</button>
+			</div>
+		</div>
+	</div>
+	
+	<!-- JavaScript -->
+	<script src="js/functions.js"></script>
+	
+	<!-- Modal effects plugin -->
+	<script src="js/classie.js"></script>
+	<script src="js/modalEffects.js"></script>
+	
+	<!-- Touch handling for hover overlay -->
+	<script src="js/toucheffects.js"></script>
+</body>
+</html>
