@@ -22,6 +22,45 @@
 	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<script src="js/modernizr.custom.js"></script>
+	
+	<!-- Google Maps -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClwWGwIJbvlVIa6jCIVB7BJXy4rt3T5I0&sensor=false"></script>
+	<script type="text/javascript">
+		// When the window has finished loading create our google map below
+		google.maps.event.addDomListener(window, 'load', init);
+	
+		function init() {
+			var sydney = new google.maps.LatLng(-33.88803,151.194126); // School of IT
+			var mapOptions = {
+				// Initial map zoom
+				zoom: 15,
+				// Initial latitude, longitude
+				center: sydney,
+				// Map styling
+				styles: [{featureType:"landscape",stylers:[{saturation:-100},{lightness:65},{visibility:"on"}]},{featureType:"poi",stylers:[{saturation:-100},{lightness:51},{visibility:"simplified"}]},{featureType:"road.highway",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"road.arterial",stylers:[{saturation:-100},{lightness:30},{visibility:"on"}]},{featureType:"road.local",stylers:[{saturation:-100},{lightness:40},{visibility:"on"}]},{featureType:"transit",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"administrative.province",stylers:[{visibility:"off"}]/**/},{featureType:"administrative.locality",stylers:[{visibility:"off"}]},{featureType:"administrative.neighborhood",stylers:[{visibility:"on"}]/**/},{featureType:"water",elementType:"labels",stylers:[{visibility:"on"},{lightness:-25},{saturation:-100}]},{featureType:"water",elementType:"geometry",stylers:[{hue:"#ffff00"},{lightness:-25},{saturation:-97}]}]
+			};
+
+			// Create the map
+			var mapElement = document.getElementById('map');
+			var map = new google.maps.Map(mapElement, mapOptions);
+			
+			// Add marker to school of IT
+			var marker = new google.maps.Marker({
+				position: sydney,
+				map: map,
+				title:"School of Information Technologies"
+			});
+
+		}
+	</script>
+	
+	<!-- Required inline declaration of google maps size -->
+	<style>
+		#map {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
 </head>
 <body>
 	<!-- Navbar -->
@@ -44,187 +83,138 @@
 		</div>
 	</nav>
 
-
-	<!-- Content -->
-	<div class="container">
-
-		<!-- Section: Introduction -->
-		<div class="row" id="intro">
-			<div class="col-xs-12 content">
-					<!-- Hero image and text -->
-					<div id="description">
-						<img id="hero" src="img/dev-illustration.png">
-						<h2>CREATING ENGAGING EXPERIENCES FOR <span class="primary">WEB AND MOBILE</span></h2>
-						<p>
-						I'm Gian Johansen, a web developer and designer with a passion for delivering clean, beautiful code that solves real problems. I spend my time crafting simple, usable interactions that keep users coming back.<br>
-						</p>
-					</div>
-					
-					<!-- "Scroll to" link -->
-					<div id="nav-arrow-skills" class="nav-arrow text-center"><p class="floating">SKILLS</p> <img class="floating" src="img/nav-arrow.png"></div>
-			</div>
+	<!-- Section: Introduction -->
+	<div id="intro">
+		<div id="grain-overlay"></div>
+		<div class="content">
+				<!-- Hero image and text -->
+				<div id="description">
+					<h2>CREATING ENGAGING EXPERIENCES FOR WEB&nbsp;AND&nbsp;MOBILE</h2>
+					<div id="description-separator"></div>
+				</div>
+				
+				<!-- "Scroll to" link -->
+				<div id="nav-arrow-skills" class="nav-arrow text-center"><div id="scrollwheel"></div></div>
 		</div>
+	</div>
 			
+	<div class="container">
 		<!-- Section: Skills -->
 		<div class="row" id="skills">
 			<!-- Left and right skills -->
-			<div class="col-xs-12 col-sm-5 col-sm-offset-1 text-center content">
-				<div class="img-wrapper">
-					<img src="img/skills.left@2x.png">
-				</div>
-				<h2 class="primary">DEVELOPMENT</h2>
-				<p>I develop using languages relevant to today's web, like HTML5 and jQuery, to produce high quality solutions within modern technologies like Django and Wordpress. My code brings your designs to life.</p>
+			<div class="col-xs-12 text-center content">
+				<h2 class="primary">DEVELOPMENT AND UX DESIGN</h2>
+				<p>I design and build online experiences that keep users coming back. My passion is using languages relevant to today's web like HTML5 to produce high quality solutions in modern technologies like Django. I am currently <span class="primary">available</span> for hire.</p>
 			</div>
-			<div class="col-xs-12 col-sm-5 text-center content">
-				<div class="img-wrapper">
-					<img src="img/skills.right@2x.png">
-				</div>
-				<h2 class="primary">UI/UX DESIGN</h2>
-				<p>I design, build and test user experiences that solve complex problems in the simplest manner possible. I enjoy finding ways to make my user's lives easier, and I believe solid design is a vital first step for that.</p>
-			</div>
-			
-			<!-- "Scroll to" link -->
-			<div id="nav-arrow-portfolio" class="nav-arrow text-center"><p class="floating">PORTFOLIO</p> <img class="floating" src="img/nav-arrow.png"></div>
 		</div>
-		
-		<!-- Section: Portfolio -->
-		<div class="row" id="portfolio">
-			<div class="col-xs-12 content">
-				<!-- Grid of portfolio pieces -->
-				<!-- Overlay effect used: http://tympanus.net/codrops/2013/06/18/caption-hover-effects/ -->
-				<ul class="grid cs-style-5">
-					
-					<!-- Camperdown Program Online -->
-					<li id="screen-cp" class="md-trigger" data-modal="modal-cp">
-						<figure>
-							<div class="screen-wrapper">
-								<div class="screen-header">
-									<div class="screen-buttons-wrapper">
-										<img class="screen-buttons" src="img/screen-buttons.png">
-									</div>
-								</div>
-								<img class="screen-img" src="img/screen-cp.png">
-							</div>
-							<figcaption>
-								<h3>CAMPERDOWN PROGRAM ONLINE</h3>
-								<span>Australian Stuttering Research Center</span>
-								<span class="description">An online component for the speech therapy program from the Australian Stuttering Research Centre. Built using <span class="primary">Django</span> with <span class="primary">Bootstrap</span>.</span>
-							</figcaption>
-						</figure>
-						
-					<!-- Study Drones -->
-					</li><li id="screen-sd" class="md-trigger" data-modal="modal-sd">
-						<figure>
-							<div class="screen-wrapper">
-								<div class="screen-header">
-									<div class="screen-buttons-wrapper">
-										<img class="screen-buttons" src="img/screen-buttons.png">
-									</div>
-								</div>
-								<img class="screen-img" src="img/screen-sd.png">
-							</div>
-							<figcaption>
-								<h3>STUDY DRONES</h3>
-								<span>University of Sydney</span>
-								<span class="description">A note-sharing tool that allows Usyd students to share files and collaborate with one another. Built using <span class="primary">Django</span> with <span class="primary">Bootstrap</span>.</span>
-							</figcaption>
-						</figure>
-						
-					<!-- KnowledgeCareer -->
-					</li><li id="screen-sd" class="md-trigger" data-modal="modal-kc">
-						<figure>
-							<div class="screen-wrapper">
-								<div class="screen-header">
-									<div class="screen-buttons-wrapper">
-										<img class="screen-buttons" src="img/screen-buttons.png">
-									</div>
-								</div>
-								<img class="screen-img" src="img/screen-kc.png">
-							</div>
-							<figcaption>
-								<h3>KNOWLEDGE CAREER</h3>
-								<span>Simplogy Pty Ltd</span>
-								<span class="description">Assists individuals with their continuing professional development through personalized learning paths. Built using <span class="primary">Drupal</span>.</span>
-							</figcaption>
-						</figure>
-						
-					<!-- Touchstone -->
-					</li><li id="screen-sd" class="md-trigger" data-modal="modal-ts">
-						<figure>
-							<div class="screen-wrapper">
-								<div class="screen-header">
-									<div class="screen-buttons-wrapper">
-										<img class="screen-buttons" src="img/screen-buttons.png">
-									</div>
-								</div>
-								<img class="screen-img" src="img/screen-ts.png">
-							</div>
-							<figcaption>
-								<h3>TOUCHSTONE</h3>
-								<span>CSIRO</span>
-								<span class="description">A web-based implementation for the database benchmarking standard TPC-C. Built under CSIRO supervision using <span class="primary">J2EE</span> and the <span class="primary">Play Framework</span>.</span>
-							</figcaption>
-						</figure>
-					</li>
-				</ul>
-			</div>
-			
-			<!-- "Scroll to" link -->
-			<div id="nav-arrow-contact" class="nav-arrow text-center"><p class="floating">CONTACT</p> <img class="floating" src="img/nav-arrow.png"></div>
-		</div>
-		
-		<!-- Section: Contact -->
-		<div class="row" id="contact">
-			
-			<div class="col-sm-12 col-md-6 col-md-offset-3 text-center">
-			
-				<div class="contact-icon-wrapper">
-					<div class="row-fluid">
-					
-						<!-- Heading icon -->
-						<div class="col-xs-12 text-center heading-icon">
-							<div class="contact-icon">
-								<img src="img/contact-icon.png">
-							</div>
-						</div>
-					
-						<div class="clearfix"></div>
-					</div>
-					
-				</div>
-			
-				<!-- Message form (works via ajax in functions.js) -->
-				<div class="contact-form-wrapper">
-					<form id="contact-form" role="form" method="post" action="http://getsimpleform.com/messages?form_api_token=eca2adb05b1ade6f67db49e9bdab0822">
-						<div class="left-inner-addon ">
-							<i class="fa fa-user"></i>
-							<input type="text" class="form-control" id="input-name" placeholder="Name">
-						</div>
-						
-						<div class="left-inner-addon ">
-							<i class="fa fa-envelope"></i>
-							<input type="email" class="form-control" id="input-email" placeholder="Email">
-						</div>
-						
-						<div class="left-inner-addon ">
-							<i class="fa fa-pencil"></i>
-							<textarea rows="4" class="form-control" id="input-message" placeholder="Message"></textarea>
-						</div>
-							
-						<button type="submit" class="btn btn-default"><i class="fa fa-envelope"></i></button>
-					</form>
-				</div>
-			
-			</div>
-			
-		</div>
-		
-		<!-- Signing off -->
-		<footer>
-			<p class="text-center">Designed with <i class="fa fa-heart primary"></i> by Gian Johansen</p>
-		</footer>
-
 	</div><!-- /container -->
+	
+	<div id="portfolio-wrapper">
+		<div class="container">
+			<!-- Section: Portfolio -->
+			<div class="row" id="portfolio">	
+				<div class="col-xs-12 content">
+					
+					<h2 class="primary text-center">RECENT WORK</h2>
+				
+					<!-- Grid of portfolio pieces -->
+					<!-- Overlay effect used: http://tympanus.net/codrops/2013/06/18/caption-hover-effects/ -->
+					<ul class="grid cs-style-5">
+						
+						<!-- Camperdown Program Online -->
+						<li id="screen-cp" class="md-trigger" data-modal="modal-cp">
+							<figure>
+								<div class="screen-wrapper">
+									<div class="screen-header">
+										<div class="screen-buttons-wrapper">
+											<img class="screen-buttons" src="img/screen-buttons.png">
+										</div>
+									</div>
+									<img class="screen-img" src="img/screen-cp.png">
+								</div>
+								<figcaption>
+									<h3>CAMPERDOWN PROGRAM ONLINE</h3>
+									<span>Australian Stuttering Research Center</span>
+									<span class="description">An online component for the speech therapy program from the Australian Stuttering Research Centre. Built using <strong>Django</strong> with <strong>Bootstrap</strong>.</span>
+								</figcaption>
+							</figure>
+							
+						<!-- Touchstone -->
+						</li><li id="screen-sd" class="md-trigger" data-modal="modal-ts">
+							<figure>
+								<div class="screen-wrapper">
+									<div class="screen-header">
+										<div class="screen-buttons-wrapper">
+											<img class="screen-buttons" src="img/screen-buttons.png">
+										</div>
+									</div>
+									<img class="screen-img" src="img/screen-ts.png">
+								</div>
+								<figcaption>
+									<h3>TOUCHSTONE</h3>
+									<span>CSIRO</span>
+									<span class="description">A web-based implementation for the database benchmarking standard TPC-C. Built under CSIRO supervision using <strong>J2EE</strong> and the <strong>Play Framework</strong>.</span>
+								</figcaption>
+							</figure>
+							
+						<!-- KnowledgeCareer -->
+						</li><li id="screen-sd" class="md-trigger" data-modal="modal-kc">
+							<figure>
+								<div class="screen-wrapper">
+									<div class="screen-header">
+										<div class="screen-buttons-wrapper">
+											<img class="screen-buttons" src="img/screen-buttons.png">
+										</div>
+									</div>
+									<img class="screen-img" src="img/screen-kc.png">
+								</div>
+								<figcaption>
+									<h3>KNOWLEDGE CAREER</h3>
+									<span>Simplogy Pty Ltd</span>
+									<span class="description">Assists individuals with their continuing professional development through personalized learning paths. Built using <strong>Drupal</strong>.</span>
+								</figcaption>
+							</figure>
+							
+						<!-- Study Drones -->
+						</li><li id="screen-sd" class="md-trigger" data-modal="modal-sd">
+							<figure>
+								<div class="screen-wrapper">
+									<div class="screen-header">
+										<div class="screen-buttons-wrapper">
+											<img class="screen-buttons" src="img/screen-buttons.png">
+										</div>
+									</div>
+									<img class="screen-img" src="img/screen-sd.png">
+								</div>
+								<figcaption>
+									<h3>STUDY DRONES</h3>
+									<span>University of Sydney</span>
+									<span class="description">A note-sharing tool that allows Usyd students to share files and collaborate with one another. Built using <strong>Django</strong> with <strong>Bootstrap</strong>.</span>
+								</figcaption>
+							</figure>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div><!-- /portfolio-wrapper -->
+	
+	<!-- Section: Contact -->
+	<div id="contact-header" class="text-center">
+		<h2>LET'S TALK</h2>
+		<p>If you'd like to get in touch to talk code, employment or anything else, please do.<br><i class="fa fa-phone"></i> 0424 943 243</p>
+	</div>
+	
+	<!-- Google maps -->
+	<div id="map-wrapper">
+		<div id="map"></div>
+		<div id="map-overlay"></div>
+	</div>
+	
+	<!-- Signing off -->
+	<footer>
+		<p class="text-center">Designed with <i class="fa fa-heart"></i> by Gian Johansen</p>
+	</footer>
 
 	<!-- Modal overlay element -->
 	<div class="md-overlay"></div>
@@ -299,6 +289,34 @@
 				<button class="md-close">Go back</button>
 			</div>
 		</div>
+	</div>
+	<div class="md-modal md-effect-1" id="modal-contact">
+		<div class="md-content">
+			<h3>Send me a message</h3>
+				<!-- Message form (works via ajax in functions.js) -->
+				<div class="contact-form-wrapper">
+					<form id="contact-form" role="form" method="post" action="http://getsimpleform.com/messages?form_api_token=eca2adb05b1ade6f67db49e9bdab0822">
+						<div class="left-inner-addon ">
+							<i class="fa fa-user"></i>
+							<input type="text" class="form-control" id="input-name" placeholder="Name">
+						</div>
+						
+						<div class="left-inner-addon ">
+							<i class="fa fa-envelope"></i>
+							<input type="email" class="form-control" id="input-email" placeholder="Email">
+						</div>
+						
+						<div class="left-inner-addon ">
+							<i class="fa fa-pencil"></i>
+							<textarea rows="4" class="form-control" id="input-message" placeholder="Message"></textarea>
+						</div>
+							
+						<button id="contact-submit" type="submit" class="btn btn-success">Send Message</button>
+						<button id="contact-cancel" type="button" class="btn btn-danger md-close">Cancel</button>
+					</form>
+				</div>
+		</div>
+		<div
 	</div>
 	
 	<!-- JavaScript -->
