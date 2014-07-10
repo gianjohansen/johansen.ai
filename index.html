@@ -26,11 +26,13 @@
 	<!-- Google Maps -->
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClwWGwIJbvlVIa6jCIVB7BJXy4rt3T5I0&sensor=false"></script>
 	<script type="text/javascript">
-		// When the window has finished loading create our google map below
+		// Create map on page load
 		google.maps.event.addDomListener(window, 'load', init);
 	
 		function init() {
-			var sydney = new google.maps.LatLng(-33.88803,151.194126); // School of IT
+			// School of IT latitude and longitude
+			var sydney = new google.maps.LatLng(-33.88803,151.194126); 
+			
 			var mapOptions = {
 				// Initial map zoom
 				zoom: 15,
@@ -64,13 +66,13 @@
 </head>
 <body>
 	<!-- Navbar -->
-	<nav class="navbar navbar-fixed-top" role="navigation">
+	<nav class="navbar" role="navigation">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
 					<!-- Logo -->
 					<div id="navbar-brand-wrapper" class="navbar-header">
-						<a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+						<span class="navbar-brand"><img src="img/logo.png"></span>
 					</div>
 					<!-- Contact link -->
 					<ul class="nav navbar-nav navbar-right">
@@ -90,7 +92,7 @@
 				<!-- Hero image and text -->
 				<div id="description">
 					<h2>CREATING ENGAGING EXPERIENCES FOR WEB&nbsp;AND&nbsp;MOBILE</h2>
-					<div id="description-separator"></div>
+					<div class="separator"></div>
 				</div>
 				
 				<!-- "Scroll to" link -->
@@ -110,12 +112,12 @@
 	</div><!-- /container -->
 	
 	<div id="portfolio-wrapper">
-		<div class="container">
-			<!-- Section: Portfolio -->
+				<!-- Section: Portfolio -->
 			<div class="row" id="portfolio">	
-				<div class="col-xs-12 content">
+				<div class="col-xs-12 text-center content">
 					
 					<h2 class="primary text-center">RECENT WORK</h2>
+					<div class="separator"></div>
 				
 					<!-- Grid of portfolio pieces -->
 					<!-- Overlay effect used: http://tympanus.net/codrops/2013/06/18/caption-hover-effects/ -->
@@ -125,11 +127,6 @@
 						<li id="screen-cp" class="md-trigger" data-modal="modal-cp">
 							<figure>
 								<div class="screen-wrapper">
-									<div class="screen-header">
-										<div class="screen-buttons-wrapper">
-											<img class="screen-buttons" src="img/screen-buttons.png">
-										</div>
-									</div>
 									<img class="screen-img" src="img/screen-cp.png">
 								</div>
 								<figcaption>
@@ -138,16 +135,11 @@
 									<span class="description">An online component for the speech therapy program from the Australian Stuttering Research Centre. Built using <strong>Django</strong> with <strong>Bootstrap</strong>.</span>
 								</figcaption>
 							</figure>
-							
+							<div class="portfolio-grainoverlay"></div>
 						<!-- Touchstone -->
 						</li><li id="screen-sd" class="md-trigger" data-modal="modal-ts">
 							<figure>
 								<div class="screen-wrapper">
-									<div class="screen-header">
-										<div class="screen-buttons-wrapper">
-											<img class="screen-buttons" src="img/screen-buttons.png">
-										</div>
-									</div>
 									<img class="screen-img" src="img/screen-ts.png">
 								</div>
 								<figcaption>
@@ -156,16 +148,11 @@
 									<span class="description">A web-based implementation for the database benchmarking standard TPC-C. Built under CSIRO supervision using <strong>J2EE</strong> and the <strong>Play Framework</strong>.</span>
 								</figcaption>
 							</figure>
-							
+							<div class="portfolio-grainoverlay"></div>
 						<!-- KnowledgeCareer -->
 						</li><li id="screen-sd" class="md-trigger" data-modal="modal-kc">
 							<figure>
 								<div class="screen-wrapper">
-									<div class="screen-header">
-										<div class="screen-buttons-wrapper">
-											<img class="screen-buttons" src="img/screen-buttons.png">
-										</div>
-									</div>
 									<img class="screen-img" src="img/screen-kc.png">
 								</div>
 								<figcaption>
@@ -174,16 +161,11 @@
 									<span class="description">Assists individuals with their continuing professional development through personalized learning paths. Built using <strong>Drupal</strong>.</span>
 								</figcaption>
 							</figure>
-							
+							<div class="portfolio-grainoverlay"></div>
 						<!-- Study Drones -->
 						</li><li id="screen-sd" class="md-trigger" data-modal="modal-sd">
 							<figure>
 								<div class="screen-wrapper">
-									<div class="screen-header">
-										<div class="screen-buttons-wrapper">
-											<img class="screen-buttons" src="img/screen-buttons.png">
-										</div>
-									</div>
 									<img class="screen-img" src="img/screen-sd.png">
 								</div>
 								<figcaption>
@@ -192,11 +174,11 @@
 									<span class="description">A note-sharing tool that allows Usyd students to share files and collaborate with one another. Built using <strong>Django</strong> with <strong>Bootstrap</strong>.</span>
 								</figcaption>
 							</figure>
+							<div class="portfolio-grainoverlay"></div>
 						</li>
 					</ul>
 				</div>
 			</div>
-		</div><!-- /container -->
 	</div><!-- /portfolio-wrapper -->
 	
 	<!-- Section: Contact -->
@@ -224,10 +206,10 @@
 		<div class="md-content">
 			<h3>Camperdown Program Online</h3>
 			<div>
-				<p><strong>Early-Mid 2014</strong></p>
+				<p><strong>Australian Stuttering Research Center<br>Early-Mid 2014</strong></p>
+				<p>An online component for their speech therapy program. I was part of the frontend team during its development.</p>
 				<!-- Contribution listing -->
 				<ul>
-					<li>I was part of the frontend team during the development and release of the service.</li>
 					<li>I prototyped the UX design and aesthetic, first by hand, then in Photoshop and <a target="_blank" href="http://balsamiq.com/">Balsamiq</a>.</li>
 					<li>I created UML diagrams during the design stage and worked from them during implementation.</li>
 					<li>I did interface implementation work in Django using Python and HTML/CSS/jQuery.</li>
@@ -242,10 +224,10 @@
 		<div class="md-content">
 			<h3>Study Drones</h3>
 			<div>
-				<p><strong>Late 2013</strong></p>
+				<p><strong>University project<br>Late 2013</strong></p>
+				<p>A note-sharing tool that allows Usyd students to share files and collaborate with one another. I was the sole frontend team member.</p>
 				<!-- Contribution listing -->
 				<ul>
-					<li>I was in charge of the frontend development team throughout the project.</li>
 					<li>I did the frontend-related sections of our UML work.</li>
 					<li>I prototyped the UX design and aesthetic, first by hand, then in Photoshop.</li>
 					<li>I did interface implementation work in Django using Python and HTML/CSS/jQuery.</li>
@@ -260,10 +242,10 @@
 		<div class="md-content">
 			<h3>Knowledge Career</h3>
 			<div>
-				<p><strong>Late 2013</strong></p>
+				<p><strong>Simplogy Pty Ltd<br>Late 2013</strong></p>
+				<p>Assists individuals with their continuing professional development through personalized learning paths. I was part of the frontend team during the website's pre-release phase.</p>
 				<!-- Contribution listing -->
 				<ul>
-                      <li>I was part of the frontend team during the websites pre-release phase.</li>
                       <li>I prototyped the UX design and aesthetic, first by hand, then in Photoshop.</li>
                       <li>I did interface implementation work in <a target="_blank" href="https://drupal.org/">Drupal</a> using PHP and HTML/CSS/jQuery.</li>
                       <li>I evaluated and modified the UX using live-user testing and A/B testing. This included regular meetings with the client to demonstrate designs and incorporate feedback.</li>
@@ -277,10 +259,11 @@
 		<div class="md-content">
 			<h3>Touchstone</h3>
 			<div>
-				<p><strong>Mid-Late 2014</strong></p>
+				<p><strong>CSIRO<br>Mid-Late 2014</strong></p>
+				<p>A web-based implementation for the database benchmarking standard TPC-C. I am developing the web application under CSIRO supervision.</p>
 				<!-- Contribution listing -->
 				<ul>
-                      <li>I am working under the supervision of CSIRO senior researcher <a href="http://ict.csiro.au/staff/shiping.chen/">Dr Shiping Chen</a>. There is a thesis component in addition to the development work.</li>
+                      <li>I am working under CSIRO senior researcher <a href="http://ict.csiro.au/staff/shiping.chen/">Dr Shiping Chen</a>. There is a thesis component in addition to the development work.</li>
                       <li>I determined project requirements through extensive consultation with Dr Chen, then expressed those using UML and an SRS.</li>
                       <li>I implemented the web application in Java within the <a href="http://www.playframework.com/">Play Framework</a> and HTML/CSS/jQuery.</li>
 					  <li>I coded the frontend using the web framework <a target="_blank" href="http://getbootstrap.com">Bootstrap</a>.</li>
@@ -289,34 +272,6 @@
 				<button class="md-close">Go back</button>
 			</div>
 		</div>
-	</div>
-	<div class="md-modal md-effect-1" id="modal-contact">
-		<div class="md-content">
-			<h3>Send me a message</h3>
-				<!-- Message form (works via ajax in functions.js) -->
-				<div class="contact-form-wrapper">
-					<form id="contact-form" role="form" method="post" action="http://getsimpleform.com/messages?form_api_token=eca2adb05b1ade6f67db49e9bdab0822">
-						<div class="left-inner-addon ">
-							<i class="fa fa-user"></i>
-							<input type="text" class="form-control" id="input-name" placeholder="Name">
-						</div>
-						
-						<div class="left-inner-addon ">
-							<i class="fa fa-envelope"></i>
-							<input type="email" class="form-control" id="input-email" placeholder="Email">
-						</div>
-						
-						<div class="left-inner-addon ">
-							<i class="fa fa-pencil"></i>
-							<textarea rows="4" class="form-control" id="input-message" placeholder="Message"></textarea>
-						</div>
-							
-						<button id="contact-submit" type="submit" class="btn btn-success">Send Message</button>
-						<button id="contact-cancel" type="button" class="btn btn-danger md-close">Cancel</button>
-					</form>
-				</div>
-		</div>
-		<div
 	</div>
 	
 	<!-- JavaScript -->

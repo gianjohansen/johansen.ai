@@ -11,9 +11,3 @@ $("#nav-arrow-contact, #navbar-contact").click(function() {
     }, 2000);
     return false;
 });
-$("#navbar-brand-wrapper").click(function() {
-    $('html, body').stop(true, true).animate({
-        scrollTop: 0
-    }, 2000);
-    return false;
-});
