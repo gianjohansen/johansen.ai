@@ -663,8 +663,28 @@ footer p {
 		display: none;
 	}
 }
+@media screen and (max-height: 450px) { 
+	.md-modal ul {
+		display: none;
+	}
+	.md-modal button {
+		margin-top: 16px;
+	}
+}
 @media screen and (max-width: 1000px) { 
 	.navbar {
 		display: none;
+	}
+}
+
+@media screen and (max-width: 1000px) { 
+	.md-modal {
+		width: 90%;
+	}
+	.md-modal h3 {
+		font-size: 18px;
+	}
+	.md-modal p, .md-modal li, .md-modal button {
+		font-size: 13px;
 	}
 }
