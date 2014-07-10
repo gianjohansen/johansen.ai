@@ -147,6 +147,7 @@ a:hover {
 	width: 100%;
 	line-height: 48px;
 	color: #fff;
+	padding: 0 48px;
 }
 
 .separator {
@@ -222,6 +223,7 @@ a:hover {
 	width: 100%;
 	line-height: 48px;
 	color: #111;
+	padding: 0 48px;
 }
 
 #portfolio {
@@ -265,6 +267,7 @@ a:hover {
 	line-height: 48px;
 	color: #fff;
 	margin-bottom: 0;
+	padding: 0 48px;
 }
 
 #portfolio .grid li:hover {
@@ -310,6 +313,7 @@ a:hover {
 	line-height: 48px;
 	color: #111;
 	margin: 0;
+	padding: 0 48px;
 }
 #contact-header p {
 	color: #7C7C7C;
@@ -492,11 +496,10 @@ a:hover {
 
 @media screen and (max-width: 31.5em) {
 	.grid {
-		padding: 10px 10px 100px 10px;
+		padding: 10px;
 	}
 	.grid li {
 		width: 100%;
-		min-width: 300px;
 	}
 }
 
@@ -681,10 +684,27 @@ footer p {
 	.md-modal {
 		width: 90%;
 	}
+}
+@media screen and (max-width: 720px) { 
 	.md-modal h3 {
 		font-size: 18px;
 	}
 	.md-modal p, .md-modal li, .md-modal button {
 		font-size: 13px;
+	}
+}
+
+@media screen and (max-width: 480px) { 
+	#intro #description h2, #skills h2, #portfolio h2, #contact-header h2 {
+		font-size: 20px;
+		letter-spacing: 0.05em;
+		padding: 0 24px;
+	}
+	#skills p, #contact-header p, footer p {
+		font-size: 13px;
+	}
+	#skills, #portfolio, #contact-header {
+		padding-top: 80px;
+		padding-bottom: 80px;
 	}
 }
