@@ -43,7 +43,8 @@ a:hover {
 .navbar-nav > li > .nav-button {
 	padding: 30px 0;
 	color: #fff;
-	font-weight: 700;
+	font-weight: 300;
+	letter-spacing: 0.1em;
 }
 
 .navbar-nav > li > .nav-button:hover {
