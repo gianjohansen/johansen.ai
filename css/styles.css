@@ -16,6 +16,9 @@ h1, h2, h3, h4, h5, h6 {
 .primary, a, a:hover {
 	color: #DFB47D;
 }
+.unavailable {
+	color: #C0392B;
+}
 
 a:hover {
 	text-decoration: underline;
