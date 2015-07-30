@@ -5,6 +5,8 @@
  * 
  */
 
+@import 'normalize';
+
 $sans-stack:	Montserrat, sans-serif;
 $serif-stack:   Merriweather, sans-serif;
 $primary-color: #53b50a;
@@ -78,6 +80,12 @@ a:hover {
 
 	i {
 		color: $primary-color;
+	}
+
+	#heart {
+		display: inline-block;
+		vertical-align: bottom;
+    	height: 15px;
 	}
 }
 
