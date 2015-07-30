@@ -1,279 +1,52 @@
 <!doctype html>
-<html lang="en">
+<html>
+
 <head>
-	<!-- Meta -->
-	<meta charset="utf-8" />
-	<title>Portfolio | Gian Johansen</title>
-	<link rel="shortcut icon" href="favicon.ico" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width">
-	<meta name="description" content="Portfolio of web developer Gian Johansen.">
 	
-	<!-- CSS -->
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/styles.css" />
+	<!-- meta -->
+	<title>Gian Johansen | Web Developer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="favicon.png" />
 	
-	<!-- Fonts -->
-	<link href='//fonts.googleapis.com/css?family=Roboto:400,700,300,100' rel='stylesheet' type='text/css'>
-	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<!-- fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Merriweather:400|Montserrat:700' rel='stylesheet' type='text/css'>
 	
-	<!-- JavaScript -->
-	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	<script src="js/modernizr.custom.js"></script>
-	
-	<!-- Google Maps -->
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClwWGwIJbvlVIa6jCIVB7BJXy4rt3T5I0&amp;sensor=false"></script>
-	<script type="text/javascript">
-		// Create map on page load
-		google.maps.event.addDomListener(window, 'load', init);
-	
-		function init() {
-			// School of IT latitude and longitude
-			var sydney = new google.maps.LatLng(-33.88803,151.194126); 
-			
-			var mapOptions = {
-				// Initial map zoom
-				zoom: 15,
-				// Initial latitude, longitude
-				center: sydney,
-				// Map styling
-				styles: [{featureType:"landscape",stylers:[{saturation:-100},{lightness:65},{visibility:"on"}]},{featureType:"poi",stylers:[{saturation:-100},{lightness:51},{visibility:"simplified"}]},{featureType:"road.highway",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"road.arterial",stylers:[{saturation:-100},{lightness:30},{visibility:"on"}]},{featureType:"road.local",stylers:[{saturation:-100},{lightness:40},{visibility:"on"}]},{featureType:"transit",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"administrative.province",stylers:[{visibility:"off"}]/**/},{featureType:"administrative.locality",stylers:[{visibility:"off"}]},{featureType:"administrative.neighborhood",stylers:[{visibility:"on"}]/**/},{featureType:"water",elementType:"labels",stylers:[{visibility:"on"},{lightness:-25},{saturation:-100}]},{featureType:"water",elementType:"geometry",stylers:[{hue:"#ffff00"},{lightness:-25},{saturation:-97}]}]
-			};
-
-			// Create the map
-			var mapElement = document.getElementById('map');
-			var map = new google.maps.Map(mapElement, mapOptions);
-			
-			// Add marker to school of IT
-			var marker = new google.maps.Marker({
-				position: sydney,
-				map: map,
-				title:"School of Information Technologies"
-			});
-
-		}
-	</script>
-	
-	<!-- Required inline declaration of google maps size -->
-	<style>
-		#map {
-			width: 100%;
-			height: 100%;
-		}
-	</style>
+	<!-- css -->
+	<link rel="stylesheet" href="assets/normalize.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/animate.css">
+	<link rel="stylesheet" href="assets/core.css">
 </head>
+
 <body>
-	<!-- Navbar -->
-	<nav class="navbar" role="navigation">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<!-- Logo -->
-					<div id="navbar-brand-wrapper" class="navbar-header">
-						<span class="navbar-brand"><img src="img/logo.png" alt="Gian Johansen's logo"></span>
-					</div>
-					<!-- Contact link -->
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-						<a id="navbar-contact" class="nav-button" href="#">CONTACT ME</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</nav>
 
-	<!-- Section: Introduction -->
-	<div id="intro">
-		<div id="grain-overlay"></div>
-		<div class="content">
-				<!-- Hero image and text -->
+	<!-- loading animation -->
+	<img id="preload" src="assets/gians-spinner.gif">
+
+	<!-- content -->
+	<section id="hero">
+		<div id="inner">
+			<!-- monogram -->
+			<div id="logo"><h2>G</h2></div>
+
+			<!-- text -->
+			<div id="wrapper">
 				<div id="description">
-					<h2>CREATING ENGAGING EXPERIENCES FOR WEB&nbsp;AND&nbsp;MOBILE</h2>
-					<div class="separator"></div>
+					<h1>Gian Johansen</h1>
+					<h2>I'm Gian, a front-end web developer helping turn brands into digital experiences. I'm on <a href="#">Twitter</a> and <a href="#">Github</a>.</h2>
 				</div>
-				
-				<!-- "Scroll to" link -->
-				<div id="nav-arrow-skills" class="nav-arrow text-center"><div id="scrollwheel"></div></div>
-		</div>
-	</div>
+			</div>
+			<span id="copyright">Made with <i class="fa fa-heart"></i> by Gian in Sydney, Australia</span>
 			
-	<div class="container">
-		<!-- Section: Skills -->
-		<div class="row" id="skills">
-			<!-- Left and right skills -->
-			<div class="col-xs-12 text-center content">
-				<h2 class="primary">DEVELOPMENT AND UX&nbsp;DESIGN</h2>
-				<p>I design and build online experiences that keep users coming back. My passion is using languages relevant to today's web like HTML5 to produce high quality solutions in modern technologies like Django. I am currently <span class="unavailable">unavailable</span> for hire.</p>
-			</div>
+			<!-- video and overlay -->
+			<div id="hero-bg-cover"></div>
+			<video id="hero-bg" src="media/hero-bg-1-30sec.mp4" autoplay loop>
 		</div>
-	</div><!-- /container -->
-	
-	<div id="portfolio-wrapper">
-				<!-- Section: Portfolio -->
-			<div class="row" id="portfolio">	
-				<div class="col-xs-12 text-center content">
-					
-					<h2 class="primary text-center">RECENT WORK</h2>
-					<div class="separator"></div>
-				
-					<!-- Grid of portfolio pieces -->
-					<!-- Overlay effect used: http://tympanus.net/codrops/2013/06/18/caption-hover-effects/ -->
-					<ul class="grid cs-style-5">
-						
-						<!-- Camperdown Program Online -->
-						<li id="screen-cp" class="md-trigger" data-modal="modal-cp">
-							<figure>
-								<div class="screen-wrapper">
-									<img class="screen-img" src="img/screen-cp.png" alt="Screenshot of Camperdown Program Online">
-								</div>
-							</figure>
-							<div class="portfolio-grainoverlay"></div>
-						<!-- Touchstone -->
-						</li><li id="screen-ts" class="md-trigger" data-modal="modal-ts">
-							<figure>
-								<div class="screen-wrapper">
-									<img class="screen-img" src="img/screen-ts.png" alt="Screenshot of Touchstone">
-								</div>
-							</figure>
-							<div class="portfolio-grainoverlay"></div>
-						<!-- KnowledgeCareer -->
-						</li><li id="screen-kc" class="md-trigger" data-modal="modal-kc">
-							<figure>
-								<div class="screen-wrapper">
-									<img class="screen-img" src="img/screen-kc.png" alt="Screenshot of KnowledgeCareer">
-								</div>
-							</figure>
-							<div class="portfolio-grainoverlay"></div>
-						<!-- Study Drones -->
-						</li><li id="screen-sd" class="md-trigger" data-modal="modal-sd">
-							<figure>
-								<div class="screen-wrapper">
-									<img class="screen-img" src="img/screen-sd.png" alt="Screenshot of Study Drones">
-								</div>
-							</figure>
-							<div class="portfolio-grainoverlay"></div>
-						</li>
-					</ul>
-				</div>
-			</div>
-	</div><!-- /portfolio-wrapper -->
-	
-	<!-- Section: Contact -->
-	<div id="contact-header" class="text-center">
-		<h2>LET'S TALK</h2>
-		<p>If you'd like to get in touch to talk code, employment or anything else, please do.<br><i class="fa fa-phone"></i> 0424 943 243</p>
-	</div>
-	
-	<!-- Google maps -->
-	<div id="map-wrapper">
-		<div id="map"></div>
-		<div id="map-overlay"></div>
-	</div>
-	
-	<!-- Signing off -->
-	<footer>
-		<p class="text-center">Designed with <i class="fa fa-heart"></i> by Gian Johansen</p>
-	</footer>
+	</section>
 
-	<!-- Modal overlay element -->
-	<div class="md-overlay"></div>
-	
-	<!-- Portfolio piece modals -->
-	<div class="md-modal md-effect-1" id="modal-cp">
-		<div class="md-content">
-			<h3>Camperdown Program Online</h3>
-			<div>
-				<p><strong>Australian Stuttering Research Center<br>Early-Mid 2014</strong></p>
-				<p>An online component for their speech therapy program. I was part of the frontend team during its development.</p>
-				<!-- Contribution listing -->
-				<ul>
-					<li>I prototyped the UX design and aesthetic, first by hand, then in Photoshop and <a target="_blank" href="http://balsamiq.com/">Balsamiq</a>.</li>
-					<li>I created UML diagrams during the design stage and worked from them during implementation.</li>
-					<li>I did interface implementation work in Django using Python and HTML/CSS/jQuery.</li>
-					<li>I used the web frameworks <a target="_blank" href="http://getbootstrap.com">Bootstrap</a> and <a target="_blank" href="http://www.getskeleton.com/">Skeleton</a> to scaffold and code the site.</li>
-					<li>I worked as part of a team using internally-hosted <a target="_blank" href="http://git-scm.com/">Git</a> for source control and <a target="_blank" href="http://www.redmine.org/">Redmine</a> for project management.</li>
-				</ul>
-				<button class="md-close">Go back</button>
-			</div> 
-		</div>
-	</div>
-	<div class="md-modal md-effect-1" id="modal-sd">
-		<div class="md-content">
-			<h3>Study Drones</h3>
-			<div>
-				<p><strong>University project<br>Late 2013</strong></p>
-				<p>A note-sharing tool that allows Usyd students to share files and collaborate with one another. I was the sole frontend team member.</p>
-				<!-- Contribution listing -->
-				<ul>
-					<li>I did the frontend-related sections of our UML work.</li>
-					<li>I prototyped the UX design and aesthetic, first by hand, then in Photoshop.</li>
-					<li>I did interface implementation work in Django using Python and HTML/CSS/jQuery.</li>
-					<li>I coded the frontend using the web framework <a target="_blank" href="http://getbootstrap.com">Bootstrap</a>.</li>
-					<li>I worked as part of a team using <a target="_blank" href="https://bitbucket.org/">BitBucket</a> for source control.</li>
-				</ul>
-				<button class="md-close">Go back</button>
-			</div>
-		</div>
-	</div>
-	<div class="md-modal md-effect-1" id="modal-kc">
-		<div class="md-content">
-			<h3>Knowledge Career</h3>
-			<div>
-				<p><strong>Simplogy Pty Ltd<br>Late 2013</strong></p>
-				<p>Assists individuals with their continuing professional development through personalized learning paths. I was part of the frontend team during the website's pre-release phase.</p>
-				<!-- Contribution listing -->
-				<ul>
-					<li>I prototyped the UX design and aesthetic, first by hand, then in Photoshop.</li>
-					<li>I did interface implementation work in <a target="_blank" href="https://drupal.org/">Drupal</a> using PHP and HTML/CSS/jQuery.</li>
-					<li>I evaluated and modified the UX using live-user testing and A/B testing. This included regular meetings with the client to demonstrate designs and incorporate feedback.</li>
-					<li>I worked as part of a team using <a target="_blank" href="http://subversion.apache.org/">Subversion</a> for source control and <a target="_blank" href="http://trac.edgewall.org/">Trac</a> for project management. Our team used the Extreme Programming methodology.</li>
-				</ul>
-				<button class="md-close">Go back</button>
-			</div>
-		</div>
-	</div>
-	<div class="md-modal md-effect-1" id="modal-ts">
-		<div class="md-content">
-			<h3>Touchstone</h3>
-			<div>
-				<p><strong>CSIRO<br>Mid-Late 2014</strong></p>
-				<p>A web-based implementation for the database benchmarking standard TPC-C. I am developing the web application under CSIRO supervision.</p>
-				<!-- Contribution listing -->
-				<ul>
-					<li>I am working under CSIRO senior researcher <a href="http://ict.csiro.au/staff/shiping.chen/">Dr Shiping Chen</a>. There is a thesis component in addition to the development work.</li>
-					<li>I determined project requirements through extensive consultation with Dr Chen, then expressed those using UML and an SRS.</li>
-					<li>I implemented the web application in Java within the <a href="http://www.playframework.com/">Play Framework</a> and HTML/CSS/jQuery.</li>
-					<li>I coded the frontend using the web framework <a target="_blank" href="http://getbootstrap.com">Bootstrap</a>.</li>
-					<li>I collaborated with my supervisors using <a target="_blank" href="http://git-scm.com/">Git</a> for source control and <a target="_blank" href="http://jekyllrb.com/">Jekyll</a> for tracking my progress.</li>
-				</ul>
-				<button class="md-close">Go back</button>
-			</div>
-		</div>
-	</div>
-	
-	<!-- JavaScript -->
-	<script src="js/functions.js"></script>
-	
-	<!-- Modal effects plugin -->
-	<script src="js/classie.js"></script>
-	<script src="js/modalEffects.js"></script>
-	
-	<!-- Touch handling for hover overlay -->
-	<script src="js/toucheffects.js"></script>
-	
-	<!-- Google analytics -->
-	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-38281823-1']);
-	  _gaq.push(['_trackPageview']);
-	  (function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	</script>
+	<!-- display content on load -->
+	<script src="assets/functions.js"></script>
+
 </body>
+
 </html>

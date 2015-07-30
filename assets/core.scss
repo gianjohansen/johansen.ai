@@ -1,0 +1,212 @@
+/*
+ * main.css
+ * http://johansen.software 
+ * https://github.com/gianjohansen/gianjohansen.github.io
+ * 
+ */
+
+$sans-stack:	Montserrat, sans-serif;
+$serif-stack:   Merriweather, sans-serif;
+$primary-color: #53b50a;
+$dark-color:	#111;
+$light-color:	#fff;
+
+body {
+	font: 100% $sans-stack;
+	color: $dark-color;
+	background-color: $light-color;
+}
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: $light-color;
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+	transition: 0.3s ease color, 0.3s ease border-color;
+}
+a:hover {
+	border-bottom: 1px solid $light-color;
+}
+
+#preload {
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	left: 50%;
+	top: 50%;
+	margin-left: -32px;
+	margin-top: -32px;
+}
+
+#hero {
+	display: none;
+	height: 100%;
+	padding: 9px;
+	box-sizing: border-box;
+}
+
+#hero-bg-cover {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(48, 59, 90, 0.8);
+	z-index: 2;
+}
+#hero-bg {;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	background: url(hero-bg-fallback.jpg) no-repeat;
+	background-size: cover;
+	z-index: 1;
+}
+
+#copyright {
+	position: absolute;
+	left: 12px;
+	bottom: 12px;
+	color: #7C838A;
+	font-size: 12px;
+	font-family: $sans-stack;
+	z-index: 3;
+
+	i {
+		color: $primary-color;
+	}
+}
+
+#logo {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 72px;
+	height: 72px;
+	background: $primary-color;
+	z-index: 3;
+
+	h2 {
+		color: $light-color;
+		margin: 0;
+		line-height: 72px;
+		text-align: center;
+		font-family: $sans-stack;
+		font-size: 36px;
+		cursor: default;
+	}
+}
+
+#inner {
+	background: rgba(21, 48, 75, 0.85);
+	position: relative;
+	height: 100%;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+#wrapper {
+	z-index: 3;
+	position: absolute;
+	top: 50%;
+	left: 120px;
+}
+
+#description {
+	max-width: 720px;
+	color: $light-color;
+
+	h1 {
+		font-size: 84px;
+		margin: 0;
+		font-family: $sans-stack;
+		letter-spacing: -3px;
+		cursor: default;
+	}
+
+	h2 {
+		font-size: 24px;
+		line-height: 1.5;
+		margin: 0;
+		font-family: $serif-stack;
+		font-weight: 400;
+		cursor: default;
+	}
+
+	&:before {
+		content: '';
+	    position: absolute;
+	    bottom: -38px;
+	    background: $primary-color;
+	    width: 120px;
+	    height: 8px;
+	}
+}
+
+
+@media (max-width: 1050px) {
+	#wrapper {
+		left: 60px;
+	}
+}
+
+@media (max-width: 820px) {
+	#description {
+		max-width: 420px;
+
+		h1 {
+			font-size: 56px;
+		}
+
+		h2 {
+			font-size: 20px;
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	#wrapper {
+		top: 30%;
+	}
+}
+@media (max-width: 599px) {
+	#hero {
+		padding: 0;
+	}
+	#wrapper {
+		left: 0;
+		top: 30%;
+	}
+	#description {
+		max-width: 100%;
+		text-align: center;
+		padding: 0 12px;
+
+		h1 {
+			font-size: 32px;
+			letter-spacing: -0.03em;
+			margin-bottom: 12px;
+		}
+
+		h2 {
+			font-size: 18px;
+		}
+
+		&:before {
+			content: none;
+		}
+	}
+	#copyright {
+		display: none;
+	}
+}
+
+@media (max-height: 400px) {
+	#description:before {
+		content: none;
+	}
+}
