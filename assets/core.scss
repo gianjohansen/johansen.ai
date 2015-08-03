@@ -30,9 +30,38 @@ a {
 	text-decoration: none;
 	border-bottom: 1px solid transparent;
 	transition: 0.3s ease color, 0.3s ease border-color;
+    position: relative;
+}
+a:before {
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	color: transparent;
+	content: '•';
+	text-shadow: 0 0 transparent;
+	font-size: 1.2em;
+	-webkit-transition: text-shadow 0.3s, color 0.3s;
+	-moz-transition: text-shadow 0.3s, color 0.3s;
+	transition: text-shadow 0.3s, color 0.3s;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+	pointer-events: none;
 }
 a:hover {
-	border-bottom: 1px solid $light-color;
+}
+a:hover:before {
+	color: #fff;
+	text-shadow: 10px 0 #fff, -10px 0 #fff;
+}
+
+.list-unstyled {
+	list-style: none;
+	margin: 0;
+
+	li {
+		display: inline-block;
+	}
 }
 
 #preload {
@@ -43,6 +72,28 @@ a:hover {
 	top: 50%;
 	margin-left: -32px;
 	margin-top: -32px;
+}
+
+#top {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 4;
+}
+
+#nav {
+	float: right;
+	margin-right: 24px;
+	text-transform: uppercase;
+
+	a {
+		padding: 26px 0;
+		float: left;
+		width: 100px;
+		font-size: 12px;
+    	text-align: center;
+    	letter-spacing: 1px;
+	}
 }
 
 #hero {
@@ -73,7 +124,7 @@ a:hover {
 	position: absolute;
 	left: 12px;
 	bottom: 12px;
-	color: #7C838A;
+	color: #fff;
 	font-size: 12px;
 	font-family: $sans-stack;
 	z-index: 3;
