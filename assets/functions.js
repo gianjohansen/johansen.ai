@@ -30,9 +30,9 @@ function fadeIn( elem, ms )
   }
 }
 
-// give video a second of buffer time
+// give video a couple seconds of buffer time
 setTimeout(function() { 
 	document.getElementById("preload").style.display = "none";
 	document.body.style.background = "#eee";
 	fadeIn(document.getElementById("hero"), 300);
-}, 1000);
+}, 2000);
