@@ -3,7 +3,7 @@ setTimeout(function() {
   document.getElementById("preload").style.display = "none";
   document.body.style.background = "#eee";
   fadeIn(document.getElementById("hero"), 300);
-}, 200);
+}, 2000);
 
 // show about modal when triggered
 document.getElementById("trigger-about").onclick = showModalAbout;
