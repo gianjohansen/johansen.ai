@@ -2,17 +2,24 @@
 <html>
 
 <head>
-	
+
 	<!-- meta -->
 	<title>Gian Johansen | Web Developer</title>
+	<meta name="description" content="Website of OpenAgent's lead front-end web developer Gian Johansen, based out of Sydney, Australia.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" href="favicon.png" />
+	<link rel="shortcut icon" href="favicon.ico" />
 
 	<!-- fonts -->
-	<link href='http://fonts.googleapis.com/css?family=Merriweather:400|Montserrat:700' rel='stylesheet' type='text/css'>
-	
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
 	<!-- css -->
+	<link rel="stylesheet" href="assets/grid-1200.css">
 	<link rel="stylesheet" href="assets/core.css">
+
+	<!-- jquery -->
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+
 </head>
 
 <body>
@@ -21,59 +28,129 @@
 	<img id="preload" src="assets/gians-spinner.gif" alt="Loading animation">
 
 	<!-- content -->
-	<section id="hero">
-		<div id="inner">
-			<!-- navbar -->
-			<header id="top">
-				<!-- monogram -->
-				<div id="logo"><h2>G</h2></div>
-				
-				<!-- nav links -->
-				<div id="nav">
-					<ul class="list-unstyled">
-						<li><a target="_blank" id="trigger-about" class="md-trigger" data-modal="about-modal" href="#">About</a></li>
-						<li><a target="_blank" href="/journal/">Writing</a></li>
-						<li><a target="_blank" href="http://www.github.com/gianjohansen">GitHub</a></li>
-					</ul>
-				</div>
-			</header>
+	<div id="content-wrapper">
 
-			<!-- text -->
-			<div id="wrapper">
-				<div id="description">
-					<h1>Gian Johansen</h1>
-					<h2>I'm Gian, a front-end web developer helping turn brands into digital experiences. I'm currently at <a target="_blank" href="http://www.openagent.com.au">OpenAgent</a>.</h2>
+		<!-- hero -->
+		<section id="hero">
+
+				<!-- overlay video -->
+				<video id="hero-video" src="media/hero-bg-1-10sec.mp4" autoplay loop>
+    			<source src="media/hero-bg-1-20sec.mp4" type="video/mp4" />
+					<img src="assets/hero-overlay.png" title="Your browser does not support the <video> tag" />
+				</video>
+				<div id="hero-video-bg"></div>
+
+				<div class="container">
+					<div class="col-xs-12 text-center">
+
+						<!-- text -->
+						<div id="intro">
+							<h1><span class="primary">GIAN</span> JOHANSEN</h1>
+							<a id="contact-me" href="http://github.com/gianjohansen" target="_blank">View My Github</a>
+							<div id="scrolldown-wrapper"><img src="assets/scrolldown.png"></div>
+
+						</div>
+					</div>
+				</div>
+		</section>
+
+		<!-- about -->
+		<section id="about">
+			<div class="container">
+				<div class="col-xs-12 text-center">
+
+					<!-- the pitch -->
+					<h2>I'm Gian, a <strong class="primary">front-end web developer</strong>. I help turn brands into digital
+						experiences because every brand has a story to tell. I'm currently lead front-end engineer
+						at&nbsp;<a href="http://ww1.openagent.com.au/" target="_blank"><strong class="primary">OpenAgent</strong></a>.
+					</h2>
+
 				</div>
 			</div>
-			<span id="copyright">Made with <img id="heart" src="assets/heart.png" alt="Heart"> by Gian in Sydney, Australia</span>
-			
-			<!-- video and overlay -->
-			<div id="hero-bg-cover"></div>
-			<video id="hero-bg" autoplay loop>
-				<source src="media/hero-bg-1-15sec.mp4" type="video/mp4">
-				Sorry, your browser doesn't support embedded videos.
-			</video>
-		</div>
-	</section>
+		</section>
 
-	<!-- modal: about -->
-	<div class="md-modal md-effect" id="about-modal">
-		<div class="md-content">
-			<div>
-				<!-- description text -->
-				<div id="about-modal-description-heading">About Me</div><div id="about-modal-description-text"><p>My name is Gian Johansen. I'm a frontend web developer from Sydney, Australia that aligns the goals of businesses and users to create engaging digital experiences. I'm currently working fulltime at OpenAgent helping to drive some much needed innovation into the real estate industry. I work primarily in HTML5/CSS3, Javascript, Rails, ASP.NET and PHP. My goal is to write code that is simple, innovative and effective.</p><p>In my free time I enjoy tinkering with things that can be tinkered with. I also tutor software engineering students at the University of Sydney.</p></div>
+		<!-- work -->
+		<section id="work">
+			<div class="container">
+				<div class="col-xs-12 text-center">
 
-				<!-- experience text -->
-				<div id="about-modal-work-heading">Experience</div><div id="about-modal-work-text"><div><h3>September 2014 - Present</h3><h4>Web Developer at OpenAgent in Bondi Junction</h4><h5>Javascript and .NET development for the frontend team</h5></div><div><h3>July 2014 - September 2014</h3><h4>Intern at OpenAgent in Surry Hills</h4><h5>Web design and data analytics for the marketing team</h5></div><div><h3>February 2014 - November 2014</h3><h4>Senior Thesis at the University of Sydney</h4><h5>"A web application frontend for database benchmarking tool TPC-C"</h5></div></div>
+					<!-- pinned project: openagent -->
+					<div class="project-container">
+						<h2 class="project-helper top">OpenAgent helps hundreds of thousands of Australians
+							each month compare real estate agents across the country. In 2015 we picked up <a
+							href="http://www.startupdaily.net/2015/06/openagent-raises-6-million-improve-user-experience-increase-brand-awareness/"
+							target="_blank"><strong>$6 million in&nbsp;funding</strong></a>.
+						</h2>
+
+						<!-- mini browser -->
+						<div id="openagent-browser" class="browser">
+							<div class="chrome">
+								<img src="assets/chrome-buttons.png">
+							</div>
+							<div class="screenshot-oa"></div>
+						</div>
+
+						<!-- further info -->
+						<h2 class="project-helper bottom">We aim to drive some much needed innovation into the real estate industry.</h2>
+
+					</div>
+
+				</div>
 			</div>
-		</div>
+		</section>
+
+		<!-- contact -->
+		<section id="contact">
+			<div class="container">
+				<div class="col-xs-6 col-sm-4 col-lg-3">
+
+					<!-- social icons -->
+					<div>
+						<p>Social</p>
+						<ul class="list-unstyled social-inline">
+							<li><a class="social-icon" href="https://www.facebook.com/gian.johansen" target="_blank"><img src="assets/social-fb.png"></a>
+							</li><li><a class="social-icon" href="https://au.linkedin.com/in/gianjohansen" target="_blank"><img src="assets/social-li.png"></a>
+							</li><li><a class="social-icon" href="https://github.com/gianjohansen" target="_blank"><img src="assets/social-gh.png"></a>
+							</li><li><a class="social-icon" href="https://twitter.com/gianjohansen" target="_blank"><img src="assets/social-tw.png"></a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div class="col-xs-6 col-sm-4 col-lg-4">
+
+					<!-- email address -->
+					<div>
+						<p>Contact</p>
+						<ul class="list-unstyled social-inline">
+							<li id="contact-left">
+								<span class="social-text" href="https://www.facebook.com/gian.johansen" target="_blank">gian@openagent.com.au</span>
+							</li><li id="contact-right">
+								<a class="social-icon" href="mailto:gian@openagent.com.au" target="_blank"><img src="assets/social-mail.png"></a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+				<!-- cute fox -->
+				<div class="col-sm-4 col-lg-5 text-right">
+					<img id="fox" src="assets/social-fox.png">
+				</div>
+			</div>
+
+		</section>
+
+		<!-- thank you -->
+		<footer id="thank-you">
+			<div class="container">
+				<div class="col-xs-12">
+					<p>&copy; 2015 Gian Johansen. If you've made it this far down the page then you're my kind of person.</p>
+				</div>
+			</div>
+		</footer>
 	</div>
-
-	<!-- fullscreen modal background -->
-	<div class="md-overlay"></div>
-
-	<!-- class manipulation library -->
-	<script src="assets/classie.js"></script>
 
 	<!-- display content on load -->
 	<script src="assets/functions.js"></script>
