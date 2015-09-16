@@ -24,6 +24,10 @@ function fadeIn( elem, ms )
       {
         clearInterval(timer);
         opacity = 1;
+
+        // fade in all content
+        $("#intro h1, #intro #contact-me, #intro #scrolldown-wrapper, #about h2, #work h2").addClass("fadeInUp");
+        $("#work #openagent-browser").addClass("fadeInUp");
       }
       elem.style.opacity = opacity;
       elem.style.filter = "alpha(opacity=" + opacity * 100 + ")";
@@ -72,4 +76,4 @@ setTimeout(function() {
     }, 500);
   });
 
-}, 2000);
+}, 1200);
