@@ -69,11 +69,11 @@ a:hover:before { color: #fff; text-shadow: 10px 0 #fff, -10px 0 #fff; }
   #contact p { margin-bottom: 4px; } }
 @media (max-width: 1200px) { #about h2 { font-size: 18px; }
   .project-container h2 { font-size: 18px; } }
-@media (max-width: 600px) { #intro { padding-top: 48px; }
-  #intro h1 { font-size: 48px; }
-  #intro #contact-me { margin-bottom: 48px; }
+@media (max-width: 600px) { #hero #intro { padding-top: 48px; }
+  #hero #intro h1 { font-size: 48px; }
+  #hero #intro #contact-me { margin-bottom: 48px; }
   #about h2 { font-size: 16px; }
   #work { height: auto; }
-  .project-container h2 { font-size: 16px; } }
+  #work .project-container h2 { font-size: 16px; } }
 
 /*# sourceMappingURL=core.css.map */

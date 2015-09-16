@@ -360,15 +360,17 @@ a:hover:before {
 	}
 }
 @media (max-width: 600px) {
-	#intro {
-		padding-top: 48px;
+	#hero {
+		#intro {
+			padding-top: 48px;
 
-		h1 {
-			font-size: 48px;
-		}
+			h1 {
+				font-size: 48px;
+			}
 
-		#contact-me {
-			margin-bottom: 48px;
+			#contact-me {
+				margin-bottom: 48px;
+			}
 		}
 	}
 
@@ -379,10 +381,10 @@ a:hover:before {
 	}
 	#work {
 		height: auto;
-	}
 
-	.project-container h2 {
-		font-size: 16px;
+		.project-container h2 {
+			font-size: 16px;
+		}
 	}
 
 }
