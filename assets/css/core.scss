@@ -219,7 +219,6 @@ a:hover:before {
 
 	.project-container {
 		h2 {
-			opacity: 0;
 			font-size: 20px;
 			font-weight: 400;
 			line-height: 36px;
@@ -260,6 +259,9 @@ a:hover:before {
 
 		}
 
+		.project-helper.top {
+			opacity: 0;
+		}
 		.project-helper.bottom {
 			padding-top: 48px;
 		}
