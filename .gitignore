@@ -25,4 +25,7 @@ Temporary Items
 *.psd
 
 # Jekyll
-_site/ 
+_site/
+
+# remote-ftp
+.ftpconfig
