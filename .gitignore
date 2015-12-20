@@ -22,4 +22,7 @@ Temporary Items
 *.cfg
 
 # Photoshop
-.psd
+*.psd
+
+# Jekyll
+_site/ 
