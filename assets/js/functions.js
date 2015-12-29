@@ -80,4 +80,4 @@ setTimeout(function() {
     $("#intro").css("opacity", 1 - $(window).scrollTop() / 350);
     $("#about h2").css("opacity", 1 - $(window).scrollTop() / 350);
   });
-}, 2000);
+}, 3000);
