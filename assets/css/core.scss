@@ -5,8 +5,9 @@
  *
  */
 
-$sans-stack:	Lato, sans-serif;
-$serif-stack: "Playfair Display", serif;
+$sans-stack:	"Roboto", sans-serif;
+$serif-stack: "Crimson Text", serif;
+$mono-stack: "Fira Mono", sans-serif;
 $dark: rgba(0, 0, 0, 0.33);
 $darker: rgba(0, 0, 0, 0.55);
 $white: rgba(255, 255, 255, 1);
@@ -16,7 +17,8 @@ $long: 300ms ease;
 
 body, html {
 	height: 100%;
-	background: $white;
+	font-size: 20px;
+	font-weight: normal;
 }
 
 /* utility classes */
@@ -36,14 +38,14 @@ body, html {
 
 .button {
 	display: inline-block;
-	margin-top: 6px;
+	margin-top: 14px;
 	position: relative;
 	border-radius: 90px;
 	padding: 14px 40px;
 	border: 1px solid $dark;
 	color: $darker;
 	font-family: $sans-stack;
-	font-weight: 400;
+	font-weight: 700;
 	font-size: 13px;
 	text-align: center;
 	text-transform: uppercase;
@@ -78,6 +80,7 @@ body, html {
 #portfolio {
 	height: 100%;
 	text-align: center;
+	background: #fafafa;
 
 	.intro-divider {
 		color: $darker;
@@ -92,14 +95,9 @@ body, html {
 	  text-transform: uppercase;
 	  letter-spacing: .25em;
 	  font-style: normal;
-	  color: $dark;
+	  color: $darker;
 	  line-height: 10px;
-	  margin: 0px 0px 25px 0px;
-
-		em {
-			font-style: normal;
-			color: $darker;
-		}
+	  margin: 0px 0px 50px 0px;
 	}
 	h2 {
 		font-family: $serif-stack;
@@ -107,6 +105,7 @@ body, html {
 		color: $dark;
 		font-style: normal;
 	  margin: 0px 0px 25px 0px;
+		font-weight: 600;
 
 		em {
 			font-style: normal;
