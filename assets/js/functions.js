@@ -1,83 +1,69 @@
-// utility for cross-browser fade
-function fadeIn( elem, ms )
-{
-  if( ! elem )
-    return;
 
-  // make sure element is hidden
-  elem.style.opacity = 0;
-  elem.style.filter = "alpha(opacity=0)";
-  elem.style.display = "block";
-  elem.style.visibility = "visible";
+// modal handling
 
-  // timed fade
-  if( ms )
-  {
-    var opacity = 0;
+var ModalEffects = (function() {
 
-    // slowly fade in
-    var timer = setInterval( function() {
-      opacity += 50 / ms;
+  function init() {
 
-      // stop fading when finished
-      if( opacity >= 1 )
-      {
-        clearInterval(timer);
-        opacity = 1;
+    var overlay = document.querySelector( '.md-overlay' );
 
-        // fade in all content
-        $("#intro h1, #intro #contact-me, #intro #view-blog, #intro #scrolldown-wrapper, #about h2, #work h2").addClass("fadeInUp");
-        $("#work #openagent-browser").addClass("fadeInUp");
+    [].slice.call( document.querySelectorAll( '.md-trigger' ) ).forEach( function( el, i ) {
+      var modal = document.querySelector( '#' + el.getAttribute( 'data-modal' ) ),
+        close = modal.querySelector( '.md-close' );
+
+      // hide modal
+      function removeModal( hasPerspective ) {
+        $(modal).removeClass( 'md-show' );
+        if( hasPerspective ) {
+          $(document.documentElement).removeClass( 'md-perspective' );
+        }
       }
-      elem.style.opacity = opacity;
-      elem.style.filter = "alpha(opacity=" + opacity * 100 + ")";
-    }, 50 );
+
+      // hide modal
+      function removeModalHandler() {
+        removeModal( $(el).hasClass( 'md-setperspective' ) );
+      }
+
+      // show modal on trigger
+      el.addEventListener( 'click', function( ev ) {
+        $(modal).addClass( 'md-show' );
+        overlay.removeEventListener( 'click', removeModalHandler );
+        overlay.addEventListener( 'click', removeModalHandler );
+
+        if( $(el).hasClass( 'md-setperspective' ) ) {
+          setTimeout( function() {
+            $(document.documentElement).addClass( 'md-perspective' );
+          }, 25 );
+        }
+      });
+
+      // close modal on background click
+      close.addEventListener( 'click', function( ev ) {
+        ev.stopPropagation();
+        removeModalHandler();
+      });
+
+    } );
+
   }
 
-  // show instantly when no time specified
-  else
-  {
-    elem.style.opacity = 1;
-    elem.style.filter = "alpha(opacity=1)";
-  }
-}
+  init();
 
-// utility for cross-browser viewport width
-function getViewportSize(w) {
+})();
 
-    w = w || window;
+$(document).ready(function() {
 
-    // all modern browsers
-    if (w.innerWidth != null) return { w: w.innerWidth, h: w.innerHeight };
+  // show the next section
+  $("#start-coding").click(function() {
 
-    // ie 8+ (standards mode)
-    var d = w.document;
-    if (document.compatMode == "CSS1Compat")
-        return { w: d.documentElement.clientWidth,
-           h: d.documentElement.clientHeight };
+    // queue the fadein
+    $("#portfolio .vertical").removeClass("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend");
+    $("#portfolio .vertical").addClass("rollOut");
+    $('#portfolio .vertical').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+      $("#portfolio").hide();
+      $("#playground").fadeIn();
+    });
 
-    // ie 8+ (quirks mode)
-    return { w: d.body.clientWidth, h: d.body.clientHeight };
-
-}
-
-// give video a couple seconds of buffer time
-setTimeout(function() {
-
-  // fade in content
-  document.getElementById("preload").style.display = "none";
-  document.body.style.background = "#eee";
-  fadeIn(document.getElementById("content-wrapper"), 300);
-
-  // arrow onclick
-  $("#scrolldown-wrapper").click(function() {
-    $('html, body').stop().animate({
-      scrollTop: $("#about").offset().top
-    }, 500);
+    return false;
   });
-
-  $(window).scroll(function(){
-    $("#intro").css("opacity", 1 - $(window).scrollTop() / 350);
-    $("#about h2").css("opacity", 1 - $(window).scrollTop() / 350);
-  });
-}, 3000);
+});

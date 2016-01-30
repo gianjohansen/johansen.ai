@@ -12,35 +12,33 @@
 	<!-- fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,600,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,600,700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 	<!-- css -->
 	<link rel="stylesheet" href="assets/css/grid-1200.css">
+	<link rel="stylesheet" href="assets/css/animate.min.css">
 	<link rel="stylesheet" href="assets/css/core.css">
 
 	<!-- jquery -->
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
 
 </head>
 
 <body>
 
 	<!-- intro -->
-	<div id="portfolio">
-		<div class="vertical">
+	<div id="portfolio" >
+		<div class="vertical animated fadeIn">
 			<section class="content" id="intro">
 				<h1>Hi. My name is Gian.</h1>
-				<div class="h1-line"></div>
 				<h2>
-					I'm a <em>front-end engineer</em> from <em>Australia</em>,<br>currently lead front-end at <em>OpenAgent</em>.
+					I'm a <em>front-end engineer</em> from <em>Australia</em>, <br>currently lead front-end at&nbsp;<em>OpenAgent</em>.
 				</h2>
 				<h2>
 					I turn <em>ideas</em> into <em>pixels</em>.
 				</h2>
 				<div class="intro-divider"><span class="fa fa-long-arrow-down"></span></div>
-				<a id="start-coding" class="button" href="http://www.openagent.com.au"><span class="fa fa-cubes"></span>See an example</a>
+				<button id="start-coding" class="button button-slide"><i class="button-icon fa fa-arrow-right"></i><span><i class="fa fa-cubes"></i>See an example</span></button>
 			</section>
 		</div>
 	</div>
@@ -63,171 +61,23 @@
 		<img id="gianjohansen" src="assets/img/gianjohansen.png" class="md-trigger" data-modal="modal-11">
 	</div>
 
+	<!-- contact modal -->
 	<div class="md-modal md-effect-11" id="modal-11">
-				<div class="md-content">
-					<div>
-						<h3>Name</h3>
-						<h4>Gian Johansen</h4>
-						<h3>Email</h3>
-						<h4>gian@openagent.com.au</h4>
-						<h3>Location</h3>
-						<h4>Sydney, Australia</h4>
-						<button class="md-close">Click To Hide This Box</button>
-					</div>
-				</div>
+		<div class="md-content">
+			<div>
+				<h3>Name</h3>
+				<h4>Gian Johansen</h4>
+				<h3>Email</h3>
+				<h4>gian@openagent.com.au</h4>
+				<h3>Location</h3>
+				<h4>Sydney, Australia</h4>
+				<button class="md-close"><i class="fa fa-times-circle"></i> Click To Go Back</button>
 			</div>
+		</div>
+	</div>
+	<div class="md-overlay"></div>
 
-	<script>
-	/*!
- * classie - class helper functions
- * from bonzo https://github.com/ded/bonzo
- *
- * classie.has( elem, 'my-class' ) -> true/false
- * classie.add( elem, 'my-new-class' )
- * classie.remove( elem, 'my-unwanted-class' )
- * classie.toggle( elem, 'my-class' )
- */
-
-/*jshint browser: true, strict: true, undef: true */
-/*global define: false */
-
-( function( window ) {
-
-'use strict';
-
-// class helper functions from bonzo https://github.com/ded/bonzo
-
-function classReg( className ) {
-  return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
-}
-
-// classList support for class management
-// altho to be fair, the api sucks because it won't accept multiple classes at once
-var hasClass, addClass, removeClass;
-
-if ( 'classList' in document.documentElement ) {
-  hasClass = function( elem, c ) {
-    return elem.classList.contains( c );
-  };
-  addClass = function( elem, c ) {
-    elem.classList.add( c );
-  };
-  removeClass = function( elem, c ) {
-    elem.classList.remove( c );
-  };
-}
-else {
-  hasClass = function( elem, c ) {
-    return classReg( c ).test( elem.className );
-  };
-  addClass = function( elem, c ) {
-    if ( !hasClass( elem, c ) ) {
-      elem.className = elem.className + ' ' + c;
-    }
-  };
-  removeClass = function( elem, c ) {
-    elem.className = elem.className.replace( classReg( c ), ' ' );
-  };
-}
-
-function toggleClass( elem, c ) {
-  var fn = hasClass( elem, c ) ? removeClass : addClass;
-  fn( elem, c );
-}
-
-var classie = {
-  // full names
-  hasClass: hasClass,
-  addClass: addClass,
-  removeClass: removeClass,
-  toggleClass: toggleClass,
-  // short names
-  has: hasClass,
-  add: addClass,
-  remove: removeClass,
-  toggle: toggleClass
-};
-
-// transport
-if ( typeof define === 'function' && define.amd ) {
-  // AMD
-  define( classie );
-} else {
-  // browser global
-  window.classie = classie;
-}
-
-})( window );
-			/**
-		 * modalEffects.js v1.0.0
-		 * http://www.codrops.com
-		 *
-		 * Licensed under the MIT license.
-		 * http://www.opensource.org/licenses/mit-license.php
-		 *
-		 * Copyright 2013, Codrops
-		 * http://www.codrops.com
-		 */
-		var ModalEffects = (function() {
-
-			function init() {
-
-				var overlay = document.querySelector( '.md-overlay' );
-
-				[].slice.call( document.querySelectorAll( '.md-trigger' ) ).forEach( function( el, i ) {
-
-					var modal = document.querySelector( '#' + el.getAttribute( 'data-modal' ) ),
-						close = modal.querySelector( '.md-close' );
-
-					function removeModal( hasPerspective ) {
-						classie.remove( modal, 'md-show' );
-
-						if( hasPerspective ) {
-							classie.remove( document.documentElement, 'md-perspective' );
-						}
-					}
-
-					function removeModalHandler() {
-						removeModal( classie.has( el, 'md-setperspective' ) );
-					}
-
-					el.addEventListener( 'click', function( ev ) {
-						classie.add( modal, 'md-show' );
-						overlay.removeEventListener( 'click', removeModalHandler );
-						overlay.addEventListener( 'click', removeModalHandler );
-
-						if( classie.has( el, 'md-setperspective' ) ) {
-							setTimeout( function() {
-								classie.add( document.documentElement, 'md-perspective' );
-							}, 25 );
-						}
-					});
-
-					close.addEventListener( 'click', function( ev ) {
-						ev.stopPropagation();
-						removeModalHandler();
-					});
-
-				} );
-
-			}
-
-			init();
-
-		})();
-
-		$(document).ready(function() {
-			$("#start-coding").click(function() {
-				$("#portfolio").fadeOut(function() {
-					setTimeout(function() {
-						$("#playground").fadeIn();
-					}, 10);
-
-				});
-				return false;
-			});
-		});
-	</script>
+	<script type="text/javascript" src="assets/js/functions.js"></script>
 </body>
 
 </html>

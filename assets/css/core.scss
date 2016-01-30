@@ -7,7 +7,6 @@
 
 $sans-stack:	"Roboto", sans-serif;
 $serif-stack: "Crimson Text", serif;
-$mono-stack: "Fira Mono", sans-serif;
 $dark: rgba(0, 0, 0, 0.33);
 $darker: rgba(0, 0, 0, 0.55);
 $white: rgba(255, 255, 255, 1);
@@ -19,6 +18,7 @@ body, html {
 	height: 100%;
 	font-size: 20px;
 	font-weight: normal;
+	overflow: hidden;
 }
 
 /* utility classes */
@@ -42,7 +42,7 @@ body, html {
 	position: relative;
 	border-radius: 90px;
 	padding: 14px 40px;
-	border: 1px solid $dark;
+	border: 1px solid #999;
 	color: $darker;
 	font-family: $sans-stack;
 	font-weight: 700;
@@ -57,14 +57,11 @@ body, html {
 	transition: all $long;
 	background-color: $white;
 	text-decoration: none;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
 
-	&:hover {
-		background: $darker;
-		color: $white;
-		border: 1px solid $dark;
-	}
-
-	span {
+	.fa-cubes {
 		font-size: 20px;
 		padding-bottom: 3px;
 		position: relative;
@@ -72,7 +69,150 @@ body, html {
 		display: inline-block;
 		margin-right: 10px;
 		transition: left $long;
+		width: 28px;
 	}
+
+	&:focus {
+		outline: none;
+	}
+
+	& > span {
+		vertical-align: middle;
+	}
+}
+
+/* animated buttons */
+
+.button-slide {
+	padding: 0;
+	overflow: hidden;
+	-webkit-transition: background-color 0.3s;
+	transition: background-color 0.3s;
+}
+.button-slide::before {
+	content: '';
+	position: absolute;
+	left: -50%;
+	width: 200%;
+	height: 200%;
+	background: #37474f;
+	top: -50%;
+	z-index: -1;
+	-webkit-transform: translate3d(0, -100%, 0) rotate3d(0, 0, 1, -10deg);
+	transform: translate3d(0, -100%, 0) rotate3d(0, 0, 1, -10deg);
+}
+.button-slide.button--inverted::before {
+	background: #7986cb;
+}
+.button-slide-up::before {
+	-webkit-transform: translate3d(0, 100%, 0) rotate3d(0, 0, 1, 10deg);
+	transform: translate3d(0, 100%, 0) rotate3d(0, 0, 1, 10deg);
+}
+.button-slide > span {
+	display: block;
+}
+.button-slide .button-icon {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	left: 0;
+	color: #fff;
+	-webkit-transform: translate3d(0, -100%, 0);
+	transform: translate3d(0, -100%, 0);
+}
+.button-slide-up .button-icon {
+	-webkit-transform: translate3d(0, 100%, 0);
+	transform: translate3d(0, 100%, 0);
+}
+.button-slide > span,
+.button-slide .button-icon {
+	padding: 15px  40px;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	height: 54px;
+	line-height: 25px;
+}
+.button-slide .button-icon {
+	padding: 14px  40px;
+}
+.button-slide:hover::before {
+	-webkit-animation: animate-slide-1 0.3s forwards ease-in;
+	animation: animate-slide-1 0.3s forwards ease-in;
+}
+.button-slide-up:hover::before {
+	-webkit-animation: animate-slide-2 0.3s forwards ease-in;
+	animation: animate-slide-2 0.3s forwards ease-in;
+}
+@-webkit-keyframes animate-slide-1 {
+	50% {
+		-webkit-transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, -10deg);
+		transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, -10deg);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+	100% {
+		-webkit-transform: translate3d(0, 0%, 0) rotate3d(0, 0, 1, 0deg);
+		transform: translate3d(0, 0%, 0) rotate3d(0, 0, 1, 0deg);
+	}
+}
+@keyframes animate-slide-1 {
+	50% {
+		-webkit-transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, -10deg);
+		transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, -10deg);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+	100% {
+		-webkit-transform: translate3d(0, 0%, 0) rotate3d(0, 0, 1, 0deg);
+		transform: translate3d(0, 0%, 0) rotate3d(0, 0, 1, 0deg);
+	}
+}
+@-webkit-keyframes animate-slide-2 {
+	50% {
+		-webkit-transform: translate3d(0, 50%, 0) rotate3d(0, 0, 1, 10deg);
+		transform: translate3d(0, 50%, 0) rotate3d(0, 0, 1, 10deg);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+	100% {
+		-webkit-transform: translate3d(0, 0%, 0) rotate3d(0, 0, 1, 0deg);
+		transform: translate3d(0, 0%, 0) rotate3d(0, 0, 1, 0deg);
+	}
+}
+@keyframes animate-slide-2 {
+	50% {
+		-webkit-transform: translate3d(0, 50%, 0) rotate3d(0, 0, 1, 10deg);
+		transform: translate3d(0, 50%, 0) rotate3d(0, 0, 1, 10deg);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+	100% {
+		-webkit-transform: translate3d(0, 0%, 0) rotate3d(0, 0, 1, 0deg);
+		transform: translate3d(0, 0%, 0) rotate3d(0, 0, 1, 0deg);
+	}
+}
+.button-slide:hover {
+	background-color: #37474f;
+	-webkit-transition: background-color 0s 0.3s, border 0s 0.3s;
+	transition: background-color 0s 0.3s, border 0s 0.3s;
+}
+.button-slide.button--inverted:hover {
+	background-color: #7986cb;
+}
+.button-slide:hover .button-icon {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.button-slide:hover > span {
+	opacity: 0;
+	-webkit-transform: translate3d(0, 100%, 0);
+	transform: translate3d(0, 100%, 0);
+}
+.button-slide-up:hover > span {
+	-webkit-transform: translate3d(0, -100%, 0);
+	transform: translate3d(0, -100%, 0);
 }
 
 /* intro */
@@ -112,6 +252,40 @@ body, html {
 			color: $darker;
 		}
 	}
+
+	@media (max-width: 992px) {
+		h2 {
+			font-size: 24px;
+			margin: 0px 0px 25px 0px;
+		}
+	}
+	@media (max-width: 400px) {
+		padding: 0 24px;
+		h2 {
+			font-size: 20px;
+
+			br {
+				display: none;
+			}
+		}
+	}
+
+	@media (max-height: 480px) {
+		padding: 24px;
+	}
+}
+
+@media (max-height: 480px) {
+	html, body, #portfolio {
+		background: #fafafa;
+	}
+	.intro-divider {
+		display: none;
+	}
+
+	#portfolio h1 {
+		margin-bottom: 25px;
+	}
 }
 
 #gianjohansen {
@@ -131,6 +305,8 @@ body, html {
 	width: 100%;
 	height: 100%;
 }
+
+/* solar system */
 
 .solar-syst {
   margin: 0 auto;
@@ -413,7 +589,7 @@ body, html {
   }
 }
 
-/* tympanus modals */
+/* contact modal */
 
 .md-perspective,
 .md-perspective body {
@@ -465,7 +641,7 @@ body, html {
 	left: 0;
 	z-index: 1000;
 	opacity: 0;
-	background: rgba(143,27,15,0.8);
+	background: rgba(50,50,50,0.8);
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
@@ -476,7 +652,6 @@ body, html {
 	visibility: visible;
 }
 
-/* Content styles */
 .md-content {
 	color: #484848;
 	background: #f5f5f5;
@@ -488,7 +663,7 @@ body, html {
 }
 
 .md-content > div {
-	padding: 40px 30px 20px;
+	padding: 40px 20px 20px 30px;
 	margin: 0;
 	font-weight: 300;
 	font-size: 1.15em;
