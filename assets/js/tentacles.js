@@ -308,17 +308,14 @@ var sketch = Sketch.create({
     },
 
     mousedown: function() {
-        $("#instructions p").text("Press space to set it free once more");
-        if ( demo ) {
-
+        if ($(window).width() > 1024) {
+            $("#instructions p").text("Press space to set it free once more");
+        }
+        if (demo) {
             demo = false;
             settings.interactive = true;
-
-            if ( !modified ) {
-                settings.length = 60;
-                settings.gravity = 0.4;
-                settings.wind = -0.5;
-            }
+            settings.gravity = 0.4;
+            settings.wind = -0.5;
         }
     },
 

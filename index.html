@@ -66,7 +66,10 @@
 
               setTimeout(function() {
                 $("#container").fadeIn();
-                $("#instructions").fadeIn();
+								if ($(window).width() <= 1024) {
+									$("#instructions p").text("Touch and drag to move the creature");
+								}
+								$("#instructions").fadeIn();
                 $("#links").fadeIn();
               }, 400);
             }, 2000);

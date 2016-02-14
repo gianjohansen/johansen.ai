@@ -5,14 +5,15 @@
  *
  */
 
-$sans-stack:	"Roboto", sans-serif;
-$serif-stack: "Crimson Text", serif;
+$sans-stack:	"Lato", sans-serif;
+$serif-stack: Georgia, serif;
 $dark: rgba(0, 0, 0, 0.33);
 $darker: rgba(0, 0, 0, 0.55);
 $white: rgba(255, 255, 255, 1);
 
 $short: 150ms ease;
 $long: 300ms ease;
+
 html,
 body {
     overflow: hidden;
@@ -110,4 +111,37 @@ h1 small {
     color: #fff;
     text-transform: uppercase;
     font-weight: 900;
+}
+
+@media (max-width: 850px) {
+	h1 {
+	    font-size: 40px;
+	}
+	h1 small {
+			margin-top: 20px;
+	    font-size: 20px;
+			display: block;
+	}
+	#instructions {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media (max-width: 768px) {
+	#instructions {
+		display: none;
+	}
+}
+
+@media (max-width: 600px) {
+	h1 {
+			font-size: 24px;
+			letter-spacing: 0.2em;
+	}
+	h1 small {
+			margin-top: 20px;
+			font-size: 18px;
+			display: block;
+	}
 }
