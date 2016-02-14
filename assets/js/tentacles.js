@@ -219,7 +219,14 @@ var sketch = Sketch.create({
         center.x = this.width / 2;
         center.y = this.height / 2;
 
-        if ($(window).width() <= 768) {
+        if ($(window).width() <= 500) {
+            settings.tentacles = 16;
+            settings.thickness = 14;
+            settings.length = 30;
+
+            settings.wind = -0.25;
+        }
+        else if ($(window).width() <= 768) {
             settings.tentacles = 20;
             settings.thickness = 18;
             settings.length = 40;
