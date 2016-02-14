@@ -219,6 +219,17 @@ var sketch = Sketch.create({
         center.x = this.width / 2;
         center.y = this.height / 2;
 
+        if ($(window).width() <= 768) {
+            settings.tentacles = 20;
+            settings.thickness = 18;
+            settings.length = 40;
+        }
+        else if ($(window).width() <= 1024) {
+            settings.tentacles = 20;
+            settings.thickness = 20;
+            settings.length = 80;
+        }
+
         var tentacle;
 
         for ( var i = 0; i < 100; i++ ) {
@@ -317,6 +328,6 @@ var sketch = Sketch.create({
             settings.gravity = 0.4;
             settings.wind = -0.5;
         }
-    },
+    }
 
 });
