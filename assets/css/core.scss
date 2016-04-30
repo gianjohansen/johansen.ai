@@ -103,11 +103,12 @@ h1 small {
     left: 20px;
     display: none;
     pointer-events: none;
+    line-height: 1.5;
 }
 #instructions p {
     margin: 0;
-    font-size: 13px;
-	letter-spacing: 0.1em;
+    font-size: 16px;
+    letter-spacing: 0.1em;
     color: #fff;
     text-transform: uppercase;
     font-weight: 900;
@@ -124,6 +125,7 @@ h1 small {
 			margin-top: 20px;
 	    font-size: 20px;
 			display: block;
+      line-height: 1.5;
 	}
 	#instructions {
 		width: 100%;
@@ -145,10 +147,14 @@ h1 small {
 	h1 {
 			font-size: 24px;
 			letter-spacing: 0.2em;
+      box-sizing: border-box;
+      top: 40%;
 	}
 	h1 small {
 			margin-top: 20px;
-			font-size: 18px;
+			font-size: 16px;
 			display: block;
+      padding: 0px 28px;
+      box-sizing: border-box;
 	}
 }
