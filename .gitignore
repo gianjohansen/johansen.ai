@@ -20,6 +20,7 @@ Temporary Items
 
 # SCSS
 *.cfg
+node_modules
 
 # Photoshop
 *.psd
