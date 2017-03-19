@@ -1,0 +1,17 @@
+{
+  "name": "gianjohansen.github.io",
+  "version": "1.0.0",
+  "description": "Personal website of Gian Johansen.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gian Johansen",
+  "license": "UNLICENSED",
+  "private": false,
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0"
+  }
+}
