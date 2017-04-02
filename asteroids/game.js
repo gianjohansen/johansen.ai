@@ -858,8 +858,8 @@ Text = {
 };
 
 SFX = {
-  laser:     new Audio('asteroids/39459__THE_bizniss__laser.wav'),
-  explosion: new Audio('asteroids/51467__smcameron__missile_explosion.wav')
+  // laser:     new Audio('asteroids/39459__THE_bizniss__laser.wav'),
+  // explosion: new Audio('asteroids/51467__smcameron__missile_explosion.wav')
 };
 
 // preload audio
