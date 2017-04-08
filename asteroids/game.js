@@ -374,15 +374,15 @@ Sprite = function () {
 
 Ship = function () {
   this.init("ship",
-            [-5,   4,
-              0, -12,
-              5,   4]);
+            [-10,   4,
+              0, -24,
+              10,   4]);
 
   this.children.exhaust = new Sprite();
   this.children.exhaust.init("exhaust",
-                             [-3,  6,
-                               0, 11,
-                               3,  6]);
+                             [-6,  6,
+                               0, 16,
+                               6,  6]);
 
   this.bulletCounter = 0;
 
@@ -432,10 +432,10 @@ Ship = function () {
             var vectorx = Math.cos(rad);
             var vectory = Math.sin(rad);
             // move to the nose of the ship
-            bullet.x = this.x + vectorx * 4;
-            bullet.y = this.y + vectory * 4;
-            bullet.vel.x = 6 * vectorx + this.vel.x;
-            bullet.vel.y = 6 * vectory + this.vel.y;
+            bullet.x = this.x + vectorx * 18;
+            bullet.y = this.y + vectory * 18;
+            bullet.vel.x = 12 * vectorx + this.vel.x;
+            bullet.vel.y = 12 * vectory + this.vel.y;
             bullet.visible = true;
             break;
           }
@@ -601,7 +601,7 @@ Bullet = function () {
   this.draw = function () {
     if (this.visible) {
       this.context.save();
-      this.context.lineWidth = 2;
+      this.context.lineWidth = 3;
       this.context.beginPath();
       this.context.moveTo(this.x-1, this.y-1);
       this.context.lineTo(this.x+1, this.y+1);
@@ -652,18 +652,32 @@ AlienBullet = function () {
 };
 AlienBullet.prototype = new Bullet();
 
+var asteroidTypes =
+  [
+    // letter "O"
+    [10, 0,
+    7, -7,
+    0, -10,
+    -7, -7,
+    -10, 0,
+    -7, 7,
+    0, 10,
+    7, 7],
+
+    // letter "A"
+    [-2,8,
+    2,8,
+    8,-8,
+    4,-8,
+    2,-6,
+    -2,-6,
+    -4,-8,
+    -8,-8]
+  ]
+
 Asteroid = function () {
   this.init("asteroid",
-            [-10,   0,
-              -5,   7,
-              -3,   4,
-               1,  10,
-               5,   4,
-              10,   0,
-               5,  -6,
-               2, -10,
-              -4, -10,
-              -4,  -5]);
+            asteroidTypes[Math.floor(Math.random() * 2) + 0  ]);
 
   this.visible = true;
   this.scale = 6;
