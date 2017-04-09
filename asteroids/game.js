@@ -638,7 +638,7 @@ AlienBullet = function () {
       this.context.beginPath();
       this.context.moveTo(this.x, this.y);
       this.context.lineTo(this.x-this.vel.x, this.y-this.vel.y);
-      this.context.strokeStyle="#FFFFFF";
+      this.context.strokeStyle="#E86E6E";
       this.context.stroke();
       this.context.restore();
     }
@@ -935,7 +935,7 @@ Game = {
       Game.totalAsteroids = 20;
       Game.spawnAsteroids();
 
-      Game.nextBigAlienTime = Date.now() + 30000 + (30000 * Math.random());
+      Game.nextBigAlienTime = Date.now() + 15000 + (15000 * Math.random());
 
       this.state = 'spawn_ship';
     },
@@ -965,7 +965,7 @@ Game = {
       if (!Game.bigAlien.visible &&
           Date.now() > Game.nextBigAlienTime) {
         Game.bigAlien.visible = true;
-        Game.nextBigAlienTime = Date.now() + (30000 * Math.random());
+        Game.nextBigAlienTime = Date.now() + (15000 * Math.random());
       }
     },
     new_level: function () {
