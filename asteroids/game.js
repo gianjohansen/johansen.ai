@@ -917,7 +917,7 @@ Game = {
       this.state = 'waiting';
     },
     waiting: function () {
-      Text.renderText(window.ipad ? 'Touch screen to begin...' : 'Hit the spacebar to begin...', 20, Game.canvasWidth/2 - 120, Game.canvasHeight/2);
+      Text.renderText(window.ipad ? 'TOUCH SCREEN TO BEGIN' : 'PRESS SPACE TO BEGIN', 18, Game.canvasWidth/2 - 180, Game.canvasHeight/2);
       if (KEY_STATUS.space || window.gameStart) {
         KEY_STATUS.space = false; // hack so we don't shoot right away
         window.gameStart = false;
@@ -954,7 +954,7 @@ Game = {
         this.state = 'run';
       }
       else {
-        Text.renderText('Waiting until it\'s safe...', 24, Game.canvasWidth/2 - 130, Game.canvasHeight/2);
+        Text.renderText('WAITING UNTIL IT\'S SAFE', 18, Game.canvasWidth/2 - 180, Game.canvasHeight/2);
       }
     },
     run: function () {
@@ -1000,7 +1000,7 @@ Game = {
       }
     },
     end_game: function () {
-      Text.renderText('GAME OVER', 24, Game.canvasWidth/2 - 60, Game.canvasHeight/2);
+      Text.renderText('GAME OVER', 18, Game.canvasWidth/2 - 70, Game.canvasHeight/2);
       if (this.timer == null) {
         this.timer = Date.now();
       }
@@ -1034,7 +1034,7 @@ window.startAsteroids = function() {
   var context = canvas[0].getContext("2d");
 
   Text.context = context;
-  Text.face = ptsans;
+  Text.face = press_start;
 
   var gridWidth = Math.round(Game.canvasWidth / GRID_SIZE);
   var gridHeight = Math.round(Game.canvasHeight / GRID_SIZE);
@@ -1193,7 +1193,7 @@ window.startAsteroids = function() {
     }
 
     if (paused) {
-      Text.renderText('PAUSED', 24, Game.canvasWidth/2 - 40, Game.canvasHeight/2);
+      Text.renderText('PAUSED', 24, Game.canvasWidth/2 - 55, Game.canvasHeight/2);
     } else {
       requestAnimFrame(mainLoop, canvasNode);
     }
