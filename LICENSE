@@ -1,7 +1,7 @@
 
 Website
 
-Copyright (c) 2016 - Gian Johansen
+Copyright (c) 2016 Gian Johansen
 
 Asteroids
 
@@ -10,6 +10,12 @@ Copyright (c) 2010 Doug McInnes
 Sine Waves
 
 Copyright (c) 2014 Isaac Suttell
+
+Bootstrap
+
+Copyright (c) 2011-2015 Twitter, Inc
+
+Above components used under the MIT license, reproduced here.
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
@@ -33,7 +39,7 @@ DEALINGS IN THE SOFTWARE.
 
 Forked version of PerspectiveTransform.js by Edan Kwan (http://www.edankwan.com/)
 
-The original PerspectiveTransform.js is created by  Israel Pastrana
+The original PerspectiveTransform.js is created by Israel Pastrana
 http://www.is-real.net/experiments/css3/wonder-webkit/js/real/display/PerspectiveTransform.js
 
 Matrix Libraries from a Java port of JAMA: A Java Matrix Package, http://math.nist.gov/javanumerics/jama/
