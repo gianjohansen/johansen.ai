@@ -374,15 +374,17 @@ Sprite = function () {
 
 Ship = function () {
   this.init("ship",
-            [-10,   4,
+            [0, 0,
+            -10,   4,
               0, -24,
               10,   4]);
 
   this.children.exhaust = new Sprite();
   this.children.exhaust.init("exhaust",
-                             [-6,  6,
-                               0, 16,
-                               6,  6]);
+                             [ 0, 4, 
+                              -5,  6,
+                               0, 14,
+                               5, 6]);
 
   this.bulletCounter = 0;
 
@@ -404,7 +406,7 @@ Ship = function () {
       var rad = ((this.rot-90) * Math.PI)/180;
       this.acc.x = 0.5 * Math.cos(rad);
       this.acc.y = 0.5 * Math.sin(rad);
-      this.children.exhaust.visible = Math.random() > 0.1;
+      this.children.exhaust.visible = Math.random() > 0.2;
     } else {
       this.acc.x = 0;
       this.acc.y = 0;
@@ -415,7 +417,7 @@ Ship = function () {
       var rad = ((this.rot-90) * Math.PI)/180;
       this.acc.x = (-1) * 0.5 * Math.cos(rad);
       this.acc.y = (-1) * 0.5 * Math.sin(rad);
-      this.children.exhaust.visible = Math.random() > 0.1;
+      this.children.exhaust.visible = Math.random() > 0.2;
     }
 
     if (this.bulletCounter > 0) {
@@ -1095,7 +1097,7 @@ window.startAsteroids = function() {
   Game.bigAlien = bigAlien;
 
   var extraDude = new Ship();
-  extraDude.scale = 0.6;
+  extraDude.scale = 1.2;
   extraDude.visible = true;
   extraDude.preMove = null;
   extraDude.children = [];
@@ -1166,13 +1168,13 @@ window.startAsteroids = function() {
 
     // score
     var score_text = ''+Game.score;
-    Text.renderText(score_text, 18, Game.canvasWidth - 14 * score_text.length, 20);
+    Text.renderText(score_text, 24, 16, Game.canvasHeight - 16);
 
     // extra dudes
     for (i = 0; i < Game.lives; i++) {
       context.save();
-      extraDude.x = Game.canvasWidth - (8 * (i + 1));
-      extraDude.y = 32;
+      extraDude.x = Game.canvasWidth - (32 * (i + 1));
+      extraDude.y = Game.canvasHeight - 32;
       extraDude.configureTransform();
       extraDude.draw();
       context.restore();
