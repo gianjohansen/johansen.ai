@@ -15,13 +15,6 @@ $(document).on("click", ".link-expand", function() {
 });
 
 $(".link-asteroids").click(function() {
-    if ($(window).width() < 768) {
-        $(".modal-warning").modal({
-            fadeDuration: 250
-        });
-        return;
-    }
-
     $(".container").fadeOut(function() {
         $(".asteroids").css("opacity", "1");
         startAsteroids();

@@ -1,3 +1,12 @@
+var isMobile = false;
+if (/Mobi/.test(navigator.userAgent)) {
+    isMobile = true;
+}
+
+var isTiny = false;
+if ($(window).width() < 768) {
+    isTiny = true;
+}
 
 KEY_CODES = {
   32: 'space',
@@ -842,6 +851,11 @@ Text = {
   },
 
   renderText: function(text, size, x, y) {
+
+    // compress for phones
+    size = (isTiny ? 12 : size);
+    x = (isTiny ? x + (text.length * 2.4) : x);
+
     this.context.save();
 
     this.context.translate(x, y);
@@ -909,11 +923,11 @@ Game = {
 
   FSM: {
     boot: function () {
-      Game.spawnAsteroids(20);
+      Game.spawnAsteroids(16);
       this.state = 'waiting';
     },
     waiting: function () {
-      Text.renderText(window.ipad ? 'TOUCH SCREEN TO BEGIN' : 'PRESS SPACE TO BEGIN', 18, Game.canvasWidth/2 - 180, Game.canvasHeight/2);
+      Text.renderText(window.isMobile ? 'TOUCH SCREEN TO BEGIN' : 'PRESS SPACE TO BEGIN', 18, Game.canvasWidth/2 - 180, Game.canvasHeight/2);
       if (KEY_STATUS.space || window.gameStart) {
         KEY_STATUS.space = false; // hack so we don't shoot right away
         window.gameStart = false;
@@ -932,7 +946,7 @@ Game = {
 
       Game.score = 0;
       Game.lives = 2;
-      Game.totalAsteroids = 20;
+      Game.totalAsteroids = (isTiny ? 4 : 16);
       Game.spawnAsteroids();
 
       Game.nextBigAlienTime = Date.now() + 15000 + (15000 * Math.random());
@@ -1018,6 +1032,30 @@ Game = {
 };
 
 window.startAsteroids = function() {
+
+  if (isMobile) {
+    $('#left-controls, #right-controls').show();
+
+    $('head').prepend($('<meta/>').attr('name', 'viewport').attr('content', 'width=device-width; height=device-height; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;'));
+
+    $(document).on('touchstart touchmove touchend', '#left-controls .button, #right-controls .button', function (e) {
+      if (e.type != 'touchend') {
+        for (k in KEY_STATUS) {
+          KEY_STATUS[k] = false;
+        }
+      }
+      var touches = e.type == 'touchend' ? e.originalEvent.changedTouches : e.originalEvent.touches
+      for (var i = 0; i < touches.length; i++) {
+        var ele = document.elementFromPoint(touches[i].pageX, touches[i].pageY);
+        KEY_STATUS[ele.id] = (e.type != 'touchend');
+      }
+    });
+
+    $(document).bind('touchstart', function (e) {
+      window.gameStart = true;
+    });
+
+  }
 
   var setdims = document.getElementById('asteroids-game');
             setdims.width = window.innerWidth;
@@ -1164,20 +1202,20 @@ window.startAsteroids = function() {
 
     // score
     var score_text = ''+Game.score;
-    Text.renderText(score_text, 24, 16, Game.canvasHeight - 16);
+    Text.renderText(score_text, 24, 16, (isTiny ? 32 : Game.canvasHeight - 16));
 
     // extra dudes
     for (i = 0; i < Game.lives; i++) {
       context.save();
       extraDude.x = Game.canvasWidth - (32 * (i + 1));
-      extraDude.y = Game.canvasHeight - 32;
+      extraDude.y = (isTiny ? 48 : Game.canvasHeight - 32);
       extraDude.configureTransform();
       extraDude.draw();
       context.restore();
     }
 
     if (showFramerate) {
-      Text.renderText(''+avgFramerate, 24, Game.canvasWidth - 38, Game.canvasHeight - 2);
+      Text.renderText(''+avgFramerate, 24, Game.canvasWidth - 38, (isTiny ? 32 : Game.canvasHeight - 2));
     }
 
     frameCount++;

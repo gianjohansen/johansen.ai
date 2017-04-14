@@ -255,7 +255,6 @@ ul {
 /* asteroids */
 .asteroids {
   opacity: 0;
-  z-index: -1;
   transition: opacity 0.6s ease;
   position: absolute;
   top: 0;
@@ -278,15 +277,31 @@ ul {
       width: 200px;
       height: 100px;
       bottom: 100px; }
+      @media (max-width: 767px) {
+        .asteroids #left-controls #up {
+          width: 160px;
+          height: 80px;
+          bottom: 80px; } }
     .asteroids #left-controls #left {
       width: 100px;
       height: 100px;
       bottom: 0px; }
+      @media (max-width: 767px) {
+        .asteroids #left-controls #left {
+          width: 80px;
+          height: 80px;
+          bottom: 0px; } }
     .asteroids #left-controls #right {
       width: 100px;
       height: 100px;
       bottom: 0px;
       left: 100px; }
+      @media (max-width: 767px) {
+        .asteroids #left-controls #right {
+          width: 80px;
+          height: 80px;
+          bottom: 0px;
+          left: 80px; } }
   .asteroids #right-controls {
     position: absolute;
     right: 1px;
@@ -297,3 +312,7 @@ ul {
       height: 200px;
       bottom: 0px;
       right: 0px; }
+      @media (max-width: 767px) {
+        .asteroids #right-controls #space {
+          width: 80px;
+          height: 80px; } }

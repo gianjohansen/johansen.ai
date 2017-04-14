@@ -17,12 +17,12 @@
 
         <!-- jquery & plugins-->
         <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
         <script src="assets/js/sinewaves.js"></script>
         <script src="assets/js/jquery.modal.js"></script>
 
         <!-- asteroids -->
         <script src="asteroids/press-start.typeface.js"></script>
-        <script src="asteroids/ipad.js"></script>
         <script src="asteroids/game.js"></script>
 
         <!-- analytics -->
@@ -37,6 +37,19 @@
     </head>
 
     <body>
+
+        <!-- html5 game: asteroids -->
+        <div class="asteroids">
+            <canvas id="asteroids-game" width="780" height="540"></canvas>
+            <div id="left-controls">
+                <div id="up" class='button'>THRUST</div>
+                <div id="left" class='button'>LEFT</div>
+                <div id="right" class='button'>RIGHT</div>
+            </div>
+                <div id="right-controls">
+                <div id="space" class='button'>FIRE</div>
+            </div>
+        </div>
 
         <!-- content -->
         <div class="container content-blur">
@@ -63,28 +76,6 @@
                   <p class="margin-none hidden">I am open to discussing freelance work or other opportunities. To get in touch you can find me on <a class="link-social" href="https://www.linkedin.com/in/gianjohansen/" target="_blank">Linkedin</a> or send me an email at <a href="mailto:gian.johansen@gmail.com" target="_blank">gian.johansen@gmail.com</a>.</p>
               </div>
               <a class="link-expand" href="#">Read a little bit more</a>
-            </div>
-
-            <div class="modal-warning modal">
-              <p class="lead">Almost there</p>
-              <div class="modal-divider"></div>
-              <div class="content">
-                  <p>Still working on the mobile version. Check back soon.</p>
-              </div>
-            </div>
-
-        </div>
-
-        <!-- html5 game: asteroids -->
-        <div class="asteroids">
-            <canvas id="asteroids-game" width="780" height="540"></canvas>
-            <div id="left-controls">
-                <div id="up" class='button'>THRUST</div>
-                <div id="left" class='button'>LEFT</div>
-                <div id="right" class='button'>RIGHT</div>
-            </div>
-                <div id="right-controls">
-                <div id="space" class='button'>FIRE</div>
             </div>
         </div>
 
