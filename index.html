@@ -11,13 +11,14 @@
         <!-- fonts -->
         <link href="//fonts.googleapis.com/css?family=PT+Serif|PT+Sans:400,700" rel="stylesheet">
 
-	    <!-- css -->
-      	<link rel="stylesheet" href="assets/css/core.css">
+        <!-- css -->
+        <link rel="stylesheet" href="assets/css/jquery.modal.css">
+        <link rel="stylesheet" href="assets/css/core.css">
 
-        <!-- jquery -->
-        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <!-- jquery & plugins-->
+        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="assets/js/sinewaves.js"></script>
+        <script src="assets/js/jquery.modal.js"></script>
 
         <!-- asteroids -->
         <script src="asteroids/press-start.typeface.js"></script>
@@ -38,14 +39,40 @@
     <body>
 
         <!-- content -->
-        <div class="container">
+        <div class="container content-blur">
         	<div class="content">
                 <p class="logo"><img class="floating-logo" src="assets/img/gian-logo.png">johansen.software</p>
                 <h1 class="hero">I'm Gian, a front-end engineer at an early-stage startup in Sydney called <a href="http://www.openagent.com.au" target="_blank">OpenAgent</a>. I quite enjoy data-driven conversion optimisation and javascript.</h1>
                 <div class="divider"></div>
-                <p class="info">You can <a class="link-info" href="https://github.com/gianjohansen" target="_blank">read more</a> about me or find me on <a class="link-social" href="https://www.linkedin.com/in/gianjohansen/" target="_blank">Linkedin</a> or just hang out here and play some <a class="link-asteroids" href="#">asteroids</a>.</p>
+                <p class="info">You can <a class="link-info" href="https://github.com/gianjohansen" target="_blank">read more</a> about me, find me on <a class="link-social" href="https://www.linkedin.com/in/gianjohansen/" target="_blank">Linkedin</a> or just hang out here and play some <a class="link-asteroids" href="#">asteroids</a>.</p>
         	</div>
           <canvas id="waves-animation"></canvas>
+
+          <div class="modal-info modal">
+              <p class="lead">About me</p>
+              <div class="modal-divider"></div>
+              <div class="content">
+                  <p>My name is Gian Johansen. I build scalable and engaging web applications, mostly using javascript. I'm 
+                  currently a front-end engineer at an industry-disrupting startup in Sydney.</p>
+                  <p class="margin-small hidden">What I bring to the table:</p>
+                  <ul class="hidden">
+                      <li>Rapid architecture and development of web applications in agile teams.</li>
+                      <li>Iterative conversion rate optimisation through A/B testing and data analytics.</li>
+                      <li>A keen interest in front-end technologies and data-driven decision making.</li>
+                  </ul>
+                  <p class="margin-none hidden">I am open to discussing freelance work or other opportunities. To get in touch you can find me on <a class="link-social" href="https://www.linkedin.com/in/gianjohansen/" target="_blank">Linkedin</a> or send me an email at <a href="mailto:gian.johansen@gmail.com" target="_blank">gian.johansen@gmail.com</a>.</p>
+              </div>
+              <a class="link-expand" href="#">Read a little bit more</a>
+            </div>
+
+            <div class="modal-warning modal">
+              <p class="lead">Almost there</p>
+              <div class="modal-divider"></div>
+              <div class="content">
+                  <p>Still working on the mobile version. Check back soon.</p>
+              </div>
+            </div>
+
         </div>
 
         <!-- html5 game: asteroids -->

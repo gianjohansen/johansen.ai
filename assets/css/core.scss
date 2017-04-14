@@ -12,7 +12,7 @@ $mono-stack: Inconsolata, monospace;
 $dark: rgba(0, 0, 0, 0.33);
 $darker: rgba(0, 0, 0, 0.55);
 $white: rgba(255, 255, 255, 1);
-$primary: #4EB648;
+$primary: #A7CFF2;
 
 $short: 150ms ease;
 $long: 300ms ease;
@@ -89,6 +89,11 @@ ul {
 
 .notransition {
     animation: none;
+}
+
+.blur {
+    -webkit-filter: blur(3px);
+    filter: blur(4px);
 }
 
 /* animation */
@@ -221,7 +226,7 @@ ul {
 
         .info {
             font-size: 26px;
-            max-width: 620px;
+            max-width: 600px;
             line-height: 150%;
             font-weight: 300;
             margin-bottom: 120px;
@@ -246,6 +251,101 @@ ul {
     }
 }
 
+/* about modal */
+
+.modal {
+    text-align: left;
+    border-radius: 3px;
+    padding: 50px;
+    background: #1D2022;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    max-width: 720px;
+
+    @media (max-width: 767px) {
+        padding: 24px;
+
+        &.modal-warning {
+            padding-bottom: 4px;
+        }
+    }
+
+    a.close-modal {
+        background: none;
+        text-indent: initial;
+        top: 0;
+        right: 0;
+        text-align: center;
+        font-size: 28px;
+        line-height: 48px;
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+        width: 48px;
+        height: 48px;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+    
+    p {
+        margin: 0;
+    }
+
+    .modal-divider {
+        background: $primary;
+        height: 4px;
+        width: 30px;
+        margin-bottom: 20px;
+    }
+
+    .lead {
+        color: #FFF;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        color: #757575;
+
+        p {
+            margin-bottom: 20px;
+            line-height: 30px;
+
+            &.margin-small {
+                margin-bottom: 8px;
+            }
+            &.margin-none {
+                margin-bottom: 0;
+            }
+        }
+
+        ul {
+            margin-bottom: 20px;
+
+            li {
+                line-height: 30px;
+            }
+        }
+    }
+
+    .link-expand {
+        display: inline-block;
+        margin-top: 40px;
+        color: $primary;
+
+        @media (max-width: 767px) {
+            margin-top: 20px;
+            line-height: 30px;
+        }
+
+    }
+
+}
+
 /* asteroids */
 
 .asteroids {
@@ -261,6 +361,7 @@ ul {
     #asteroids-game {
         top: 0px;
         left: 0px;
+        max-width: 100%;
     }
 
     .button {

@@ -51,14 +51,18 @@ ul {
   letter-spacing: 0;
   transition: all 0.2s ease; }
   .btn.btn-gian {
-    color: #4EB648;
-    border-color: #4EB648; }
+    color: #A7CFF2;
+    border-color: #A7CFF2; }
     .btn.btn-gian:hover {
       color: white;
-      background: #4EB648; }
+      background: #A7CFF2; }
 
 .notransition {
   animation: none; }
+
+.blur {
+  -webkit-filter: blur(3px);
+  filter: blur(4px); }
 
 /* animation */
 #waves-animation {
@@ -166,7 +170,7 @@ ul {
           display: none; } }
     .container .content .info {
       font-size: 26px;
-      max-width: 620px;
+      max-width: 600px;
       line-height: 150%;
       font-weight: 300;
       margin-bottom: 120px; }
@@ -186,6 +190,68 @@ ul {
         .container .content .info {
           margin-bottom: 0; } }
 
+/* about modal */
+.modal {
+  text-align: left;
+  border-radius: 3px;
+  padding: 50px;
+  background: #1D2022;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  max-width: 720px; }
+  @media (max-width: 767px) {
+    .modal {
+      padding: 24px; }
+      .modal.modal-warning {
+        padding-bottom: 4px; } }
+  .modal a.close-modal {
+    background: none;
+    text-indent: initial;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-size: 28px;
+    line-height: 48px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    width: 48px;
+    height: 48px; }
+    .modal a.close-modal:hover {
+      opacity: 1; }
+  .modal .hidden {
+    display: none; }
+  .modal p {
+    margin: 0; }
+  .modal .modal-divider {
+    background: #A7CFF2;
+    height: 4px;
+    width: 30px;
+    margin-bottom: 20px; }
+  .modal .lead {
+    color: #FFF;
+    font-size: 22px;
+    margin-bottom: 20px; }
+  .modal .content {
+    color: #757575; }
+    .modal .content p {
+      margin-bottom: 20px;
+      line-height: 30px; }
+      .modal .content p.margin-small {
+        margin-bottom: 8px; }
+      .modal .content p.margin-none {
+        margin-bottom: 0; }
+    .modal .content ul {
+      margin-bottom: 20px; }
+      .modal .content ul li {
+        line-height: 30px; }
+  .modal .link-expand {
+    display: inline-block;
+    margin-top: 40px;
+    color: #A7CFF2; }
+    @media (max-width: 767px) {
+      .modal .link-expand {
+        margin-top: 20px;
+        line-height: 30px; } }
+
 /* asteroids */
 .asteroids {
   opacity: 0;
@@ -198,7 +264,8 @@ ul {
   /* on-screen controls */ }
   .asteroids #asteroids-game {
     top: 0px;
-    left: 0px; }
+    left: 0px;
+    max-width: 100%; }
   .asteroids .button {
     position: absolute;
     border: 1px solid black; }

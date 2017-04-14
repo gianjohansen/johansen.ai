@@ -1,4 +1,27 @@
+
+$(document).on("click", ".link-info", function() {
+    $(".modal-info .hidden").hide();
+    $(".modal-info .link-expand").show();
+    $(".modal-info").modal({
+        fadeDuration: 250
+    });
+    return false;
+});
+
+$(document).on("click", ".link-expand", function() {
+    $(".modal-info .hidden").fadeIn();
+    $(this).hide();
+    return false;
+});
+
 $(".link-asteroids").click(function() {
+    if ($(window).width() < 768) {
+        $(".modal-warning").modal({
+            fadeDuration: 250
+        });
+        return;
+    }
+
     $(".container").fadeOut(function() {
         $(".asteroids").css("opacity", "1");
         startAsteroids();
@@ -55,17 +78,17 @@ var waves = new SineWaves({
     }],
     resizeEvent: function() {
 
-        // blue gradient
-	    var gradient = this.ctx.createLinearGradient(0, 0, this.width, 0);
-	    gradient.addColorStop(0,"#A7CFF2");
-	    gradient.addColorStop(0.5,"#A7CFF2");
-	    gradient.addColorStop(1,"rgba(0, 0, 0, 0)");
+        // fade to right of screen
+        var gradient = this.ctx.createLinearGradient(0, 0, this.width, 0);
+        gradient.addColorStop(0,"#A7CFF2");
+        gradient.addColorStop(0.5,"#A7CFF2");
+        gradient.addColorStop(1,"rgba(0, 0, 0, 0)");
 
-	    var index = -1;
-	    var length = this.waves.length;
-	      while(++index < length){
-	      this.waves[index].strokeStyle = gradient;
-	    }
+        var index = -1;
+        var length = this.waves.length;
+          while(++index < length){
+          this.waves[index].strokeStyle = gradient;
+        }
         
     }
 });
