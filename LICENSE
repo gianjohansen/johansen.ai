@@ -3,6 +3,14 @@ Website
 
 Copyright (c) 2016 Gian Johansen
 
+Bootstrap
+
+Copyright (c) 2011-2015 Twitter, Inc
+
+jQuery Modal
+
+Copyright (c) 2012 Kyle Fox
+
 Asteroids
 
 Copyright (c) 2010 Doug McInnes
@@ -11,11 +19,7 @@ Sine Waves
 
 Copyright (c) 2014 Isaac Suttell
 
-Bootstrap
-
-Copyright (c) 2011-2015 Twitter, Inc
-
-Above components used under the MIT license, reproduced here.
+Above components distributed under the MIT License.
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
