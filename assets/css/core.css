@@ -203,26 +203,29 @@ ul {
       padding: 24px; }
       .modal.modal-warning {
         padding-bottom: 4px; } }
-  .modal a.close-modal {
-    background: none;
-    text-indent: initial;
-    top: 0;
-    right: 0;
-    text-align: center;
-    font-size: 28px;
-    line-height: 48px;
-    opacity: 0.5;
-    transition: opacity 0.3s ease;
-    width: 48px;
-    height: 48px; }
-    .modal a.close-modal:hover {
-      opacity: 1; }
+  .modal a {
+    color: #A7CFF2; }
+    .modal a.close-modal {
+      color: white;
+      background: none;
+      text-indent: initial;
+      top: 0;
+      right: 0;
+      text-align: center;
+      font-size: 28px;
+      line-height: 48px;
+      opacity: 0.5;
+      transition: opacity 0.3s ease;
+      width: 48px;
+      height: 48px; }
+      .modal a.close-modal:hover {
+        opacity: 1; }
   .modal .hidden {
     display: none; }
   .modal p {
     margin: 0; }
   .modal .modal-divider {
-    background: #A7CFF2;
+    background: white;
     height: 4px;
     width: 30px;
     margin-bottom: 20px; }

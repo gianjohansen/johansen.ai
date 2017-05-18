@@ -269,21 +269,26 @@ ul {
         }
     }
 
-    a.close-modal {
-        background: none;
-        text-indent: initial;
-        top: 0;
-        right: 0;
-        text-align: center;
-        font-size: 28px;
-        line-height: 48px;
-        opacity: 0.5;
-        transition: opacity 0.3s ease;
-        width: 48px;
-        height: 48px;
+    a {
+        color: $primary;
 
-        &:hover {
-            opacity: 1;
+        &.close-modal {
+            color: $white;
+            background: none;
+            text-indent: initial;
+            top: 0;
+            right: 0;
+            text-align: center;
+            font-size: 28px;
+            line-height: 48px;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+            width: 48px;
+            height: 48px;
+
+            &:hover {
+                opacity: 1;
+            }
         }
     }
 
@@ -296,7 +301,7 @@ ul {
     }
 
     .modal-divider {
-        background: $primary;
+        background: $white;
         height: 4px;
         width: 30px;
         margin-bottom: 20px;
