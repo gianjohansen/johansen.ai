@@ -175,6 +175,12 @@ ul {
         .logo {
             font-size: 18px;
             margin: 0;
+
+            svg {
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+
         }
 
         .hero {
