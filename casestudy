@@ -1,0 +1,59 @@
+Case study
+
+OpenAgent
+
+Role: Front-End Engineer
+Task: Rapid CRO
+When: December 2017
+
+Project
+OpenAgent is a startup attempting to transform the way property is transacted. A landing page for a third-party partnership was underperforming and we were given the challenge of rebuilding the user experience with a goal of moving lead conversion rate from 1% to 6% within 30 days.
+Visit site
+
+Outcome
+<graph>
+Over the three weeks we worked on the page we released over fifteen rapid-fire experiments (a new analysis and experiment every two days). At that point we had met our goal, so wound down the project with a week to spare.
+
+Quote
+"This group made the impossible possible. They took on the challenge of increasing conversions from the On The House landing page 5x in 3 weeks. It's been great to watch the team iterate super-fast on the concepts and stay focused. They were able to hit their goal of a 5% conversion rate by the start of January, which has put us in really good stead to hit our OKR this quarter."
+Dino Talic - Head of Product, OpenAgent
+
+The Process
+The initial build for the partnership was completed in October, but had significantly underperformed relative to our usual lead conversion. To address this we put together a mini-scrum team of myself, a product manager to own the change and a designer for the interface work. Feedback on the design was that it was too complicated and too unclear in its messaging.
+
+<screenshot of original>
+
+We had significant constraints on the project:
+- with our limited thirty day deadline we needed to keep development small and quick
+- the page wasn't receiving enough traffic to effectively run A/B split tests
+
+This meant we didn't have our familiar A/B testing strategy to rely on. Normally we'd count a conversion change from 2.0% to 2.1% as a big win, but here we had a month to deliver on a 600% conversion increase. A 0.1% improvement at each iteration just wouldn't cut it. We decided instead on a much riskier approach.
+
+Instead of small, iterative tests we would instead trial a new release every day, with significant changes between each. We would collect just enough data to know whether there had been a step improvement in conversions, then move on. We'd test everything, from updated messaging to better user experience, with a day of analysis in between.
+
+Our initial experiments focused on an overhaul of the user experience. From past projects we knew that multi-step forms converted better for us than single-page forms, and in the past we'd built a basic experience we could swap in with minimal changes. The form on the page we found was very long and very intimidating.
+
+<image of smartsearch>
+
+This would also mean a new landing page to lead in to this form, and we were also able to reuse a past experiment, with only small changes to wording and images.
+
+<image of v1>
+
+This was a big win over the course of several experiments, giving us an improvement on conversion rates from 0.56% to 1.97%.
+
+Next our focus was on value proposition. The page didn't wasn't clear on what the user would receive after conversion, and our hypothesis was that this was scaring users off. We rebuilt the landing page with stronger explanations on the agent research provided by the service to leverage the reputations of the two companies as being data focused and additional modules explaining how it worked.
+
+<image of v2>
+
+This also resulted in an improved conversion rate, although not as strong as we'd hoped. We decided to test a second value prop. The research angle worked for our customers, but the company we were partnered with . We decided to leverage this branding, and our new messaging de-emphasised research and instead shifted focus to pure data.
+
+<image of v3>
+
+Thi
+
+
+
+
+
+Contact
+
