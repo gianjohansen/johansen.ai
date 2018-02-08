@@ -17,6 +17,7 @@ body {
   color: white;
   font-family: "Lato", sans-serif;
   background: #0d0d0d;
+  -webkit-transition: background 0.4s ease;
   transition: background 0.4s ease; }
   body.bordered.fp-viewing-0 {
     background: #112136; }
@@ -35,11 +36,20 @@ html.fp-enabled body.fp-responsive {
 
 /* loading animation */
 .gianjohansen-loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
   width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding-bottom: 50px;
   z-index: 1; }
@@ -49,6 +59,7 @@ html.fp-enabled body.fp-responsive {
       padding-bottom: 5px; } }
   .gianjohansen-loader .status {
     visibility: hidden;
+    -webkit-animation-duration: 0.6s;
     animation-duration: 0.6s;
     text-align: center; }
     .gianjohansen-loader .status .icon {
@@ -64,6 +75,7 @@ html.fp-enabled body.fp-responsive {
   .gianjohansen-loader .progress {
     margin-top: 45px;
     visibility: hidden;
+    -webkit-animation-duration: 0.6s;
     animation-duration: 0.6s;
     height: 2px; }
     .gianjohansen-loader .progress > svg {
@@ -84,6 +96,7 @@ html.fp-enabled body.fp-responsive {
       display: none; } }
   .borders .border {
     background: #FFF;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     position: absolute; }
     .borders .border.top {
@@ -127,6 +140,7 @@ html.fp-enabled body.fp-responsive {
   bottom: 60px;
   text-align: center; }
   .contact > * {
+    -webkit-transition: opacity 0.1s ease;
     transition: opacity 0.1s ease; }
 
 /* scroll animation */
@@ -141,6 +155,7 @@ html.fp-enabled body.fp-responsive {
     .scroll-btn {
       bottom: 30px; } }
   .scroll-btn > * {
+    -webkit-transition: opacity 0.1s ease;
     transition: opacity 0.1s ease;
     display: inline-block;
     line-height: 18px;
@@ -161,7 +176,6 @@ html.fp-enabled body.fp-responsive {
     height: 55px;
     margin: 0 auto 20px;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: 3px solid white;
     border-radius: 23px; }
@@ -176,7 +190,6 @@ html.fp-enabled body.fp-responsive {
       background: white;
       border-radius: 50%;
       -webkit-animation: ani-mouse 2.5s linear infinite;
-      -moz-animation: ani-mouse 2.5s linear infinite;
       animation: ani-mouse 2.5s linear infinite; }
   .scroll-btn.black .mouse {
     border: 3px solid #0d0d0d; }
@@ -188,6 +201,7 @@ html.fp-enabled body.fp-responsive {
   display: none;
   color: #FFF;
   z-index: 1;
+  -webkit-transition: background 0.1s ease;
   transition: background 0.1s ease; }
   .gianjohansen .page {
     min-height: 100%;
@@ -197,6 +211,7 @@ html.fp-enabled body.fp-responsive {
       position: absolute;
       top: 26%;
       left: 50%;
+      -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       width: 100%;
       color: #fff;
@@ -247,20 +262,6 @@ html.fp-enabled body.fp-responsive {
     opacity: 0;
     top: 29%; } }
 
-@-moz-keyframes ani-mouse {
-  0% {
-    opacity: 1;
-    top: 29%; }
-  15% {
-    opacity: 1;
-    top: 50%; }
-  50% {
-    opacity: 0;
-    top: 50%; }
-  100% {
-    opacity: 0;
-    top: 29%; } }
-
 @keyframes ani-mouse {
   0% {
     opacity: 1;
@@ -282,6 +283,7 @@ html.fp-enabled body.fp-responsive {
         .gianjohansen .page.two {
           padding: 20px 0 80px; } }
       .gianjohansen .page.two:before {
+        -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease;
         position: absolute;
         top: 0;
@@ -369,6 +371,7 @@ html.fp-enabled body.fp-responsive {
             position: relative;
             margin-top: -150px;
             visibility: hidden;
+            -webkit-animation-duration: 0.8s;
             animation-duration: 0.8s;
             max-width: 100%;
             width: 520px;
@@ -447,6 +450,7 @@ html.fp-enabled body.fp-responsive {
           position: relative;
           color: #0d0d0d;
           text-decoration: none;
+          -webkit-transition: all 0.1s ease;
           transition: all 0.1s ease;
           padding: 12px 24px;
           border: 2px solid #0d0d0d; }
@@ -465,6 +469,7 @@ html.fp-enabled body.fp-responsive {
         text-align: center;
         margin: 0 auto;
         visibility: hidden;
+        -webkit-transition: padding 0.1s ease;
         transition: padding 0.1s ease; }
         .gianjohansen .page.two .contact-me:hover {
           padding-bottom: 10px;
@@ -487,6 +492,7 @@ html.fp-enabled body.fp-responsive {
   position: relative;
   color: #FFF;
   z-index: 1;
+  -webkit-transition: background 0.1s ease;
   transition: background 0.1s ease; }
   .context-page header {
     position: relative;
@@ -513,6 +519,7 @@ html.fp-enabled body.fp-responsive {
         content: " ";
         background: #000;
         opacity: .55;
+        -webkit-transition: opacity .3s ease;
         transition: opacity .3s ease;
         z-index: 2; }
       .context-page header .cover:after {
@@ -524,6 +531,7 @@ html.fp-enabled body.fp-responsive {
         width: 100%;
         height: 30%;
         background-size: 100%;
+        background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(transparent));
         background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), transparent); }
     .context-page header .info {
       position: absolute;
@@ -532,9 +540,18 @@ html.fp-enabled body.fp-responsive {
       height: 100%;
       width: 100%;
       text-align: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       z-index: 2; }
       .context-page header .info .type {
@@ -573,8 +590,14 @@ html.fp-enabled body.fp-responsive {
         left: 0;
         width: 100%;
         height: 20%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center; }
         @media (max-width: 767px) {
           .context-page header .info .bottom {
@@ -590,7 +613,10 @@ html.fp-enabled body.fp-responsive {
           font-weight: 700;
           letter-spacing: 2px;
           font-size: 12px;
+          -webkit-box-flex: 1;
+          -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+          -ms-flex-preferred-size: 0;
           flex-basis: 0; }
           @media (max-width: 767px) {
             .context-page header .info .bottom p {
@@ -653,6 +679,7 @@ html.fp-enabled body.fp-responsive {
         position: relative;
         color: #0d0d0d;
         text-decoration: none;
+        -webkit-transition: all 0.1s ease;
         transition: all 0.1s ease;
         padding: 12px 24px;
         border: 2px solid #0d0d0d; }
@@ -703,6 +730,7 @@ html.fp-enabled body.fp-responsive {
         position: relative;
         color: #0d0d0d;
         text-decoration: none;
+        -webkit-transition: all 0.1s ease;
         transition: all 0.1s ease;
         padding: 12px 24px;
         border: 2px solid #0d0d0d; }
