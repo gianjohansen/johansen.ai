@@ -503,8 +503,8 @@ html.fp-enabled body.fp-responsive {
       top: 0;
       left: 0;
       background-image: url("/assets/img/photo-interior-3.jpg");
-      background-size: auto 100%;
-      background-position: bottom center;
+      background-size: cover;
+      background-position: center;
       height: 100%;
       width: 100%;
       text-align: center;
