@@ -1,5 +1,0 @@
-
-RewriteEngine On
-
-# case studies
-RewriteRule ^case-studies/openagent?$ /case-studies/openagent.html [QSA]
