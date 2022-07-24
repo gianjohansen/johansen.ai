@@ -432,3 +432,53 @@
 .socials svg {
   fill: #fff;
 }
+
+.blogContainer {
+  margin-top: clamp(6vw, 12vw, 10vh);
+  margin-left: var(--margin-width);
+  margin-right: var(--margin-width);
+  margin-bottom: clamp(2vw, 14vh, 18vh);
+}
+
+.blogContainer p {
+  color: rgb(160, 159, 166);
+}
+.genericHeading {
+  font-size: clamp(32px, 4.5vw, 80px);
+  font-weight: 600;
+  line-height: clamp(42px, 6vw, 100px);
+  margin-bottom: clamp(16px, 2vh, 28px);
+}
+
+@media (max-width: 576px) {
+  .genericHeading {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+h2.genericHeading {
+  font-size: var(--default-font-size);
+  font-weight: 600;
+  line-height: inherit;
+  margin-bottom: 16px;
+}
+
+.blogHero {
+  border-radius: 6px;
+  margin: 3vh 0;
+}
+
+.pageSeperators {
+  text-align: center;
+  padding: 15vh 0 1vh;
+}
+
+.pageSeperator {
+  display: inline-block;
+  background: rgb(160, 169, 166);
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  margin: 0 12px;
+}
