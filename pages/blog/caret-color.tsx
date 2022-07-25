@@ -7,7 +7,7 @@ import Layout from '@components/Layout'
 
 const CaretColor: NextPage = () => {
   return (
-    <Layout title="some-blog">
+    <Layout title="Style your input carets with this obscure css property">
       <style>
         {`
         #example-input, #example-input-2 {

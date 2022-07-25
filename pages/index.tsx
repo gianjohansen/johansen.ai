@@ -11,7 +11,7 @@ import Layout from '@components/Layout'
 
 const Home: NextPage = () => {
   return (
-    <Layout title="index">
+    <Layout>
       <div className={styles.container}>
         <Container>
           <Row>

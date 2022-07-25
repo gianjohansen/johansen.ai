@@ -3,7 +3,7 @@ import Script from 'next/script'
 
 function Cursor() {
   return (
-    <div className="cursor">
+    <div className="cursor hidden">
       <div className="cursor__ball cursor__ball--big ">
         <svg height={90} width={90}>
           <circle cx={15} cy={15} r={15} strokeWidth={0} />
@@ -32,6 +32,10 @@ function Cursor() {
                 x: e.x - 5,
                 y: e.y - 15,
               })
+              const cursorClasses = document.querySelector('.cursor')?.classList;
+              if (cursorClasses?.contains('hidden')) {
+                cursorClasses.remove('hidden');
+              }
             }
           `}
       </Script>

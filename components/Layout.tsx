@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
 import { motion } from 'framer-motion'
+import Head from './Head';
 
 import Nav from '@components/Nav'
 import Writing from '@components/Writing'
@@ -8,7 +9,7 @@ import Footer from '@components/Footer'
 
 type Props = {
   children: ReactNode
-  title: string
+  title?: string
 }
 
 const variants = {
@@ -17,8 +18,9 @@ const variants = {
   exit: { opacity: 0, x: 0, y: -40 },
 }
 
-const Layout = ({ children, title }: Props): JSX.Element => (
+const Layout = ({ children, title = 'Hello!' }: Props): JSX.Element => (
   <>
+    <Head title={[title, 'Gian Johansen • Front-End Engineer'].join(' • ')} />
     <motion.main
       key={title}
       initial="hidden"

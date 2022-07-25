@@ -82,6 +82,9 @@ body .cursor {
   pointer-events: none;
   line-height: 1;
 }
+body .cursor.hidden {
+  opacity: 0;
+}
 body .cursor * {
   line-height: 1;
 }
@@ -109,7 +112,4 @@ body .cursor__ball circle {
     cursor: default;
   }
 }
-/* stylus-based screens */
-@media (hover: hover) and (pointer: fine) {
-  /* ... */
-}
+

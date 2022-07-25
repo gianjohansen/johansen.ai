@@ -3,16 +3,13 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { AnimatePresence } from 'framer-motion'
 
-import Nav from '@components/Nav'
 import Cursor from '@components/Cursor'
-import Head from '@components/Head'
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   const url = `https://wallis.dev${router.route}`
 
   return (
     <>
-      <Head />
       <Cursor />
       <AnimatePresence
         exitBeforeEnter
