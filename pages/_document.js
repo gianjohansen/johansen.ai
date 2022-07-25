@@ -11,6 +11,10 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;700&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <body>
         <Main />

@@ -12,11 +12,13 @@
     "format:fix": "prettier --write ."
   },
   "dependencies": {
+    "@types/react-syntax-highlighter": "^15.5.3",
     "framer-motion": "^6.5.1",
     "next": "12.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-grid-system": "^8.1.5",
+    "react-syntax-highlighter": "^15.5.0",
     "react-ticker": "^1.3.2",
     "reset-css": "^5.0.1"
   },

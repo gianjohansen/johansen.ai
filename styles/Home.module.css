@@ -5,6 +5,15 @@
   margin-bottom: 10vh;
 }
 
+.mono {
+  font-family: 'IBM Plex Mono', monospace;
+  background: #282b2e;
+  color: #fff;
+  padding: 2px 8px;
+  margin: 0 6px;
+  border-radius: 6px;
+}
+
 .desktopRight {
   text-align: right;
 }
@@ -325,7 +334,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   position: relative;
-  padding-right: clamp(40px, 10vw, 120px);
+  padding-right: clamp(40px, 7vw, 120px);
 }
 
 .blogHeadingText:after {
@@ -551,8 +560,17 @@
 }
 
 .blogContainer p {
-  color: rgb(160, 159, 166);
+  color: rgb(182, 181, 188);
+  margin-bottom: 36px;
+  line-height: 1.5;
+  font-weight: 400;
 }
+
+.blogContainer a {
+  font-weight: 600;
+  color: #fff;
+}
+
 .genericHeading {
   font-size: clamp(32px, 4.5vw, 80px);
   font-weight: 600;
@@ -570,18 +588,18 @@
 h2.genericHeading {
   font-size: var(--default-font-size);
   font-weight: 600;
-  line-height: inherit;
-  margin-bottom: 16px;
+  line-height: 1.5;
+  margin-bottom: clamp(16px, 2vh, 28px);
 }
 
 .blogHero {
   border-radius: 6px;
-  margin: 3vh 0;
+  margin: 0 0 3vh;
 }
 
 .pageSeperators {
   text-align: center;
-  padding: 15vh 0 1vh;
+  padding: 14vh 0 1vh;
 }
 
 .pageSeperator {

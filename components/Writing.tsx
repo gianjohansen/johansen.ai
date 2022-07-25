@@ -28,40 +28,19 @@ function Writing() {
             <Col>
               <div className={styles.blogList}>
                 <div className={styles.blogListing}>
-                  <LinkStaticPosition href="/blog/some-page">
+                  <LinkStaticPosition href="/blog/caret-color">
                     <div className={styles.blogHeading}>
                       <span className={styles.blogHeadingText}>
-                        Streaming a single netflix account from one house to
-                        another
+                      Style your input carets with this obscure css property
                       </span>
                       <div className={styles.blogMeta}>
                         <div className={styles.blogCategories}>
-                          <div className={styles.blogCategory}>Privacy</div>
-                          <div className={styles.blogCategory}>Guide</div>
+                          <div className={styles.blogCategory}>CSS</div>
+                          <div className={styles.blogCategory}>Web</div>
                         </div>
                         <div className={styles.blogStats}>
                           <div className={styles.blogStat}>May 6</div>
-                          <div className={styles.blogStat}>12 minute read</div>
-                        </div>
-                      </div>
-                    </div>
-                  </LinkStaticPosition>
-                </div>
-                <div className={styles.blogListing}>
-                  <LinkStaticPosition href="/blog/another-page">
-                    <div className={styles.blogHeading}>
-                      <span className={styles.blogHeadingText}>
-                        Installing tow-boot onto a pinephone pro: an illustrated
-                        guide
-                      </span>
-                      <div className={styles.blogMeta}>
-                        <div className={styles.blogCategories}>
-                          <div className={styles.blogCategory}>Linux</div>
-                          <div className={styles.blogCategory}>Guide</div>
-                        </div>
-                        <div className={styles.blogStats}>
-                          <div className={styles.blogStat}>May 6</div>
-                          <div className={styles.blogStat}>12 minute read</div>
+                          <div className={styles.blogStat}>2 minute read</div>
                         </div>
                       </div>
                     </div>
