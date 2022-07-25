@@ -31,7 +31,7 @@ function Writing() {
                   <LinkStaticPosition href="/blog/caret-color">
                     <div className={styles.blogHeading}>
                       <span className={styles.blogHeadingText}>
-                      Style your input carets with this obscure css property
+                        Style your input carets with this obscure css property
                       </span>
                       <div className={styles.blogMeta}>
                         <div className={styles.blogCategories}>

@@ -50,9 +50,9 @@ const CaretColor: NextPage = () => {
             <Col xl={8}>
               <p>
                 Quick tip of the day: input field carets can be colored with
-                css. They're the blinking cursors that show where the user is
-                currently typing. This is the sort of style that once upon a
-                time needed to be faked with some trickery, but it's gone
+                css. They&apos;re the blinking cursors that show where the user
+                is currently typing. This is the sort of style that once upon a
+                time needed to be faked with some trickery, but it&apos;s gone
                 completely native these days.
               </p>
               <p>
@@ -76,26 +76,26 @@ const CaretColor: NextPage = () => {
                 While <span className={styles.mono}>caret-color</span> has full
                 browser support (minus internet explorer), there are a few other
                 caret-related properties making their way through the working
-                group which don't. Until those are ready{' '}
+                group which don&apos;t. Until those are ready{' '}
                 <a
                   href="https://codepen.io/team/css-tricks/pen/YzGoBGq"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   back to trickery
                 </a>{' '}
                 it is.
               </p>
               <h2 className={styles.genericHeading}>In the bad old days</h2>
-              <p>
-                In case you were wondering how it could have been faked:
-              </p>
+              <p>In case you were wondering how it could have been faked:</p>
               <p>
                 <input type="text" id="example-input-2" />
               </p>
               <p>
-                We get the same effect by setting the text color to our desired caret
-                color (thereby setting the caret color), hiding the body text and using a text shadow with our body color
-                as stand-in body text:
+                We get the same effect by setting the text color to our desired
+                caret color (thereby setting the caret color), hiding the body
+                text and using a text shadow with our body color as stand-in
+                body text:
               </p>
               <SyntaxHighlighter language="css" style={obsidian}>
                 {`.some-element {
@@ -105,8 +105,10 @@ const CaretColor: NextPage = () => {
 }`}
               </SyntaxHighlighter>
               <p>
-                I'd joke about how older css required hacks like this but let's
-                be honest, our stylesheets are still full of these. We've just rebranded them "workarounds" and trained our bundlers to add them for us.
+                I&apos;d joke about how older css required hacks like this but
+                let&apos;s be honest, our stylesheets are still full of these.
+                We&apos;ve just rebranded them &quot;workarounds&quot; and
+                trained our bundlers to add them for us.
               </p>
             </Col>
           </Row>
