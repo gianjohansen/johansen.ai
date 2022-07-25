@@ -1,25 +1,28 @@
 import 'reset-css'
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+import { AnimatePresence } from 'framer-motion'
 
-import Footer from '@components/Footer'
 import Nav from '@components/Nav'
 import Cursor from '@components/Cursor'
 import Head from '@components/Head'
-import Writing from '@components/Writing'
-import Contact from '@components/Contact'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, router }: AppProps) {
+  const url = `https://wallis.dev${router.route}`
+
   return (
     <>
       <Head />
-      <Nav />
       <Cursor />
-      <Component {...pageProps} />
-      <Writing />
-      <Contact />
-      <Footer />
-    </>)
+      <AnimatePresence
+        exitBeforeEnter
+        initial={false}
+        onExitComplete={() => window.scrollTo(0, 0)}
+      >
+        <Component {...pageProps} key={url} />
+      </AnimatePresence>
+    </>
+  )
 }
 
 export default MyApp

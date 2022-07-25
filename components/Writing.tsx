@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import LinkStaticPosition from './NoScrollLink'
 import styles from '@styles/Home.module.css'
 import { Container, Row, Col } from 'react-grid-system'
 
@@ -28,17 +29,19 @@ function Writing() {
               <div className={styles.blogList}>
                 <div className={styles.blogListing}>
                   <div className={styles.blogHeading}>
-                    <Link href="/blog/some-page">
+                    <LinkStaticPosition href="/blog/some-page">
                       Streaming a single netflix account from one house to
                       another
-                    </Link>
+                    </LinkStaticPosition>
                   </div>
                   <div className={styles.blogCount}>➔</div>
                 </div>
                 <div className={styles.blogListing}>
                   <div className={styles.blogHeading}>
-                    Installing tow-boot onto a pinephone pro: an illustrated
-                    guide
+                    <LinkStaticPosition href="/blog/another-page">
+                      Installing tow-boot onto a pinephone pro: an illustrated
+                      guide
+                    </LinkStaticPosition>
                   </div>
                   <div className={styles.blogCount}>➔</div>
                 </div>

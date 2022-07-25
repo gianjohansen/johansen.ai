@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 import styles from '@styles/Home.module.css'
 import { Container, Row, Col } from 'react-grid-system'
 import Qantas from '@public/images/logo-qantas-black.png'
@@ -8,9 +7,11 @@ import Optus from '@public/images/logo-optus-black.png'
 import OpenAgent from '@public/images/logo-openagent-black.png'
 import Script from 'next/script'
 
+import Layout from '@components/Layout'
+
 const Home: NextPage = () => {
   return (
-    <>
+    <Layout title="index">
       <div className={styles.container}>
         <Container>
           <Row>
@@ -139,7 +140,7 @@ const Home: NextPage = () => {
         </Container>
         <Script src="/js/homepage.js" />
       </div>
-    </>
+    </Layout>
   )
 }
 

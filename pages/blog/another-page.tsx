@@ -4,9 +4,9 @@ import { Container, Row, Col } from 'react-grid-system'
 
 import Layout from '@components/Layout'
 
-const SomeBlog: NextPage = () => {
+const AnotherPage: NextPage = () => {
   return (
-    <Layout title="some-blog">
+    <Layout title="another-page">
       <div className={styles.blogContainer}>
         <Container>
           <Row justify="center">
@@ -77,4 +77,4 @@ const SomeBlog: NextPage = () => {
   )
 }
 
-export default SomeBlog
+export default AnotherPage

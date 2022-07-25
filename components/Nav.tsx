@@ -3,6 +3,7 @@ import styles from '@styles/Home.module.css'
 import { Container, Row, Col } from 'react-grid-system'
 import Script from 'next/script'
 import Link from 'next/link'
+import LinkStaticPosition from './NoScrollLink'
 
 function Nav() {
   return (
@@ -10,9 +11,9 @@ function Nav() {
       <Container>
         <Row justify="between" align="center">
           <Col>
-            <Link href="/">
+            <LinkStaticPosition href="/">
               <img src="/images/logo-white.png" className={styles.headerLogo} />
-            </Link>
+            </LinkStaticPosition>
           </Col>
           <Col xs="content" style={{ textAlign: 'right' }}>
             <a
