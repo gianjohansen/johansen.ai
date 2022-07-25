@@ -1,0 +1,14 @@
+.git
+.gitignore
+
+README.md
+
+# artifacts:
+.next
+.swc
+**/out
+
+# node
+**/node_modules
+package.json
+package-lock.json
