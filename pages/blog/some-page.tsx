@@ -10,7 +10,12 @@ const SomeBlog: NextPage = () => {
       <div className={styles.blogContainer}>
         <Container>
           <Row justify="center">
-            <Col md={8}>
+            <Col xl={8}>
+              <div className={styles.blogCategories}>
+                <div className={styles.blogCategory}>Linux</div>
+                <div className={styles.blogCategory}>Pinephone</div>
+                <div className={styles.blogCategory}>Guide</div>
+              </div>
               <h1 className={styles.genericHeading}>
                 Installing tow-boot onto a pinephone pro
               </h1>
@@ -23,7 +28,7 @@ const SomeBlog: NextPage = () => {
             </Col>
           </Row>
           <Row justify="center">
-            <Col md={8}>
+            <Col xl={8}>
               <img
                 className={styles.blogHero}
                 src="/images/blog-post-example.jpg"
@@ -31,7 +36,7 @@ const SomeBlog: NextPage = () => {
             </Col>
           </Row>
           <Row justify="center">
-            <Col md={8}>
+            <Col xl={8}>
               <h2 className={styles.genericHeading}>Subheading</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce

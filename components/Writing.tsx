@@ -28,28 +28,44 @@ function Writing() {
             <Col>
               <div className={styles.blogList}>
                 <div className={styles.blogListing}>
-                  <div className={styles.blogHeading}>
-                    <LinkStaticPosition href="/blog/some-page">
-                      Streaming a single netflix account from one house to
-                      another
-                    </LinkStaticPosition>
-                  </div>
-                  <div className={styles.blogCount}>➔</div>
+                  <LinkStaticPosition href="/blog/some-page">
+                    <div className={styles.blogHeading}>
+                      <span className={styles.blogHeadingText}>
+                        Streaming a single netflix account from one house to
+                        another
+                      </span>
+                      <div className={styles.blogMeta}>
+                        <div className={styles.blogCategories}>
+                          <div className={styles.blogCategory}>Privacy</div>
+                          <div className={styles.blogCategory}>Guide</div>
+                        </div>
+                        <div className={styles.blogStats}>
+                          <div className={styles.blogStat}>May 6</div>
+                          <div className={styles.blogStat}>12 minute read</div>
+                        </div>
+                      </div>
+                    </div>
+                  </LinkStaticPosition>
                 </div>
                 <div className={styles.blogListing}>
-                  <div className={styles.blogHeading}>
-                    <LinkStaticPosition href="/blog/another-page">
-                      Installing tow-boot onto a pinephone pro: an illustrated
-                      guide
-                    </LinkStaticPosition>
-                  </div>
-                  <div className={styles.blogCount}>➔</div>
-                </div>
-                <div className={styles.blogListing}>
-                  <div className={styles.blogHeading}>
-                    Available options for getting whatsapp onto a pinephone pro
-                  </div>
-                  <div className={styles.blogCount}>➔</div>
+                  <LinkStaticPosition href="/blog/another-page">
+                    <div className={styles.blogHeading}>
+                      <span className={styles.blogHeadingText}>
+                        Installing tow-boot onto a pinephone pro: an illustrated
+                        guide
+                      </span>
+                      <div className={styles.blogMeta}>
+                        <div className={styles.blogCategories}>
+                          <div className={styles.blogCategory}>Linux</div>
+                          <div className={styles.blogCategory}>Guide</div>
+                        </div>
+                        <div className={styles.blogStats}>
+                          <div className={styles.blogStat}>May 6</div>
+                          <div className={styles.blogStat}>12 minute read</div>
+                        </div>
+                      </div>
+                    </div>
+                  </LinkStaticPosition>
                 </div>
               </div>
             </Col>
