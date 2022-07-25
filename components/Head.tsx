@@ -1,6 +1,5 @@
 import React from 'react'
 import Head from 'next/head'
-import Script from 'next/script'
 import { setConfiguration } from 'react-grid-system'
 
 function PageHead() {
@@ -21,6 +20,7 @@ function PageHead() {
   return (
     <Head>
       <title>Gian Johansen &bull; Web Developer</title>
+      <link rel="shortcut icon" href="/favicon.png" />
     </Head>
   )
 }
