@@ -18,9 +18,6 @@ import Contact from '@components/Contact/Contact'
 const SomeBlog: NextPage = () => {
   return (
     <>
-      <Head />
-      <Cursor />
-      <Nav />
       <div className={styles.blogContainer}>
         <Container>
           <Row justify="center">
@@ -87,9 +84,6 @@ const SomeBlog: NextPage = () => {
           </Row>
         </Container>
       </div>
-      <Writing />
-      <Contact />
-      <Footer />
     </>
   )
 }

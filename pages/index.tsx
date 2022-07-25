@@ -8,19 +8,9 @@ import Optus from '@public/images/logo-optus-black.png'
 import OpenAgent from '@public/images/logo-openagent-black.png'
 import Script from 'next/script'
 
-import Footer from '@components/Footer/Footer'
-import Nav from '@components/Nav/Nav'
-import Cursor from '@components/Cursor/Cursor'
-import Head from '@components/Head/Head'
-import Writing from '@components/Writing/Writing'
-import Contact from '@components/Contact/Contact'
-
 const Home: NextPage = () => {
   return (
     <>
-      <Head />
-      <Cursor />
-      <Nav />
       <div className={styles.container}>
         <Container>
           <Row>
@@ -149,9 +139,6 @@ const Home: NextPage = () => {
         </Container>
         <Script src="/js/homepage.js" />
       </div>
-      <Writing />
-      <Contact />
-      <Footer />
     </>
   )
 }
