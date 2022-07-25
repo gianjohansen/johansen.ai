@@ -35,7 +35,7 @@ const Home: NextPage = () => {
                   I make neat things on the web for companies and brands just
                   like&nbsp;
                   <br />
-                  yours across australia and beyond. I'm mostly react and
+                  yours across australia and beyond. I&apos;m mostly react and
                   typescript.
                 </p>
               </div>
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
                 style={{ color: '#fff', fontWeight: '600' }}
                 className={styles.textSecondary}
               >
-                I've worked with…
+                I&apos;ve worked with…
               </p>
             </Col>
             <Col xs={12} sm={6} className={styles.desktopRight}>

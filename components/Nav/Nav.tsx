@@ -7,10 +7,6 @@ import Link from 'next/link'
 function Nav() {
   return (
     <div className={styles.header}>
-      <Script
-        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"
-        strategy="beforeInteractive"
-      />
       <Container>
         <Row justify="between" align="center">
           <Col>

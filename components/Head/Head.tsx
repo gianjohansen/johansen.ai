@@ -1,16 +1,26 @@
 import React from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
+import { setConfiguration } from 'react-grid-system'
 
 function PageHead() {
+  const maxWidth = 1900
+  setConfiguration({
+    // breakpoints: [576, 768, 992, 1200, 1600, 1920],
+    containerWidths: [
+      maxWidth,
+      maxWidth,
+      maxWidth,
+      maxWidth,
+      maxWidth,
+      maxWidth,
+    ],
+    gutterWidth: 20,
+  })
+
   return (
     <Head>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;700&display=swap"
-        rel="stylesheet"
-      />
+      <title>Gian Johansen &bull; Web Developer</title>
     </Head>
   )
 }

@@ -5,13 +5,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
-    "next": "12.2.2",
+    "next": "12.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-grid-system": "^8.1.5",
