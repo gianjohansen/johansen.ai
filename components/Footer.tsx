@@ -21,12 +21,17 @@ function Footer() {
             className={styles.desktopRight}
           >
             <p className={styles.emissions}>
-              This page emits only <strong>0.49g</strong> of CO2 per
-              pageload.&nbsp;
-              <br />
-              That&apos;s better than <strong>99%</strong> of pages tested.
-              <a href="#" style={{ color: '#fff', marginLeft: '8px' }}>
-                ➔
+              <a
+                href="https://www.websitecarbon.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                This website emits only <strong>0.08g</strong> of CO2 per
+                load.&nbsp;
+                <br />
+                {/* https://www.websitecarbon.com/website/personal-beta-opal-vercel-app/ */}
+                That&apos;s better than <strong>93%</strong> of pages tested.{' '}
+                <span style={{ color: '#fff' }}>➔</span>
               </a>
               &nbsp;
             </p>

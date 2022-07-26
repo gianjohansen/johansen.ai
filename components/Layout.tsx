@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import { motion } from 'framer-motion'
-import Head from './Head';
+import Head from './Head'
 
 import Nav from '@components/Nav'
 import Writing from '@components/Writing'
