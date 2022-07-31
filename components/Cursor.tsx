@@ -1,7 +1,7 @@
 import React from 'react'
 import Script from 'next/script'
 
-function Cursor() {
+const Cursor: React.FC<{}> = () => {
   return (
     <div className="cursor hidden">
       <div className="cursor__ball cursor__ball--big ">

@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '@styles/Home.module.css'
 import { Container, Row, Col } from 'react-grid-system'
 
-function Footer() {
+const Footer: React.FC<{}> = () => {
   return (
     <div className={styles.footer}>
       <Container>

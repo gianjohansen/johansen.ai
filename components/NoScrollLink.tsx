@@ -1,15 +1,15 @@
 import Link, { LinkProps } from 'next/link'
 import React, { ReactNode } from 'react'
 
-interface IProps extends LinkProps {
+interface LinkStaticPositionProps extends LinkProps {
   children: ReactNode
 }
 
-const LinkStaticPosition = ({
+const LinkStaticPosition: React.FC<LinkStaticPositionProps> = ({
   children,
   href,
   passHref,
-}: IProps): JSX.Element => (
+}) => (
   <Link href={href} passHref={passHref} scroll={false}>
     {children}
   </Link>
