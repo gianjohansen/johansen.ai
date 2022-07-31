@@ -30,7 +30,7 @@ strong {
 }
 
 html {
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 
 html,
@@ -46,6 +46,10 @@ body {
   cursor: none;
   transition-duration: 0.1s;
   transition-timing-function: linear;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .logo {
@@ -111,4 +115,55 @@ body .cursor__ball circle {
   body {
     cursor: default;
   }
+}
+
+/* gsap */
+
+.horizontal-container {
+  min-height: 600px;
+}
+
+.horizontal-container .horizontal-wrapper {
+  position: relative;
+  width: calc(50vw + 10px + 840px * 4 + 30px * 3);
+  padding: 0px;
+}
+
+.horizontal-container .thumbnail {
+  display: inline-block;
+  float: left;
+  height: 600px;
+  width: 840px;
+  color: white;
+  font-weight: 800;
+  border-radius: 10px;
+  padding-right: 30px;
+  background: #161618;
+}
+
+.horizontal-container .thumbnail img {
+  border-radius: 6px;
+  height: 600px;
+}
+
+.horizontal-container .thumbnail:last-child {
+  margin-right: 0px;
+}
+
+/* blog card animations */
+
+.fadeIn-bottom {
+  top: 80%;
+}
+
+.fadeIn-top {
+  top: 20%;
+}
+
+.fadeIn-left {
+  left: 20%;
+}
+
+.fadeIn-right {
+  left: 80%;
 }

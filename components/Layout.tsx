@@ -3,13 +3,11 @@ import { motion } from 'framer-motion'
 import Head from './Head'
 
 import Nav from '@components/Nav'
-import Writing from '@components/Writing'
-import Contact from '@components/Contact'
-import Footer from '@components/Footer'
+import StaticOutro from '@components/StaticOutro'
 
-type Props = {
-  children: ReactNode
+interface LayoutProps {
   title?: string
+  children: React.ReactNode
 }
 
 const variants = {
@@ -18,7 +16,7 @@ const variants = {
   exit: { opacity: 0, x: 0, y: -40 },
 }
 
-const Layout = ({ children, title = 'Hello!' }: Props): JSX.Element => (
+const Layout = ({ title = 'Hello!', children }: LayoutProps): JSX.Element => (
   <>
     <Head title={[title, 'Gian Johansen • Front-End Engineer'].join(' • ')} />
     <motion.main
@@ -29,6 +27,7 @@ const Layout = ({ children, title = 'Hello!' }: Props): JSX.Element => (
       variants={variants}
       transition={{ type: 'linear' }}
       className="
+                    main-motion-wrapper
                     flex flex-col items-start w-full pt-10
                     px-8 sm:px-16 md:px-36 lg:px-52 xl:px-80 2xl:px-96
                     pt-24 h-full
@@ -36,9 +35,7 @@ const Layout = ({ children, title = 'Hello!' }: Props): JSX.Element => (
     >
       <Nav />
       {children}
-      <Writing />
-      <Contact />
-      <Footer />
+      <StaticOutro />
     </motion.main>
   </>
 )
