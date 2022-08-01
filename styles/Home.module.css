@@ -541,7 +541,7 @@
   margin-top: clamp(6vw, 12vw, 10vh);
   margin-left: var(--margin-width);
   margin-right: var(--margin-width);
-  margin-bottom: clamp(2vw, 14vh, 18vh);
+  margin-bottom: 0;
 }
 
 .blogContainer p {
@@ -584,7 +584,7 @@ h2.genericHeading {
 
 .pageSeperators {
   text-align: center;
-  padding: 14vh 0 1vh;
+  padding: 6vh 0 6vh;
 }
 
 .pageSeperator {

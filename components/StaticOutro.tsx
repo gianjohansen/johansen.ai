@@ -9,7 +9,11 @@ import Footer from '@components/Footer'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const StaticOutro: React.FC<{}> = () => {
+interface StaticOutroProps {
+  children: React.ReactNode
+}
+
+const StaticOutro: React.FC<StaticOutroProps> = ({ children }) => {
   React.useEffect(() => {
     const isDesktop = window.innerWidth >= 992
 
@@ -33,7 +37,7 @@ const StaticOutro: React.FC<{}> = () => {
         trigger: '.horizontal-container',
         start: '300px center',
         end: () => '+=' + (container.scrollWidth - window.innerWidth),
-        pin: '.main-motion-wrapper',
+        pin: '.pin-target',
         anticipatePin: 0,
         scrub: scrubValue,
         invalidateOnRefresh: true,
@@ -89,7 +93,8 @@ const StaticOutro: React.FC<{}> = () => {
   }, [])
 
   return (
-    <>
+    <div className="pin-target">
+      {children}
       <div className={styles.experience}>
         <Container>
           <Row justify="between" align="center">
@@ -144,28 +149,28 @@ const StaticOutro: React.FC<{}> = () => {
                   <div className="thumbnail">
                     <BlogCard
                       title="Post 1"
-                      img="/images/blog-2.jpg"
+                      img="/images/blog-2-c.jpg"
                       href="/blog/caret-color"
                     />
                   </div>
                   <div className="thumbnail">
                     <BlogCard
                       title="Post 2"
-                      img="/images/blog-1.jpg"
+                      img="/images/blog-1-c.jpg"
                       href="/blog/caret-color"
                     />
                   </div>
                   <div className="thumbnail">
                     <BlogCard
                       title="Post 3"
-                      img="/images/blog-3.jpg"
+                      img="/images/blog-3-c.jpg"
                       href="/blog/caret-color"
                     />
                   </div>
                   <div className="thumbnail">
                     <BlogCard
                       title="Post 4"
-                      img="/images/blog-4.jpg"
+                      img="/images/blog-4-c.jpg"
                       href="/blog/caret-color"
                     />
                   </div>
@@ -177,7 +182,7 @@ const StaticOutro: React.FC<{}> = () => {
       </div>
       <Contact />
       <Footer />
-    </>
+    </div>
   )
 }
 

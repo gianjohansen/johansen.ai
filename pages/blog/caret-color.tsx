@@ -4,6 +4,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter'
 import { obsidian } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { Container, Row, Col } from 'react-grid-system'
 import Layout from '@components/Layout'
+import StaticOutro from '@components/StaticOutro'
 
 const CaretColor: NextPage = () => {
   return (
@@ -112,6 +113,10 @@ const CaretColor: NextPage = () => {
               </p>
             </Col>
           </Row>
+        </Container>
+      </div>
+      <StaticOutro>
+        <Container>
           <Row>
             <Col>
               <div className={styles.pageSeperators}>
@@ -122,7 +127,7 @@ const CaretColor: NextPage = () => {
             </Col>
           </Row>
         </Container>
-      </div>
+      </StaticOutro>
     </Layout>
   )
 }

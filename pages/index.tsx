@@ -6,6 +6,7 @@ import Qantas from '@public/images/logo-qantas-black.png'
 import Optus from '@public/images/logo-optus-black.png'
 import OpenAgent from '@public/images/logo-openagent-black.png'
 import Script from 'next/script'
+import StaticOutro from '@components/StaticOutro'
 
 import Layout from '@components/Layout'
 
@@ -76,70 +77,73 @@ const Home: NextPage = () => {
           </Row>
         </Container>
       </div>
-      <div className={styles.jobList}>
-        <Container>
-          <Row>
-            <Col xs={12} lg={4} className={styles.jobCol}>
-              <div className={styles.job}>
-                <div className={styles.jobIconQantas}>
-                  <Image src={Qantas} height={40} width={40} />
+
+      <StaticOutro>
+        <div className={styles.jobList}>
+          <Container>
+            <Row>
+              <Col xs={12} lg={4} className={styles.jobCol}>
+                <div className={styles.job}>
+                  <div className={styles.jobIconQantas}>
+                    <Image src={Qantas} height={40} width={40} />
+                  </div>
+                  <div className={styles.jobDescription}>
+                    <p
+                      className={`${styles.jobName} jobYearsVisibleShow`}
+                      id="firstJob"
+                    >
+                      Qantas
+                    </p>
+                    <p className={`${styles.jobIndustry} jobYearsVisibleShow`}>
+                      The spirit of Australia
+                    </p>
+                  </div>
+                  <div className={`${styles.jobYears} jobYearsVisibleShow`}>
+                    2021 — 2022
+                  </div>
                 </div>
-                <div className={styles.jobDescription}>
-                  <p
-                    className={`${styles.jobName} jobYearsVisibleShow`}
-                    id="firstJob"
-                  >
-                    Qantas
-                  </p>
-                  <p className={`${styles.jobIndustry} jobYearsVisibleShow`}>
-                    The spirit of Australia
-                  </p>
+              </Col>
+              <Col xs={12} lg={4} className={styles.jobCol}>
+                <div className={styles.job}>
+                  <div className={styles.jobIconOptus}>
+                    <Image src={Optus} height={40} width={40} />
+                  </div>
+                  <div className={styles.jobDescription}>
+                    <p className={`${styles.jobName} jobYearsVisibleShow`}>
+                      Optus
+                    </p>
+                    <p className={`${styles.jobIndustry} jobYearsVisibleShow`}>
+                      We get people talking
+                    </p>
+                  </div>
+                  <div className={`${styles.jobYears} jobYearsVisibleShow`}>
+                    2018 — 2021
+                  </div>
                 </div>
-                <div className={`${styles.jobYears} jobYearsVisibleShow`}>
-                  2021 — 2022
+              </Col>
+              <Col xs={12} lg={4} className={styles.jobCol}>
+                <div className={styles.job}>
+                  <div className={styles.jobIconOpenAgent}>
+                    <Image src={OpenAgent} height={40} width={40} />
+                  </div>
+                  <div className={styles.jobDescription}>
+                    <p className={`${styles.jobName} jobYearsVisibleShow`}>
+                      OpenAgent
+                    </p>
+                    <p className={`${styles.jobIndustry} jobYearsVisibleShow`}>
+                      Real estate, redefined
+                    </p>
+                  </div>
+                  <div className={`${styles.jobYears} jobYearsVisibleShow`}>
+                    2014 — 2018
+                  </div>
                 </div>
-              </div>
-            </Col>
-            <Col xs={12} lg={4} className={styles.jobCol}>
-              <div className={styles.job}>
-                <div className={styles.jobIconOptus}>
-                  <Image src={Optus} height={40} width={40} />
-                </div>
-                <div className={styles.jobDescription}>
-                  <p className={`${styles.jobName} jobYearsVisibleShow`}>
-                    Optus
-                  </p>
-                  <p className={`${styles.jobIndustry} jobYearsVisibleShow`}>
-                    We get people talking
-                  </p>
-                </div>
-                <div className={`${styles.jobYears} jobYearsVisibleShow`}>
-                  2018 — 2021
-                </div>
-              </div>
-            </Col>
-            <Col xs={12} lg={4} className={styles.jobCol}>
-              <div className={styles.job}>
-                <div className={styles.jobIconOpenAgent}>
-                  <Image src={OpenAgent} height={40} width={40} />
-                </div>
-                <div className={styles.jobDescription}>
-                  <p className={`${styles.jobName} jobYearsVisibleShow`}>
-                    OpenAgent
-                  </p>
-                  <p className={`${styles.jobIndustry} jobYearsVisibleShow`}>
-                    Real estate, redefined
-                  </p>
-                </div>
-                <div className={`${styles.jobYears} jobYearsVisibleShow`}>
-                  2014 — 2018
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-        <Script src="/js/homepage.js" />
-      </div>
+              </Col>
+            </Row>
+          </Container>
+          <Script src="/js/homepage.js" />
+        </div>
+      </StaticOutro>
     </Layout>
   )
 }

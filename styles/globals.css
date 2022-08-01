@@ -29,10 +29,6 @@ strong {
   opacity: 1;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 html,
 body {
   padding: 0;
