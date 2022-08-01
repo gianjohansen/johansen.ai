@@ -6,7 +6,7 @@ import { AnimatePresence } from 'framer-motion'
 import Cursor from '@components/Cursor'
 
 function MyApp({ Component, pageProps, router }: AppProps) {
-  const url = `https://wallis.dev${router.route}`
+  const url = `${router.route}`
 
   return (
     <>

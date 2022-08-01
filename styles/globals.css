@@ -107,7 +107,7 @@ body .cursor__ball circle {
 /* smartphones, touchscreens */
 @media (hover: none) and (pointer: coarse),
   (hover: none) and (pointer: fine),
-  (hover: none) and (pointer: coarse),
+  (hover: hover) and (pointer: coarse),
   (max-width: 768px) {
   body .cursor {
     display: none !important;
@@ -125,7 +125,7 @@ body .cursor__ball circle {
 
 .horizontal-container .horizontal-wrapper {
   position: relative;
-  width: calc(50vw + 10px + 840px * 4 + 30px * 3);
+  width: calc(50vw + 10px + 840px * 4);
   padding: 0px;
 }
 
@@ -135,8 +135,7 @@ body .cursor__ball circle {
   height: 600px;
   width: 840px;
   color: white;
-  font-weight: 800;
-  border-radius: 10px;
+  font-weight: 600;
   padding-right: 30px;
   background: #161618;
 }
@@ -146,8 +145,38 @@ body .cursor__ball circle {
   height: 600px;
 }
 
-.horizontal-container .thumbnail:last-child {
-  margin-right: 0px;
+@media (max-width: 992px) {
+  .horizontal-container {
+    min-height: unset;
+    padding: 10px 0 0;
+  }
+
+  .horizontal-container .horizontal-wrapper {
+    width: 100%;
+  }
+
+  .horizontal-container .thumbnail {
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    padding-right: 30px;
+    background: #161618;
+    margin-bottom: 30px;
+    padding-right: 0;
+  }
+
+  .horizontal-container .thumbnail img {
+    border-radius: 6px;
+    height: auto;
+  }
+
+  .horizontal-container .thumbnail:last-child {
+    margin-right: 0px;
+  }
+
+  .horizontal-container .thumbnail {
+    float: none;
+  }
 }
 
 /* blog card animations */

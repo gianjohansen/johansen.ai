@@ -3,6 +3,20 @@ import styles from '@styles/Home.module.css'
 import { Container, Row, Col } from 'react-grid-system'
 import LinkStaticPosition from './NoScrollLink'
 
+import gsap from 'gsap'
+import ScrollToPlugin from 'gsap/dist/ScrollToPlugin'
+gsap.registerPlugin(ScrollToPlugin)
+
+const scrollTo = (element?: string) => {
+  gsap.to(window, {
+    scrollTo: {
+      y: element || 'max',
+      autoKill: false,
+    },
+    duration: 1,
+  })
+}
+
 const Nav: React.FC<{}> = () => (
   <div className={styles.header}>
     <Container>
@@ -19,13 +33,19 @@ const Nav: React.FC<{}> = () => (
         <Col xs="content" style={{ textAlign: 'right' }}>
           <a
             className={styles.menuLink}
-            href="javascript:window.scrollTo({top: document.getElementById('recent-writing').getBoundingClientRect().top - 40, behavior: 'smooth'})"
+            onClick={(e) => {
+              e.preventDefault()
+              scrollTo('#recent-writing')
+            }}
           >
             Recent writing
           </a>
           <a
             className={styles.menuLink}
-            href="javascript:window.scrollTo({top: document.getElementById('get-in-touch').getBoundingClientRect().top - 40, behavior: 'smooth'})"
+            onClick={(e) => {
+              e.preventDefault()
+              scrollTo()
+            }}
           >
             Get in touch
           </a>

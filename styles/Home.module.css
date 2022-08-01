@@ -142,6 +142,17 @@
   margin-bottom: 2vh;
 }
 
+.innerGrid {
+  margin-left: var(--margin-width);
+  margin-right: var(--margin-width);
+}
+
+@media (min-width: 992px) {
+  .innerGrid {
+    margin: 0;
+  }
+}
+
 .textSecondary {
   color: rgb(160, 159, 166);
 }
@@ -287,7 +298,9 @@
   .jobIconQantas,
   .jobIconOptus,
   .jobIconOpenAgent {
-    margin-bottom: 20px;
+    float: left;
+    margin-bottom: 40px;
+    margin-right: 20px;
     width: 60px;
     height: 60px;
   }
@@ -479,6 +492,8 @@
 .contact {
   text-align: center;
   margin: 20vh 0 20vh;
+  margin-left: var(--margin-width);
+  margin-right: var(--margin-width);
 }
 
 @media (max-width: 768px) {
@@ -592,12 +607,12 @@ h2.genericHeading {
 }
 
 .horizontalHeader {
-  font-size: clamp(32px, 4.5vw, 80px);
+  font-size: clamp(32px, 3.5vw, 72px);
   font-weight: 600;
-  line-height: clamp(42px, 6vw, 100px);
+  line-height: clamp(42px, 4.5vw, 90px);
   color: #fff;
   margin-bottom: 40px;
-  padding-right: 120px;
+  padding-right: 90px;
 }
 
 .rssLink {
@@ -607,8 +622,34 @@ h2.genericHeading {
   transition: color 0.3s;
 }
 
+.rssLink svg {
+  line-height: 1;
+}
+
 .rssLink:hover {
   color: #fff;
+}
+
+@media (max-width: 1400px) {
+  .horizontalHeader {
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .horizontalIntro {
+    display: none;
+  }
+  .rssLink {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .horizontalHeader {
+    font-size: 28px;
+    line-height: 36px;
+  }
 }
 
 .blogCardContainer {
@@ -642,6 +683,7 @@ h2.genericHeading {
   bottom: 0;
   right: 0;
   opacity: 0;
+  border-radius: 6px;
   -webkit-transition: all 0.4s ease-in-out 0s;
   -moz-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
@@ -682,8 +724,8 @@ h2.genericHeading {
 
 .contentDetails h3 {
   color: #fff;
-  font-size: 60px;
-  line-height: 1.15;
+  font-size: clamp(32px, 4.5vw, 80px);
+  line-height: clamp(42px, 6vw, 100px);
   font-weight: 600;
   margin-bottom: 0;
   padding: 0 40px;
@@ -692,4 +734,23 @@ h2.genericHeading {
 .contentDetails p {
   color: #fff;
   font-size: 0.8em;
+}
+
+@media (max-width: 576px) {
+  .contentDetails {
+    opacity: 1;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    transform: none;
+    text-align: left;
+    padding: 0;
+  }
+  .contentDetails h3 {
+    font-size: 28px;
+    line-height: 36px;
+    color: #fff;
+    padding: 8px 16px;
+  }
 }
