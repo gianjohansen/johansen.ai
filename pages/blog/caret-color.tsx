@@ -8,7 +8,7 @@ import StaticOutro from '@components/StaticOutro'
 
 const CaretColor: NextPage = () => {
   return (
-    <Layout title="Style your input carets with this obscure css property">
+    <Layout title="Give your input carets some color with these obscure css selectors">
       <style>
         {`
         #example-input, #example-input-2 {
@@ -34,7 +34,7 @@ const CaretColor: NextPage = () => {
                 <div className={styles.blogCategory}>Web</div>
               </div>
               <h1 className={styles.genericHeading}>
-                Style your input carets with this obscure css property
+                Give your input carets some color with these obscure css selectors
               </h1>
               <p>Add some on-brand color to those blinkers.</p>
             </Col>
@@ -43,7 +43,7 @@ const CaretColor: NextPage = () => {
             <Col xl={8}>
               <img
                 className={styles.blogHero}
-                src="/images/blinking-cursor.webp"
+                src="/images/blog-5.jpg"
               />
             </Col>
           </Row>
