@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '@styles/Home.module.css'
 import { Container, Row, Col } from 'react-grid-system'
 import LinkStaticPosition from './NoScrollLink'
+import { showLoader } from './Cursor'
 
 import gsap from 'gsap'
 import ScrollToPlugin from 'gsap/dist/ScrollToPlugin'
@@ -27,6 +28,7 @@ const Nav: React.FC<{}> = () => (
               src="/images/logo-white.png"
               className={styles.headerLogo}
               id="nav-logo"
+              onClick={showLoader}
             />
           </LinkStaticPosition>
         </Col>
