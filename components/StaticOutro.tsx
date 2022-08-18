@@ -150,7 +150,7 @@ const StaticOutro: React.FC<StaticOutroProps> = ({ children }) => {
                     <BlogCard
                       title="Post 1"
                       img="/images/blog-2-c.jpg"
-                      href="/blog/caret-color"
+                      tags={['Mobile', 'Guide']}
                     />
                   </div>
                   <div className="thumbnail">
