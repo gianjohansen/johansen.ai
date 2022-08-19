@@ -21,9 +21,9 @@ const Layout: React.FC<LayoutProps> = ({ title = 'Hello!', children }) => (
       animate="enter"
       exit="exit"
       variants={{
-        hidden: { opacity: 0, transition: { duration: 0.5 } },
-        enter: { opacity: 1, transition: { duration: 0.5 } },
-        exit: { opacity: 0, transition: { duration: 0.5 } },
+        hidden: { opacity: 0, transition: { duration: 0.2 } },
+        enter: { opacity: 1, transition: { duration: 0.2 } },
+        exit: { opacity: 0, transition: { duration: 0.2 } },
       }}
       transition={{ type: 'linear' }}
     >
