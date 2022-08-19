@@ -78,7 +78,7 @@ const Home: NextPage = () => {
         </Container>
       </div>
 
-      <StaticOutro>
+      <StaticOutro staticBlogLinks={false}>
         <div className={styles.jobList}>
           <Container>
             <Row>

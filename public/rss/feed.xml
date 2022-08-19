@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>Gian Johansen • Front-End Engineer</title>
+    <link>https://personal-beta-gianjohansen.vercel.app/</link>
+    <description>Portfolio and blog for front-end engineer Gian Johansen, based out of Sydney, Australia</description>
+    <item>
+       <title>What to do when your Pinephone Pro won't charge or turn on</title>
+       <link>https://personal-beta-gianjohansen.vercel.app/blog/pinephone-pro-wont-charge</link>
+    </item>
+    <item>
+       <title>Style your input carets with this obscure css property</title>
+       <link>https://personal-beta-gianjohansen.vercel.app/blog/caret-color</link>
+    </item>
+    <item>
+       <title>A beautiful Firefox startpage and some common relevant gotchas</title>
+       <link>https://personal-beta-gianjohansen.vercel.app/blog/minimal-startpage</link>
+    </item>
+  </channel>
+</rss>

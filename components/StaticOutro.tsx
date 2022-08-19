@@ -10,11 +10,20 @@ import Footer from '@components/Footer'
 gsap.registerPlugin(ScrollTrigger)
 
 interface StaticOutroProps {
+  staticBlogLinks?: boolean
   children: React.ReactNode
 }
 
-const StaticOutro: React.FC<StaticOutroProps> = ({ children }) => {
+const StaticOutro: React.FC<StaticOutroProps> = ({ staticBlogLinks = true, children }) => {
   React.useEffect(() => {
+    if (staticBlogLinks) {
+      return;
+    }
+
+    const refreshPins = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 1000);
+
     const isDesktop = window.innerWidth >= 992
 
     const containerLeft =
@@ -41,6 +50,9 @@ const StaticOutro: React.FC<StaticOutroProps> = ({ children }) => {
         anticipatePin: 0,
         scrub: scrubValue,
         invalidateOnRefresh: true,
+        onEnter: () => {
+          clearTimeout(refreshPins);
+        }
       })
 
       // transform blog images along -x axis
@@ -92,10 +104,12 @@ const StaticOutro: React.FC<StaticOutroProps> = ({ children }) => {
     }
   }, [])
 
+  const isStatic = staticBlogLinks;
+
   return (
     <div className="pin-target">
       {children}
-      <div className={styles.experience}>
+      <div className={styles.recentWriting}>
         <Container>
           <Row justify="between" align="center">
             <Col sm={12}>
@@ -110,8 +124,8 @@ const StaticOutro: React.FC<StaticOutroProps> = ({ children }) => {
           </Row>
         </Container>
       </div>
-      <div className={styles.innerGrid}>
-        <Container fluid={true} md={true} lg={true} xl={true} xxl={true}>
+      <div className={isStatic ? 'static-blog-links' : 'scrollable-blog-links ' + styles.innerGrid}>
+        <Container fluid={!staticBlogLinks} md={undefined} lg={undefined} xl={undefined} xxl={undefined}>
           <Row>
             <Col>
               <div className="horizontal-container">
@@ -122,7 +136,7 @@ const StaticOutro: React.FC<StaticOutroProps> = ({ children }) => {
                       experience
                     </div>
                     <div className={styles.rssLink}>
-                      <a href="#">
+                      <a href="/rss/feed.xml" type="application/rss+xml">
                         Grab the RSS
                         <span className={styles.arrowSvg}>
                           <svg
@@ -148,30 +162,26 @@ const StaticOutro: React.FC<StaticOutroProps> = ({ children }) => {
                   </div>
                   <div className="thumbnail">
                     <BlogCard
-                      title="Post 1"
+                      title="What to do when your Pinephone Pro won't charge or turn on"
                       img="/images/blog-2-c.jpg"
+                      href="/blog/pinephone-pro-wont-charge"
                       tags={['Mobile', 'Guide']}
                     />
                   </div>
                   <div className="thumbnail">
                     <BlogCard
-                      title="Post 2"
-                      img="/images/blog-1-c.jpg"
+                      title="Give your input carets some color with these obscure css selectors"
+                      img="/images/blog-5.jpg"
                       href="/blog/caret-color"
+                      tags={['Web', 'CSS']}
                     />
                   </div>
                   <div className="thumbnail">
                     <BlogCard
-                      title="Post 3"
-                      img="/images/blog-3-c.jpg"
-                      href="/blog/caret-color"
-                    />
-                  </div>
-                  <div className="thumbnail">
-                    <BlogCard
-                      title="Post 4"
+                      title="A beautiful Firefox startpage and some common relevant gotchas"
                       img="/images/blog-4-c.jpg"
-                      href="/blog/caret-color"
+                      href="/blog/minimal-startpage"
+                      tags={['Web', 'Firefox']}
                     />
                   </div>
                 </div>
