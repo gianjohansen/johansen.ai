@@ -23,7 +23,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ title, img, href, tags }) => (
 
                 <div className={styles.contentTags}>
                   {tags?.map((tag) => {
-                    return (<div className={styles.contentTag}>
+                    return (<div className={styles.contentTag} key={tag}>
                       {tag}
                     </div>)
                   })}
