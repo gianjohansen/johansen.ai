@@ -82,7 +82,7 @@ const Home: NextPage = () => {
         <div className={styles.jobList}>
           <Container>
             <Row>
-              <Col xs={12} lg={4} className={styles.jobCol}>
+              <Col xs={12} md={4} className={styles.jobCol}>
                 <div className={styles.job}>
                   <div className={styles.jobIconQantas}>
                     <Image src={Qantas} height={40} width={40} />
@@ -103,7 +103,7 @@ const Home: NextPage = () => {
                   </div>
                 </div>
               </Col>
-              <Col xs={12} lg={4} className={styles.jobCol}>
+              <Col xs={12} md={4} className={styles.jobCol}>
                 <div className={styles.job}>
                   <div className={styles.jobIconOptus}>
                     <Image src={Optus} height={40} width={40} />
@@ -121,7 +121,7 @@ const Home: NextPage = () => {
                   </div>
                 </div>
               </Col>
-              <Col xs={12} lg={4} className={styles.jobCol}>
+              <Col xs={12} md={4} className={styles.jobCol}>
                 <div className={styles.job}>
                   <div className={styles.jobIconOpenAgent}>
                     <Image src={OpenAgent} height={40} width={40} />
