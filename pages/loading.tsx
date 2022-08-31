@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import Image from 'next/image'
 import styles from '@styles/Home.module.css'
 import { Container, Row, Col } from 'react-grid-system'
 import Qantas from '@public/images/logo-qantas-black.png'

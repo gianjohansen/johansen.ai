@@ -85,7 +85,7 @@ const Home: NextPage = () => {
               <Col xs={12} md={4} className={styles.jobCol}>
                 <div className={styles.job}>
                   <div className={styles.jobIconQantas}>
-                    <Image src={Qantas} height={40} width={40} />
+                    <img src="/images/logo-qantas-black.png" />
                   </div>
                   <div className={styles.jobDescription}>
                     <p
@@ -106,7 +106,7 @@ const Home: NextPage = () => {
               <Col xs={12} md={4} className={styles.jobCol}>
                 <div className={styles.job}>
                   <div className={styles.jobIconOptus}>
-                    <Image src={Optus} height={40} width={40} />
+                    <img src="/images/logo-optus-black.png" height={40} width={40} />
                   </div>
                   <div className={styles.jobDescription}>
                     <p className={`${styles.jobName} jobYearsVisibleShow`}>
@@ -124,7 +124,7 @@ const Home: NextPage = () => {
               <Col xs={12} md={4} className={styles.jobCol}>
                 <div className={styles.job}>
                   <div className={styles.jobIconOpenAgent}>
-                    <Image src={OpenAgent} height={40} width={40} />
+                    <img src="/images/logo-openagent-black.png" height={40} width={40} />
                   </div>
                   <div className={styles.jobDescription}>
                     <p className={`${styles.jobName} jobYearsVisibleShow`}>
