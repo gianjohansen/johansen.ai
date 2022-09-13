@@ -22,15 +22,14 @@ const Footer: React.FC<{}> = () => {
           >
             <p className={styles.emissions}>
               <a
-                href="https://www.websitecarbon.com/"
+                href="https://www.websitecarbon.com/website/johansen-software/"
                 target="_blank"
                 rel="noreferrer"
               >
-                This website emits only <strong>0.08g</strong> of CO2 per
+                This website emits only <strong>0.17g</strong> of CO2 per
                 load.&nbsp;
                 <br />
-                {/* https://www.websitecarbon.com/website/personal-beta-opal-vercel-app/ */}
-                That&apos;s better than <strong>93%</strong> of pages tested.{' '}
+                That&apos;s cleaner than <strong>83%</strong> of pages tested.{' '}
                 <span style={{ color: '#fff' }}>➔</span>
               </a>
               &nbsp;
