@@ -39,7 +39,7 @@ const MinimalStartpage: NextPage = () => {
                 I&apos;ve switched my browser startpage repo to public. I&apos;ve been using it for a while now, it&apos;s nothing special but it&apos;s clean and it&apos;s fast and it works for me.
               </p>
               <p>
-                You can grab the source from the <a href="https://github.com/gianjohansen/firefox-startpage" target="_blank" rel="noreferrer">repository</a>.
+                You can grab the source from the <a href="https://github.com/gianjohansen/firefox-startpage" target="_blank" rel="noreferrer">repository</a> or see the <a href="https://gianjohansen.github.io/firefox-startpage/" target="_blank" rel="noreferrer">live preview</a>.
               </p>
               <img
                 className={styles.blogHero}
