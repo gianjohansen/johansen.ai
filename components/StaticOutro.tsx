@@ -104,12 +104,10 @@ const StaticOutro: React.FC<StaticOutroProps> = ({ staticBlogLinks = true, child
     }
   }, [])
 
-  const isStatic = staticBlogLinks;
-
   return (
     <div className="pin-target">
       {children}
-      <div className={styles.recentWriting}>
+      {!staticBlogLinks && (<div className={styles.recentWriting}>
         <Container>
           <Row justify="between" align="center">
             <Col sm={12}>
@@ -123,8 +121,8 @@ const StaticOutro: React.FC<StaticOutroProps> = ({ staticBlogLinks = true, child
             </Col>
           </Row>
         </Container>
-      </div>
-      <div className={isStatic ? 'static-blog-links' : 'scrollable-blog-links ' + styles.innerGrid}>
+      </div>)}
+      <div className={staticBlogLinks ? 'static-blog-links' : 'scrollable-blog-links ' + styles.innerGrid}>
         <Container fluid={!staticBlogLinks} md={undefined} lg={undefined} xl={undefined} xxl={undefined}>
           <Row>
             <Col>
