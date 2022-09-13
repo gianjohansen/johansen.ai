@@ -1,11 +1,8 @@
 import type { NextPage } from 'next'
 import styles from '@styles/Home.module.css'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { obsidian } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { Container, Row, Col } from 'react-grid-system'
 import Layout from '@components/Layout'
 import StaticOutro from '@components/StaticOutro'
-import LinkStaticPosition from '@components/NoScrollLink'
 
 const PinephoneProWontCharge: NextPage = () => {
   return (

@@ -1,9 +1,8 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import PageHead from '@components/PageHead'
 
 import Nav from '@components/Nav'
-import StaticOutro from '@components/StaticOutro'
 
 interface LayoutProps {
   title?: string

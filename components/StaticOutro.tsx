@@ -90,19 +90,6 @@ const StaticOutro: React.FC<StaticOutroProps> = ({
           )
           // empty tween for a delay at the end
           .to({}, { duration: 3 })
-
-        // // without begin/end delay:
-        // gsap.to(thumb, {
-        //   x: () => { return -(container.scrollWidth - window.innerWidth + containerLeft) },
-        //   ease: "none",
-        //   scrollTrigger: {
-        //     trigger: ".wrapper",
-        //     start: '300px center',
-        //     scrub: scrubValue,
-        //     invalidateOnRefresh: true,
-        //     end: () => "+=" + (container.scrollWidth - window.innerWidth + containerLeft)
-        //   }
-        // });
       })
     }
   }, [])
