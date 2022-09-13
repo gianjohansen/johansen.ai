@@ -34,17 +34,15 @@ const CaretColor: NextPage = () => {
                 <div className={styles.blogCategory}>Web</div>
               </div>
               <h1 className={styles.genericHeading}>
-                Give your input carets some color with these obscure css selectors
+                Give your input carets some color with these obscure css
+                selectors
               </h1>
               <p>Add some on-brand color to those blinkers.</p>
             </Col>
           </Row>
           <Row justify="center">
             <Col xl={8}>
-              <img
-                className={styles.blogHero}
-                src="/images/blog-5.jpg"
-              />
+              <img className={styles.blogHero} src="/images/blog-5.jpg" />
             </Col>
           </Row>
           <Row justify="center">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import 'reset-css'
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
@@ -11,18 +11,18 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 function MyApp({ Component, pageProps, router }: AppProps) {
-  const [ lastRoute, setLastRoute ] = useState(router.route);
+  const [lastRoute, setLastRoute] = useState(router.route)
 
   const url = `${router.route}`
 
   useEffect(() => {
-    router.events.on("routeChangeStart", () => {
-      showLoader();
-    });
-    router.events.on("routeChangeComplete", () => {
-      hideLoader();
-    });
-  }, [router.events]);
+    router.events.on('routeChangeStart', () => {
+      showLoader()
+    })
+    router.events.on('routeChangeComplete', () => {
+      hideLoader()
+    })
+  }, [router.events])
 
   return (
     <>
@@ -35,11 +35,11 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 
           // if this is not the landing page then reinit the horizontal scroll
           if (lastRoute !== router.route) {
-            ScrollTrigger.refresh();
-            setLastRoute(router.route);
+            ScrollTrigger.refresh()
+            setLastRoute(router.route)
           }
 
-          hideLoader();
+          hideLoader()
         }}
       >
         <Component {...pageProps} key={url} />

@@ -14,15 +14,18 @@ interface StaticOutroProps {
   children: React.ReactNode
 }
 
-const StaticOutro: React.FC<StaticOutroProps> = ({ staticBlogLinks = true, children }) => {
+const StaticOutro: React.FC<StaticOutroProps> = ({
+  staticBlogLinks = true,
+  children,
+}) => {
   React.useEffect(() => {
     if (staticBlogLinks) {
-      return;
+      return
     }
 
     const refreshPins = setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 1000);
+      ScrollTrigger.refresh()
+    }, 1000)
 
     const isDesktop = window.innerWidth >= 992
 
@@ -51,8 +54,8 @@ const StaticOutro: React.FC<StaticOutroProps> = ({ staticBlogLinks = true, child
         scrub: scrubValue,
         invalidateOnRefresh: true,
         onEnter: () => {
-          clearTimeout(refreshPins);
-        }
+          clearTimeout(refreshPins)
+        },
       })
 
       // transform blog images along -x axis
@@ -107,23 +110,37 @@ const StaticOutro: React.FC<StaticOutroProps> = ({ staticBlogLinks = true, child
   return (
     <div className="pin-target">
       {children}
-      {!staticBlogLinks && (<div className={styles.recentWriting}>
-        <Container>
-          <Row justify="between" align="center">
-            <Col sm={12}>
-              <p
-                id="recent-writing"
-                style={{ color: '#fff', fontWeight: '600' }}
-                className={styles.textSecondary}
-              >
-                Recent writing…
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </div>)}
-      <div className={staticBlogLinks ? 'static-blog-links' : 'scrollable-blog-links ' + styles.innerGrid}>
-        <Container fluid={!staticBlogLinks} md={undefined} lg={undefined} xl={undefined} xxl={undefined}>
+      {!staticBlogLinks && (
+        <div className={styles.recentWriting}>
+          <Container>
+            <Row justify="between" align="center">
+              <Col sm={12}>
+                <p
+                  id="recent-writing"
+                  style={{ color: '#fff', fontWeight: '600' }}
+                  className={styles.textSecondary}
+                >
+                  Recent writing…
+                </p>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+      )}
+      <div
+        className={
+          staticBlogLinks
+            ? 'static-blog-links'
+            : 'scrollable-blog-links ' + styles.innerGrid
+        }
+      >
+        <Container
+          fluid={!staticBlogLinks}
+          md={undefined}
+          lg={undefined}
+          xl={undefined}
+          xxl={undefined}
+        >
           <Row>
             <Col>
               <div className="horizontal-container">

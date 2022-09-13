@@ -5,7 +5,7 @@ import LinkStaticPosition from './NoScrollLink'
 interface BlogCardProps {
   title: string
   img: string
-  href: string,
+  href: string
   tags?: string[]
 }
 
@@ -23,9 +23,11 @@ const BlogCard: React.FC<BlogCardProps> = ({ title, img, href, tags }) => (
 
                 <div className={styles.contentTags}>
                   {tags?.map((tag) => {
-                    return (<div className={styles.contentTag} key={tag}>
-                      {tag}
-                    </div>)
+                    return (
+                      <div className={styles.contentTag} key={tag}>
+                        {tag}
+                      </div>
+                    )
                   })}
                 </div>
               </div>

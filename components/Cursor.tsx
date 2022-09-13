@@ -2,11 +2,11 @@ import React from 'react'
 import Script from 'next/script'
 
 export const showLoader = () => {
-  document.body.classList.add('show-loader');
+  document.body.classList.add('show-loader')
 }
 
 export const hideLoader = () => {
-  document.body.classList.remove('show-loader');
+  document.body.classList.remove('show-loader')
 }
 
 const Cursor: React.FC<{}> = () => {

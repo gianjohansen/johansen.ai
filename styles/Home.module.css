@@ -298,7 +298,8 @@
     align-items: center;
     padding: 20px 25px;
   }
-  .jobIndustry, .jobYears {
+  .jobIndustry,
+  .jobYears {
     display: none;
   }
   .jobIconQantas,
