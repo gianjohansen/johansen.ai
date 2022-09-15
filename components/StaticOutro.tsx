@@ -122,6 +122,7 @@ const StaticOutro: React.FC<StaticOutroProps> = ({
         }
       >
         <Container
+          id={staticBlogLinks ? 'recent-writing' : ''}
           fluid={!staticBlogLinks}
           md={undefined}
           lg={undefined}
