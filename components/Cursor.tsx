@@ -40,7 +40,7 @@ const Cursor: React.FC<{}> = () => {
               })  
               TweenMax.to($smallBall, 0.1, {
                 x: e.x - 3,
-                y: e.y - 15,
+                y: e.y - 4,
               })
               TweenMax.to($loader, 0.4, {
                 x: e.x + 2,

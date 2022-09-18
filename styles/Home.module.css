@@ -73,10 +73,17 @@
 }
 
 .container {
-  margin-top: clamp(6vw, 12vw, 10vh);
+  margin-top: clamp(3vw, 12vw, 8vh);
   margin-left: var(--margin-width);
   margin-right: var(--margin-width);
-  margin-bottom: clamp(2vw, 14vh, 18vh);
+  margin-bottom: clamp(2vw, 10vh, 18vh);
+}
+
+@media (min-height: 1080px) {
+  .container {
+    margin-top: clamp(6vw, 12vw, 10vh);
+    margin-bottom: clamp(2vw, 10vh, 18vh);
+  }
 }
 
 @media (max-width: 768px) {
@@ -91,10 +98,16 @@
 }
 
 .headline {
-  font-size: clamp(32px, 4.5vw, 80px);
+  font-size: clamp(32px, 4vw, 80px);
   font-weight: 600;
-  line-height: clamp(42px, 6vw, 100px);
+  line-height: clamp(42px, 5vw, 100px);
   margin-bottom: clamp(24px, 2vh, 28px);
+}
+@media (min-height: 1080px) {
+  .headline {
+    font-size: clamp(32px, 4.5vw, 80px);
+    line-height: clamp(42px, 6vw, 100px);
+  }
 }
 
 @media (max-width: 768px) {
@@ -290,7 +303,25 @@
 .jobIconQantas img,
 .jobIconOptus img,
 .jobIconOpenAgent img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.jobIconQantas,
+.jobIconOptus,
+.jobIconOpenAgent {
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jobIconQantas {
+  padding: 6px;
+}
+@media (min-height: 1080px) {
+  .jobIconQantas {
+    padding: 12px;
+  }
 }
 @media (min-width: 769px) and (max-width: 1100px) {
   .job {
@@ -861,7 +892,6 @@ h2.genericHeading {
     text-align: left;
     padding: 0;
     position: relative;
-    border-bottom: 1px solid #454546;
   }
   .contentDetails h3 {
     font-size: 20px;

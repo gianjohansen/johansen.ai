@@ -1,8 +1,14 @@
 :root {
   --margin-height: 10vh;
   --margin-width: 6vw;
-  --default-font-size: clamp(20px, 1.5vw, 24px);
+  --default-font-size: clamp(18px, 1.5vw, 20px);
   --section-space: 20vh;
+}
+
+@media (min-height: 1080px) {
+  :root {
+    --default-font-size: clamp(20px, 1.5vw, 24px);
+  }
 }
 
 ::-moz-selection {
@@ -108,6 +114,9 @@ body .cursor__ball circle {
   opacity: 1;
   transition: opacity 0.1s ease;
 }
+.cursor__ball--small svg {
+  display: block;
+}
 .show-loader .cursor__ball--big,
 .show-loader .cursor__ball--small {
   opacity: 0;
@@ -167,11 +176,15 @@ body .cursor__ball circle {
   .scrollable-blog-links .horizontal-container .thumbnail {
     height: auto;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 0;
     padding-right: 30px;
     background: #161618;
     margin-bottom: 30px;
     padding-right: 0;
+    border-bottom: 1px solid #454546;
+  }
+  .scrollable-blog-links .horizontal-container .thumbnail:last-child {
+    border-bottom: none;
   }
 
   .scrollable-blog-links .horizontal-container .thumbnail img {
