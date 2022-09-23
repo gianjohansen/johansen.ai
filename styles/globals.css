@@ -71,7 +71,8 @@ a {
 }
 
 pre {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: Menlo, Consolas, 'Ubuntu Mono', 'Roboto Mono', 'DejaVu Sans Mono',
+    monospace;
   margin-bottom: 36px;
   border-radius: 6px;
   padding: 0.4em 0.65em !important;

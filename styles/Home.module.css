@@ -6,7 +6,8 @@
 }
 
 .mono {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: Menlo, Consolas, 'Ubuntu Mono', 'Roboto Mono', 'DejaVu Sans Mono',
+    monospace;
   background: #282b2e;
   color: #fff;
   padding: 2px 8px;
