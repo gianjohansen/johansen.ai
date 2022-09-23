@@ -49,7 +49,7 @@ const Home: NextPage = () => {
             <Col xs={12} sm={6} className={styles.desktopRight}>
               <a
                 className={styles.downloadResume}
-                href="/downloads/gian-resume-2021.pdf"
+                href="/downloads/gian-resume-2022.pdf"
                 target="_blank"
               >
                 <span>Download resume</span>
