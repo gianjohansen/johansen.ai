@@ -24,7 +24,7 @@ const PageHead: React.FC<PageHeadProps> = ({ title }) => {
   return (
     <Head>
       <title>{title}</title>
-      <link rel="shortcut icon" href="/favicon.png" />
+      <link rel="shortcut icon" href="/favicon.svg" />
       <link rel="alternate" type="application/rss+xml" href="/rss/feed.xml" />
     </Head>
   )
