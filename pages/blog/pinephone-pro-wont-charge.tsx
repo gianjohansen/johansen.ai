@@ -30,6 +30,20 @@ const PinephoneProWontCharge: NextPage = () => {
           </Row>
           <Row justify="center">
             <Col xl={8}>
+              <blockquote>
+                <strong>Update:</strong> Pine64 now ship with the fix already
+                applied, as confirmed{' '}
+                <a
+                  href="https://www.pine64.org/2022/08/18/a-response-to-martijns-blog/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  here
+                </a>
+                . If you bought your device after August 2022 then this post
+                likely doesn&apos;t apply to you, if you were in an earlier
+                batch then read on.
+              </blockquote>
               <p>
                 Daily driving the Pinephone Pro has been relatively pain-free, a
                 nice surprise that I didn&apos;t expect. I run into minor issues

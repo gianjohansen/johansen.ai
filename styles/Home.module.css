@@ -675,6 +675,10 @@
   list-style: disc;
 }
 
+.blogContainer li::marker {
+  color: #fff;
+}
+
 .blogContainer li:last-child {
   margin-bottom: 0;
 }
@@ -730,7 +734,7 @@ h2.genericHeading {
 
 .pageSeperator {
   display: inline-block;
-  background: rgb(160, 169, 166);
+  background: #fff;
   height: 12px;
   width: 12px;
   border-radius: 50%;

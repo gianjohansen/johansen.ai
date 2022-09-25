@@ -70,6 +70,10 @@ a {
   text-decoration: none;
 }
 
+em {
+  font-style: italic;
+}
+
 pre {
   font-family: Menlo, Consolas, 'Ubuntu Mono', 'Roboto Mono', 'DejaVu Sans Mono',
     monospace;
