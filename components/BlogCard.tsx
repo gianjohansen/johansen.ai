@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from '@styles/Home.module.css'
 import LinkStaticPosition from './NoScrollLink'
-import ExportedImage from "next-image-export-optimizer";
-import { StaticImageData } from 'next/image';
+import ExportedImage from 'next-image-export-optimizer'
+import { StaticImageData } from 'next/image'
 
 interface BlogCardProps {
   title: string
@@ -22,7 +22,8 @@ const BlogCard: React.FC<BlogCardProps> = ({ title, img, href, tags }) => (
               <ExportedImage
                 className={styles.contentImage}
                 src={img}
-                objectFit="cover" />
+                objectFit="cover"
+              />
               <div className={`${styles.contentDetails} fadeIn-bottom`}>
                 <h3 className="content-title">{title}</h3>
 

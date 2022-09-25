@@ -6,9 +6,9 @@ import styles from '@styles/Home.module.css'
 import BlogCard from './BlogCard'
 import Contact from '@components/Contact'
 import Footer from '@components/Footer'
-import blog2C from "../public/images/blog-2-c.jpg";
-import blog5 from "../public/images/blog-5.jpg";
-import blog4C from "../public/images/blog-4-c.jpg";
+import blog2C from '../public/images/blog-2-c.jpg'
+import blog5 from '../public/images/blog-5.jpg'
+import blog4C from '../public/images/blog-4-c.jpg'
 
 gsap.registerPlugin(ScrollTrigger)
 
