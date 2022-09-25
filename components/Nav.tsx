@@ -26,6 +26,7 @@ const Nav: React.FC<{}> = () => (
           <LinkStaticPosition href="/">
             <svg
               id="nav-logo"
+              className={styles.headerLogo}
               xmlns="http://www.w3.org/2000/svg"
               width="80"
               height="80"

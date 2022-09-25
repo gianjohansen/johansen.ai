@@ -40,7 +40,13 @@
 }
 
 .headerLogo {
-  height: clamp(42px, 6vw, 77px);
+  height: 60px;
+  width: auto;
+}
+@media (min-width: 768px) {
+  .headerLogo {
+    height: 80px;
+  }
 }
 
 .menuLink {
