@@ -17,7 +17,7 @@ export default function Document() {
         <NextScript />
         <Script
           src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
       </body>
     </Html>

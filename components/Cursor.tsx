@@ -34,18 +34,20 @@ const Cursor: React.FC<{}> = () => {
 
             // Move the cursor
             function onMouseMove(e) {
-              TweenMax.to($bigBall, 0.4, {
-                x: e.x - 14,
-                y: e.y - 15,
-              })  
-              TweenMax.to($smallBall, 0.1, {
-                x: e.x - 3,
-                y: e.y - 4,
-              })
-              TweenMax.to($loader, 0.4, {
-                x: e.x + 2,
-                y: e.y,
-              })
+              if (typeof TweenMax !== 'undefined') {
+                TweenMax.to($bigBall, 0.4, {
+                  x: e.x - 14,
+                  y: e.y - 15,
+                })
+                TweenMax.to($smallBall, 0.1, {
+                  x: e.x - 3,
+                  y: e.y - 4,
+                })
+                TweenMax.to($loader, 0.4, {
+                  x: e.x + 2,
+                  y: e.y,
+                })
+              }
               const cursorClasses = document.querySelector('.cursor')?.classList;
               if (cursorClasses?.contains('hidden')) {
                 setTimeout(() => {
