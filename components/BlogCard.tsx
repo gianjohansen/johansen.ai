@@ -23,6 +23,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ title, img, href, tags }) => (
                 className={styles.contentImage}
                 src={img}
                 objectFit="cover"
+                alt={title}
               />
               <div className={`${styles.contentDetails} fadeIn-bottom`}>
                 <h3 className="content-title">{title}</h3>
