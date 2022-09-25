@@ -5,16 +5,22 @@
     <link>https://johansen.software/</link>
     <description>Portfolio and blog for front-end engineer Gian Johansen, based out of Sydney, Australia</description>
     <item>
-       <title>What to do when your Pinephone Pro won't charge or turn on</title>
-       <link>https://johansen.software/blog/pinephone-pro-wont-charge</link>
+      <guid>pinephone-pro-wont-charge</guid>
+      <title>What to do when your Pinephone Pro won't charge or turn on</title>
+      <link>https://johansen.software/blog/pinephone-pro-wont-charge</link>
+      <pubDate>Fri, 19 Aug 2022 21:59:00 +1000</pubDate>
     </item>
     <item>
-       <title>Style your input carets with this obscure css property</title>
-       <link>https://johansen.software/blog/caret-color</link>
+      <guid>caret-color</guid>
+      <title>Style your input carets with this obscure css property</title>
+      <link>https://johansen.software/blog/caret-color</link>
+      <pubDate>Tue, 26 Jul 2022 00:48:00 +1000</pubDate>
     </item>
     <item>
-       <title>A beautiful Firefox startpage and some common relevant gotchas</title>
-       <link>https://johansen.software/blog/minimal-startpage</link>
+      <guid>minimal-startpage</guid>
+      <title>A beautiful Firefox startpage and some common relevant gotchas</title>
+      <link>https://johansen.software/blog/minimal-startpage</link>
+      <pubDate>Sat, 18 Dec 2021 03:05:00 +1000</pubDate>
     </item>
   </channel>
 </rss>
