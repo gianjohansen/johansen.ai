@@ -791,6 +791,7 @@ h2.genericHeading {
   background: rgba(0, 0, 0, 0.7);
   position: absolute;
   height: 100%;
+  height: calc(100% - 3px);
   width: 100%;
   left: 0;
   top: 0;
@@ -801,6 +802,7 @@ h2.genericHeading {
   -webkit-transition: all 0.4s ease-in-out 0s;
   -moz-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
+  z-index: 1;
 }
 
 .blogCardContent:hover .contentOverlay {
@@ -828,6 +830,7 @@ h2.genericHeading {
   -moz-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
   pointer-events: none;
+  z-index: 1;
 }
 
 @media (min-width: 993px) {
