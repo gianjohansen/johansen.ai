@@ -301,9 +301,9 @@
   padding: 12px;
 }
 
-.jobIconQantas img,
-.jobIconOptus img,
-.jobIconOpenAgent img {
+.jobIconQantas svg,
+.jobIconOptus svg,
+.jobIconOpenAgent svg {
   max-width: 100%;
   max-height: 100%;
 }
@@ -311,13 +311,34 @@
 .jobIconQantas,
 .jobIconOptus,
 .jobIconOpenAgent {
-  padding: 6px;
+  padding: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .jobIconQantas {
   padding: 6px;
+}
+@media (max-height: 1200px) {
+  .jobIconQantas,
+  .jobIconOptus,
+  .jobIconOpenAgent {
+    padding: 9px;
+  }
+}
+@media (max-height: 900px) {
+  .jobIconQantas,
+  .jobIconOptus,
+  .jobIconOpenAgent {
+    padding: 6px;
+  }
+}
+@media (max-width: 568px) {
+  .jobIconQantas,
+  .jobIconOptus,
+  .jobIconOpenAgent {
+    padding: 12px;
+  }
 }
 @media (min-height: 1080px) {
   .jobIconQantas {
