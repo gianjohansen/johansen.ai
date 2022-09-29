@@ -6,10 +6,18 @@ import StaticOutro from '@components/StaticOutro'
 
 import Layout from '@components/Layout'
 import { NextSeo } from 'next-seo'
+import Head from 'next/head'
 
 const Home: NextPage = () => {
   return (
     <Layout>
+      <Head>
+        <meta
+          property="twitter:image"
+          content="https://johansen.software/images/johansen-software-card.jpg"
+        />
+        <link rel="alternate" type="application/rss+xml" href="/rss/feed.xml" />
+      </Head>
       <NextSeo
         title="Hello!"
         description="Gian Johansen is a front-end engineer with an eye for good user experience and conversion optimization in Sydney. I make neat things on the web."
