@@ -3,10 +3,33 @@ import styles from '@styles/Home.module.css'
 import { Container, Row, Col } from 'react-grid-system'
 import Layout from '@components/Layout'
 import StaticOutro from '@components/StaticOutro'
+import { NextSeo } from 'next-seo'
 
 const PinephoneProWontCharge: NextPage = () => {
   return (
     <Layout title="What to do when your Pinephone Pro won't charge or turn on">
+      <NextSeo
+        title="What to do when your Pinephone Pro won't charge or turn on"
+        openGraph={{
+          title: "What to do when your Pinephone Pro won't charge or turn on",
+          type: 'article',
+          url: 'https://johansen.software/blog/pinephone-pro-wont-charge',
+          description:
+            "Daily driving the Pinephone Pro has been relatively pain-free, a nice surprise that I didn't expect. I run into minor issues every...",
+          images: [
+            {
+              url: 'https://johansen.software/images/blog-pinephone-pro-wont-turn-on.jpg',
+              width: 1400,
+              height: 1000,
+              alt: "What to do when your Pinephone Pro won't charge or turn on",
+              type: 'image/jpeg',
+            },
+          ],
+        }}
+        twitter={{
+          cardType: 'summary_large_image',
+        }}
+      />
       <div className={`${styles.blogContainer} blog-container`}>
         <Container>
           <Row justify="center">
@@ -25,7 +48,10 @@ const PinephoneProWontCharge: NextPage = () => {
           </Row>
           <Row justify="center">
             <Col xl={8}>
-              <img className={styles.blogHero} src="/images/blog-2-c.jpg" />
+              <img
+                className={styles.blogHero}
+                src="/images/blog-pinephone-pro-wont-turn-on.jpg"
+              />
             </Col>
           </Row>
           <Row justify="center">

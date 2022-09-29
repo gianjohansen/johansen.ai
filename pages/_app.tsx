@@ -8,6 +8,9 @@ import Cursor, { showLoader, hideLoader } from '@components/Cursor'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 
+import { DefaultSeo } from 'next-seo'
+import SEO from '../next.seo.config'
+
 gsap.registerPlugin(ScrollTrigger)
 
 function MyApp({ Component, pageProps, router }: AppProps) {
@@ -26,6 +29,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 
   return (
     <>
+      <DefaultSeo {...SEO} />
       <Cursor />
       <AnimatePresence
         exitBeforeEnter

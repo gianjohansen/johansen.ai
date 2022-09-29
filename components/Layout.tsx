@@ -11,9 +11,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ title = 'Hello!', children }) => (
   <>
-    <PageHead
-      title={[title, 'Gian Johansen • Front-End Engineer'].join(' • ')}
-    />
+    <PageHead />
     <motion.main
       key={title}
       initial="hidden"

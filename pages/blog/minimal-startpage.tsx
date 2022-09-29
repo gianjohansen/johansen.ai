@@ -3,10 +3,34 @@ import styles from '@styles/Home.module.css'
 import { Container, Row, Col } from 'react-grid-system'
 import Layout from '@components/Layout'
 import StaticOutro from '@components/StaticOutro'
+import { NextSeo } from 'next-seo'
 
 const MinimalStartpage: NextPage = () => {
   return (
     <Layout title="A beautiful Firefox startpage and some common relevant gotchas">
+      <NextSeo
+        title="A beautiful Firefox startpage and some common relevant gotchas"
+        openGraph={{
+          title:
+            'A beautiful Firefox startpage and some common relevant gotchas',
+          type: 'article',
+          url: 'https://johansen.software/blog/minimal-startpage',
+          description:
+            "I think in most cases a user's new tab page can best be described as 'the page that briefly appears as they type their google search'.",
+          images: [
+            {
+              url: 'https://johansen.software/images/blog-minimal-startpage.jpg',
+              width: 1400,
+              height: 1000,
+              alt: 'A beautiful Firefox startpage and some common relevant gotchas',
+              type: 'image/jpeg',
+            },
+          ],
+        }}
+        twitter={{
+          cardType: 'summary_large_image',
+        }}
+      />
       <div className={styles.blogContainer}>
         <Container>
           <Row justify="center">
@@ -25,7 +49,10 @@ const MinimalStartpage: NextPage = () => {
           </Row>
           <Row justify="center">
             <Col xl={8}>
-              <img className={styles.blogHero} src="/images/blog-4-c.jpg" />
+              <img
+                className={styles.blogHero}
+                src="/images/blog-minimal-startpage.jpg"
+              />
             </Col>
           </Row>
           <Row justify="center">

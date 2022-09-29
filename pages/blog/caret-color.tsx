@@ -5,10 +5,34 @@ import { obsidian } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { Container, Row, Col } from 'react-grid-system'
 import Layout from '@components/Layout'
 import StaticOutro from '@components/StaticOutro'
+import { NextSeo } from 'next-seo'
 
 const CaretColor: NextPage = () => {
   return (
     <Layout title="Give your input carets some color with these obscure css selectors">
+      <NextSeo
+        title="Give your input carets some color with these obscure css selectors"
+        openGraph={{
+          title:
+            'Give your input carets some color with these obscure css selectors',
+          type: 'article',
+          url: 'https://johansen.software/blog/caret-color',
+          description:
+            "Quick tip of the day: input field carets can be colored with css. They're the blinking cursors that show where the user is currently typing.",
+          images: [
+            {
+              url: 'https://johansen.software/images/blog-input-caret-color.jpg',
+              width: 1400,
+              height: 1000,
+              alt: 'Give your input carets some color with these obscure css selectors',
+              type: 'image/jpeg',
+            },
+          ],
+        }}
+        twitter={{
+          cardType: 'summary_large_image',
+        }}
+      />
       <style>
         {`
         #example-input, #example-input-2 {
@@ -42,7 +66,10 @@ const CaretColor: NextPage = () => {
           </Row>
           <Row justify="center">
             <Col xl={8}>
-              <img className={styles.blogHero} src="/images/blog-5.jpg" />
+              <img
+                className={styles.blogHero}
+                src="/images/blog-input-caret-color.jpg"
+              />
             </Col>
           </Row>
           <Row justify="center">

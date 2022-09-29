@@ -6,9 +6,9 @@ import styles from '@styles/Home.module.css'
 import BlogCard from './BlogCard'
 import Contact from '@components/Contact'
 import Footer from '@components/Footer'
-import blog2C from '../public/images/blog-2-c.jpg'
-import blog5 from '../public/images/blog-5.jpg'
-import blog4C from '../public/images/blog-4-c.jpg'
+import blogPinephoneProWontTurnOn from '../public/images/blog-pinephone-pro-wont-turn-on.jpg'
+import blogInputCaretColor from '../public/images/blog-input-caret-color.jpg'
+import blogMinimalStartpage from '../public/images/blog-minimal-startpage.jpg'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -169,7 +169,7 @@ const StaticOutro: React.FC<StaticOutroProps> = ({
                   <div className="thumbnail">
                     <BlogCard
                       title="What to do when your Pinephone Pro won't charge or turn on"
-                      img={blog2C}
+                      img={blogPinephoneProWontTurnOn}
                       href="/blog/pinephone-pro-wont-charge"
                       tags={['Mobile', 'Guide']}
                     />
@@ -177,7 +177,7 @@ const StaticOutro: React.FC<StaticOutroProps> = ({
                   <div className="thumbnail">
                     <BlogCard
                       title="Give your input carets some color with these obscure css selectors"
-                      img={blog5}
+                      img={blogInputCaretColor}
                       href="/blog/caret-color"
                       tags={['Web', 'CSS']}
                     />
@@ -185,7 +185,7 @@ const StaticOutro: React.FC<StaticOutroProps> = ({
                   <div className="thumbnail">
                     <BlogCard
                       title="A beautiful Firefox startpage and some common relevant gotchas"
-                      img={blog4C}
+                      img={blogMinimalStartpage}
                       href="/blog/minimal-startpage"
                       tags={['Web', 'Firefox']}
                     />
