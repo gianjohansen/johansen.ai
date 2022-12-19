@@ -222,12 +222,17 @@ const PinephoneProWontCharge: NextPage = () => {
                 you&apos;ll need to switch to it manually.
               </p>
               <p>
-                I&apos;ll have an illustrated guide covering the installation
-                process soon but for now{' '}
+                The Tow-Boot wiki
                 <a href="https://tow-boot.org/devices/pine64-pinephonePro.html">
-                  their wiki has instructions
-                </a>
-                .
+                  has really good instructions
+                </a>{' '}
+                on how to do this, or for the more visually-inclined amongst us
+                there are some good walkthroughs{' '}
+                <a href="https://www.youtube.com/watch?v=7piXOM8G2uQ">
+                  available on youtube
+                </a>{' '}
+                that you can follow along with. Either way, making this switch
+                should permanently resolve the wake-from-suspend problem.
               </p>
             </Col>
           </Row>
