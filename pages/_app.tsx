@@ -19,6 +19,10 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   const url = `${router.route}`
 
   useEffect(() => {
+    document.documentElement.style.opacity = '1'
+  }, [])
+
+  useEffect(() => {
     router.events.on('routeChangeStart', () => {
       showLoader()
     })
