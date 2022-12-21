@@ -8,15 +8,13 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --check .",
-    "format:fix": "prettier --write .",
-    "image-optimization": "next-image-export-optimizer"
+    "format:fix": "prettier --write ."
   },
   "dependencies": {
     "@types/react-syntax-highlighter": "^15.5.3",
     "framer-motion": "^6.5.1",
     "gsap": "^3.6.1",
     "next": "12.2.0",
-    "next-image-export-optimizer": "^0.14.4",
     "next-seo": "^5.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",

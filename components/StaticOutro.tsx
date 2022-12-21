@@ -169,7 +169,7 @@ const StaticOutro: React.FC<StaticOutroProps> = ({
                   <div className="thumbnail">
                     <BlogCard
                       title="What to do when your Pinephone Pro won't charge or turn on"
-                      img={blogPinephoneProWontTurnOn}
+                      img="/images/blog-pinephone-pro-wont-turn-on.jpg"
                       href="/blog/pinephone-pro-wont-charge"
                       tags={['Mobile', 'Guide']}
                     />
@@ -177,7 +177,7 @@ const StaticOutro: React.FC<StaticOutroProps> = ({
                   <div className="thumbnail">
                     <BlogCard
                       title="Give your input carets some color with these obscure css selectors"
-                      img={blogInputCaretColor}
+                      img="/images/blog-input-caret-color.jpg"
                       href="/blog/caret-color"
                       tags={['Web', 'CSS']}
                     />
@@ -185,7 +185,7 @@ const StaticOutro: React.FC<StaticOutroProps> = ({
                   <div className="thumbnail">
                     <BlogCard
                       title="A beautiful Firefox startpage and some common relevant gotchas"
-                      img={blogMinimalStartpage}
+                      img="/images/blog-minimal-startpage.jpg"
                       href="/blog/minimal-startpage"
                       tags={['Web', 'Firefox']}
                     />
