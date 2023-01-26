@@ -645,6 +645,7 @@
 .blogContainer a {
   padding-bottom: 1px;
   border-bottom: 2px solid;
+  margin: 0 2px;
 }
 
 .blogContainer {
@@ -657,7 +658,7 @@
 .blogContainer p {
   color: rgb(182, 181, 188);
   margin-bottom: 36px;
-  line-height: 1.5;
+  line-height: 1.6;
   font-weight: 400;
 }
 
@@ -703,18 +704,23 @@
   margin-bottom: clamp(16px, 2vh, 28px);
 }
 
+h2.genericHeading {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
 @media (max-width: 576px) {
-  .genericHeading {
+  .genericHeading, h2.genericHeading {
     font-size: 28px;
     line-height: 36px;
   }
-}
 
-h2.genericHeading {
-  font-size: var(--default-font-size);
-  font-weight: 600;
-  line-height: 1.5;
-  margin-bottom: 36px;
+  .blogContainer blockquote {
+    padding: 0 0 0 24px;
+    border-left: 4px solid #fff;
+  }
 }
 
 .blogHero {
