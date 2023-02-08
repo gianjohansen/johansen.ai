@@ -119,7 +119,7 @@ const Home: NextPage = () => {
                     </p>
                   </div>
                   <div className={`${styles.jobYears} jobYearsVisibleShow`}>
-                    2021 — 2022
+                    2021 — 2023
                   </div>
                 </div>
               </Col>
