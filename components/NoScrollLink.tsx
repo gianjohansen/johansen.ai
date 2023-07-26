@@ -10,9 +10,11 @@ const LinkStaticPosition: React.FC<LinkStaticPositionProps> = ({
   href,
   passHref,
 }) => (
-  <Link href={href} passHref={passHref} scroll={false}>
-    {children}
-  </Link>
+  <a href={href as string}>
+    <Link href={href} passHref={passHref} scroll={false}>
+      {children}
+    </Link>
+  </a>
 )
 
 export default LinkStaticPosition
