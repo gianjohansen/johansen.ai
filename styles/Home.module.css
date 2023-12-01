@@ -199,6 +199,10 @@
   color: rgb(160, 159, 166);
   margin-bottom: 2vh;
   transition: color 0.3s ease;
+  display: flex;
+  display: inline-flex;
+  justify-content: end;
+  align-items: center;
 }
 .downloadResume:hover {
   color: #fff;
@@ -255,14 +259,36 @@
   background: rgb(52, 52, 58);
 }
 
-.arrowSvg {
-  vertical-align: middle;
-  display: inline-block;
-  margin-left: clamp(12px, 0.75vw, 0.75vw);
+.pdfIcon {
+  width: 36px;
+  display: block;
+  line-height: 1;
+  margin-right: 8px;
 }
+
+.pdfIcon svg {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  margin-bottom: 1px;
+}
+
+.arrowSvg {
+  display: flex;
+  margin-left: clamp(12px, 0.75vw, 0.75vw);
+  justify-content: center;
+  align-items: center;
+}
+
 .arrowSvg svg {
   width: 4.5vh;
   height: 4.5vh;
+}
+
+@media (max-width: 900px) {
+  .arrowSvg {
+    max-width: 48px;
+  }
 }
 
 .jobIconQantas {
