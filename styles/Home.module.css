@@ -159,7 +159,7 @@
   color: rgb(160, 159, 166);
   margin-left: var(--margin-width);
   margin-right: var(--margin-width);
-  margin-bottom: 2vh;
+  margin-bottom: 16px;
 }
 
 @media (max-width: 576px) {
@@ -197,7 +197,6 @@
 }
 .downloadResume {
   color: rgb(160, 159, 166);
-  margin-bottom: 2vh;
   transition: color 0.3s ease;
   display: flex;
   display: inline-flex;
