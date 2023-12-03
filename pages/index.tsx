@@ -124,7 +124,9 @@ const Home: NextPage = () => {
                       className={`${styles.jobName} jobYearsVisibleShow`}
                       id="firstJob"
                     >
-                      Qantas
+                      <span>Qantas</span>
+                      <span className={`${styles.jobMobile} ${styles.jobMobileBull}`}>&bull;</span>
+                      <span className={`${styles.jobMobile} ${styles.jobMobileYear}`}>2021 — 2023</span>
                     </p>
                     <p className={`${styles.jobIndustry} jobYearsVisibleShow`}>
                       The spirit of Australia
@@ -153,7 +155,9 @@ const Home: NextPage = () => {
                   </div>
                   <div className={styles.jobDescription}>
                     <p className={`${styles.jobName} jobYearsVisibleShow`}>
-                      Optus
+                      <span>Optus</span>
+                      <span className={`${styles.jobMobile} ${styles.jobMobileBull}`}>&bull;</span>
+                      <span className={`${styles.jobMobile} ${styles.jobMobileYear}`}>2018 — 2021</span>
                     </p>
                     <p className={`${styles.jobIndustry} jobYearsVisibleShow`}>
                       We get people talking
@@ -186,7 +190,9 @@ const Home: NextPage = () => {
                   </div>
                   <div className={styles.jobDescription}>
                     <p className={`${styles.jobName} jobYearsVisibleShow`}>
-                      OpenAgent
+                      <span>OpenAgent</span>
+                      <span className={`${styles.jobMobile} ${styles.jobMobileBull}`}>&bull;</span>
+                      <span className={`${styles.jobMobile} ${styles.jobMobileYear}`}>2014 — 2018</span>
                     </p>
                     <p className={`${styles.jobIndustry} jobYearsVisibleShow`}>
                       Real estate, redefined

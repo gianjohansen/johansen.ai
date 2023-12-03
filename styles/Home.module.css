@@ -29,7 +29,7 @@
 @media (max-width: 576px) {
   .experience .desktopRight {
     text-align: unset;
-    margin-top: 2vh;
+    margin-top: 12px;
   }
 }
 
@@ -415,6 +415,7 @@
     padding-bottom: 30px;
     margin-bottom: 30px;
     position: relative;
+    border-bottom: 1px solid #454546;
   }
 
   .jobCol:last-child .job {
@@ -429,15 +430,14 @@
   .jobIconOptus,
   .jobIconOpenAgent {
     float: right;
-    margin-bottom: 40px;
-    margin-right: 20px;
-    width: 60px;
-    height: 60px;
+    margin: 3px 0 0;
+    width: 52px;
+    height: 52px;
   }
 }
 .job span {
-  width: 100% !important;
-  height: 100% !important;
+  width: 100%;
+  height: 100%;
 }
 
 .jobName {
@@ -445,6 +445,41 @@
   font-weight: 700;
   font-size: var(--default-font-size);
 }
+
+.jobMobile {
+  display: none;
+}
+
+.jobMobileBull {
+  color: rgb(160, 159, 166);
+  margin: 0 12px;
+}
+
+@media (max-width: 576px) {
+  .job {
+    border-bottom: 1px solid #454546;
+  }
+  .jobMobile {
+    display: block;
+  }
+  .jobName span {
+    display: inline-block;
+    width: auto;
+    height: auto;
+  }
+  .jobYears {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .jobIconQantas,
+  .jobIconOptus,
+  .jobIconOpenAgent {
+    display: none;
+  }
+}
+
 .jobIndustry {
   margin-bottom: 0;
   font-size: var(--default-font-size);
