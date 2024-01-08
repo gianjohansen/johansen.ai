@@ -95,7 +95,7 @@ const StaticOutro: React.FC<StaticOutroProps> = ({
           .to({}, { duration: 3 })
       })
     }
-  }, [])
+  }, [staticBlogLinks])
 
   return (
     <div className="pin-target">
