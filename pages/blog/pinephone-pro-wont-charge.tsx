@@ -51,6 +51,7 @@ const PinephoneProWontCharge: NextPage = () => {
               <img
                 className={styles.blogHero}
                 src="/images/blog-pinephone-pro-wont-turn-on.jpg"
+                alt="What to do when your Pinephone Pro won't charge or turn on"
               />
             </Col>
           </Row>

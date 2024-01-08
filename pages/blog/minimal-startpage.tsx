@@ -52,6 +52,7 @@ const MinimalStartpage: NextPage = () => {
               <img
                 className={styles.blogHero}
                 src="/images/blog-minimal-startpage.jpg"
+                alt="A beautiful Firefox startpage and some common relevant gotchas"
               />
             </Col>
           </Row>
@@ -85,6 +86,7 @@ const MinimalStartpage: NextPage = () => {
               <img
                 className={styles.blogHero}
                 src="/images/blog-minimal-startpage/minimal-startpage.png"
+                alt="A screenshot of the minimal startpage in Firefox"
               />
               <div className={styles.inlinePageSeperators}>
                 <div className={styles.pageSeperator}></div>

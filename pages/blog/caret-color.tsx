@@ -69,6 +69,7 @@ const CaretColor: NextPage = () => {
               <img
                 className={styles.blogHero}
                 src="/images/blog-input-caret-color.jpg"
+                alt="Give your input carets some color with these obscure css selectors"
               />
             </Col>
           </Row>
