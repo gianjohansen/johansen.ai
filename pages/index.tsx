@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <Head>
         <meta
           property="twitter:image"
-          content="https://johansen.software/images/johansen-software-card.jpg"
+          content="https://johansen.ai/images/johansen-software-card.jpg"
         />
         <link rel="alternate" type="application/rss+xml" href="/rss/feed.xml" />
       </Head>

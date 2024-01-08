@@ -15,7 +15,7 @@ const Contact: React.FC<{}> = () => {
               I am not currently open to new opportunities.
             </p>
             <p className={styles.emailButton}>
-              <a href="mailto:gian@johansen.software">gian@johansen.software</a>
+              <a href="mailto:gian@johansen.ai">gian@johansen.ai</a>
             </p>
             <p className={styles.socials}>
               <a

@@ -13,12 +13,12 @@ const PinephoneProWontCharge: NextPage = () => {
         openGraph={{
           title: "What to do when your Pinephone Pro won't charge or turn on",
           type: 'article',
-          url: 'https://johansen.software/blog/pinephone-pro-wont-charge',
+          url: 'https://johansen.ai/blog/pinephone-pro-wont-charge',
           description:
             "Daily driving the Pinephone Pro has been relatively pain-free, a nice surprise that I didn't expect. I run into minor issues every...",
           images: [
             {
-              url: 'https://johansen.software/images/blog-pinephone-pro-wont-turn-on.jpg',
+              url: 'https://johansen.ai/images/blog-pinephone-pro-wont-turn-on.jpg',
               width: 1400,
               height: 1000,
               alt: "What to do when your Pinephone Pro won't charge or turn on",

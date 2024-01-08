@@ -14,12 +14,12 @@ const MinimalStartpage: NextPage = () => {
           title:
             'A beautiful Firefox startpage and some common relevant gotchas',
           type: 'article',
-          url: 'https://johansen.software/blog/minimal-startpage',
+          url: 'https://johansen.ai/blog/minimal-startpage',
           description:
             "I think in most cases a user's new tab page can best be described as 'the page that briefly appears as they type their google search'.",
           images: [
             {
-              url: 'https://johansen.software/images/blog-minimal-startpage.jpg',
+              url: 'https://johansen.ai/images/blog-minimal-startpage.jpg',
               width: 1400,
               height: 1000,
               alt: 'A beautiful Firefox startpage and some common relevant gotchas',

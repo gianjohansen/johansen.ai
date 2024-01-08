@@ -1,8 +1,8 @@
 This is my personal website, built with next.js and deployed via Cloudflare.
 
-![johansen.software](https://user-images.githubusercontent.com/6005261/190838678-90c4eb20-22c6-46ef-9362-025254fb495d.png)
+![johansen.ai](https://user-images.githubusercontent.com/6005261/190838678-90c4eb20-22c6-46ef-9362-025254fb495d.png)
 
-Currently lives at [https://johansen.software](https://johansen.software/).
+Currently lives at [https://johansen.ai](https://johansen.ai/).
 
 ## Development
 
@@ -44,4 +44,4 @@ Previous iterations:
 
 **2018 - 2022** - Raindrop animation
 
-![johansen.software](https://user-images.githubusercontent.com/6005261/190838634-52a04120-1437-46a2-b523-884e168e6e89.png)
+![johansen.ai](https://user-images.githubusercontent.com/6005261/190838634-52a04120-1437-46a2-b523-884e168e6e89.png)

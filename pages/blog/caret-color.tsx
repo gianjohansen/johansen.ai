@@ -16,12 +16,12 @@ const CaretColor: NextPage = () => {
           title:
             'Give your input carets some color with these obscure css selectors',
           type: 'article',
-          url: 'https://johansen.software/blog/caret-color',
+          url: 'https://johansen.ai/blog/caret-color',
           description:
             "Quick tip of the day: input field carets can be colored with css. They're the blinking cursors that show where the user is currently typing.",
           images: [
             {
-              url: 'https://johansen.software/images/blog-input-caret-color.jpg',
+              url: 'https://johansen.ai/images/blog-input-caret-color.jpg',
               width: 1400,
               height: 1000,
               alt: 'Give your input carets some color with these obscure css selectors',
