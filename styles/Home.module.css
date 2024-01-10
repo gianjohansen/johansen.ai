@@ -290,6 +290,18 @@
   }
 }
 
+.rssCta {
+  margin-left: clamp(12px, 0.75vw, 0.75vw);
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.rssCta svg {
+  width: 4.5vh;
+  height: 4.5vh;
+}
+
 .jobIconQantas {
   border-radius: 6px;
   background: #fff;

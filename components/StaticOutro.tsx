@@ -144,7 +144,7 @@ const StaticOutro: React.FC<StaticOutroProps> = ({
                     <div className={styles.rssLink}>
                       <a href="/rss/feed.xml" type="application/rss+xml">
                         Grab the RSS
-                        <span className={styles.arrowSvg}>
+                        <span className={styles.rssCta}>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="100"
