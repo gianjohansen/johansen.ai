@@ -1,6 +1,6 @@
 This is my personal website, built with next.js and deployed via Cloudflare.
 
-![johansen.ai](https://user-images.githubusercontent.com/6005261/190838678-90c4eb20-22c6-46ef-9362-025254fb495d.png)
+![johansen.ai](screenshot.png)
 
 Currently lives at [https://johansen.ai](https://johansen.ai/).
 
