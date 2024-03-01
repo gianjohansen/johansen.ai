@@ -58,7 +58,7 @@ const Home: NextPage = () => {
             <Col xs={12} sm={6} className={styles.desktopRight}>
               <a
                 className={styles.downloadResume}
-                href="/downloads/gian-resume-2023.pdf"
+                href="/downloads/gian-resume-2024.pdf"
                 target="_blank"
               >
                 <div className={styles.pdfIcon}>
@@ -126,14 +126,14 @@ const Home: NextPage = () => {
                     >
                       <span>Qantas</span>
                       <span className={`${styles.jobMobile} ${styles.jobMobileBull}`}>&bull;</span>
-                      <span className={`${styles.jobMobile} ${styles.jobMobileYear}`}>2021 — 2023</span>
+                      <span className={`${styles.jobMobile} ${styles.jobMobileYear}`}>2021 — 2024</span>
                     </p>
                     <p className={`${styles.jobIndustry} jobYearsVisibleShow`}>
                       The spirit of Australia
                     </p>
                   </div>
                   <div className={`${styles.jobYears} jobYearsVisibleShow`}>
-                    2021 — 2023
+                    2021 — 2024
                   </div>
                 </div>
               </Col>
