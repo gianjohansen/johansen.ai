@@ -22,14 +22,14 @@ const Footer: React.FC<{}> = () => {
           >
             <p className={styles.emissions}>
               <a
-                href="https://www.websitecarbon.com/website/johansen-software/"
+                href="https://www.websitecarbon.com/website/johansen-ai/"
                 target="_blank"
                 rel="noreferrer"
               >
-                This website emits only <strong>0.17g</strong> of CO2 per
+                This website emits only <strong>0.06g</strong> of CO2 per
                 load.&nbsp;
                 <br />
-                That&apos;s cleaner than <strong>83%</strong> of pages tested.{' '}
+                That&apos;s cleaner than <strong>96%</strong> of pages tested.{' '}
                 <span style={{ color: '#fff' }}>➔</span>
               </a>
               &nbsp;
