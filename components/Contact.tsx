@@ -52,7 +52,7 @@ const Contact: React.FC<{}> = () => {
                 </svg>
               </a>
               <a
-                href="https://www.goodreads.com/user/show/175729266-gian-johansen"
+                href="https://www.goodreads.com/gian-johansen"
                 target="_blank"
                 rel="noreferrer"
               >
